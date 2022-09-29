@@ -1,0 +1,11 @@
+/home/thaumy/data/dev/lab/SuperMovie_server/bin/Debug/net6.0/SuperMovie_server
+/home/thaumy/data/dev/lab/SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.dll
+/home/thaumy/data/dev/lab/SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.pdb
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.GeneratedMSBuildEditorConfig.editorconfig
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.AssemblyInfoInputs.cache
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.AssemblyInfo.cs
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.CoreCompileInputs.cache
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.dll
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/ref/SuperMovie_server.dll
+/home/thaumy/data/dev/lab/SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.pdb

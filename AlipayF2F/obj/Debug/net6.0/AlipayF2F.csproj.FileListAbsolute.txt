@@ -1,0 +1,10 @@
+/home/thaumy/data/dev/lab/AlipayF2F/bin/Debug/net6.0/AlipayF2F.dll
+/home/thaumy/data/dev/lab/AlipayF2F/bin/Debug/net6.0/AlipayF2F.pdb
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/AlipayF2F.csproj.AssemblyReference.cache
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/AlipayF2F.GeneratedMSBuildEditorConfig.editorconfig
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/AlipayF2F.AssemblyInfoInputs.cache
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/AlipayF2F.AssemblyInfo.cs
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/AlipayF2F.csproj.CoreCompileInputs.cache
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/AlipayF2F.dll
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/ref/AlipayF2F.dll
+/home/thaumy/data/dev/lab/AlipayF2F/obj/Debug/net6.0/AlipayF2F.pdb

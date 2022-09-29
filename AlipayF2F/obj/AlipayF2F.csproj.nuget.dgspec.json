@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/thaumy/data/dev/lab/AlipayF2F/AlipayF2F.csproj": {}
+  },
+  "projects": {
+    "/home/thaumy/data/dev/lab/AlipayF2F/AlipayF2F.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/thaumy/data/dev/lab/AlipayF2F/AlipayF2F.csproj",
+        "projectName": "AlipayF2F",
+        "projectPath": "/home/thaumy/data/dev/lab/AlipayF2F/AlipayF2F.csproj",
+        "packagesPath": "/home/thaumy/.nuget/packages/",
+        "outputPath": "/home/thaumy/data/dev/lab/AlipayF2F/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/thaumy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AlipaySDKNet.Core": {
+              "target": "Package",
+              "version": "[4.6.398, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

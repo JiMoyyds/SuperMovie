@@ -1,0 +1,96 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AlipayF2F/1.0.0": {
+        "dependencies": {
+          "AlipaySDKNet.Core": "4.6.398"
+        },
+        "runtime": {
+          "AlipayF2F.dll": {}
+        }
+      },
+      "AlipaySDKNet.Core/4.6.398": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "Portable.BouncyCastle": "1.8.5.2",
+          "System.Text.Encoding.CodePages": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AlipaySDKNet.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.1.0": {},
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.5.0",
+            "fileVersion": "1.8.5.2"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/4.7.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AlipayF2F/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AlipaySDKNet.Core/4.6.398": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PaUH6Il5qThg56oBJlOwYo57NKencSpbjyNhMPLOYLHJRT+XRtkv9PUVSfjc2SwGcdSXlSBDrFCVz90mXKCDdQ==",
+      "path": "alipaysdknet.core/4.6.398",
+      "hashPath": "alipaysdknet.core.4.6.398.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
+      "path": "microsoft.netcore.platforms/3.1.0",
+      "hashPath": "microsoft.netcore.platforms.3.1.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.8.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iLfdr+T33QrDpsvcKRbMVk0PnjqE4hcrbgc6IH+A1BdPAThZlMB9s5TtFANhVVtdS+0oN3yIivgXRPRET7zuZw==",
+      "path": "portable.bouncycastle/1.8.5.2",
+      "hashPath": "portable.bouncycastle.1.8.5.2.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
+      "path": "system.text.encoding.codepages/4.7.0",
+      "hashPath": "system.text.encoding.codepages.4.7.0.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
+namespace SuperMovie_server.component;
+
+public class ResetPwd : WebSocketBehavior
+{
+    protected override void OnMessage(MessageEventArgs ev)
+    {
+    }
+}
