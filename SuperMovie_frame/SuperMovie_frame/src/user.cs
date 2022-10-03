@@ -15,4 +15,7 @@ public interface IUserOperation
     public List<IUserModel> GetAllUser();
     public bool IsPwdHashValid(long userId, string pwdHash);
     public double GetVipLevelDiscount(long userId);
+    public bool UpdateUserPwdHash(long userId, string newValue);
+    public bool UpdateUserVipLevel(long userId, long newValue);
+    public bool UpdateUserVipLevelExpireTime(long userId, DateTime newValue);
 }

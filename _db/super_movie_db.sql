@@ -52,7 +52,7 @@ CREATE TABLE default_schema.film (
     film_is_preorder boolean,
     film_types text,
     film_price integer,
-    film_actors integer
+    film_actors text
 );
 
 
