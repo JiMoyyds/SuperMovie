@@ -15,6 +15,14 @@
 - [ ] 根据主演过滤
 - [ ] 以film_id为主键，对其他字段进行修改
 
+其中，film_actors是文本数据（text），不同的演员使用美元符号`$`分割。
+
+for example：
+
+- 某电影只有演员小明，则film_actors的值应为:`小明`
+- 某电影有演员小明、李华，则film_actors的值应为:`小明$李华`
+- 某电影有演员小明、李华、小红，则film_actors的值应为:`小明$李华$小红`
+
 ## table :: super_movie.default_schema.order
 
 - [ ] 创建
