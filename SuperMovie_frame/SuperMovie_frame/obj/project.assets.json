@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/thaumy/data/dev/lab/SuperMovie_frame/SuperMovie_frame/SuperMovie_frame.csproj",
+      "projectUniqueName": "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_frame/SuperMovie_frame/SuperMovie_frame.csproj",
       "projectName": "SuperMovie_frame",
-      "projectPath": "/home/thaumy/data/dev/lab/SuperMovie_frame/SuperMovie_frame/SuperMovie_frame.csproj",
+      "projectPath": "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_frame/SuperMovie_frame/SuperMovie_frame.csproj",
       "packagesPath": "/home/thaumy/.nuget/packages/",
-      "outputPath": "/home/thaumy/data/dev/lab/SuperMovie_frame/SuperMovie_frame/obj/",
+      "outputPath": "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_frame/SuperMovie_frame/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/thaumy/.nuget/NuGet/NuGet.Config"
