@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/obj/Debug/net6.0/SuperMovie_frame.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/obj/Debug/net6.0/SuperMovie_frame.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/obj/Debug/net6.0/SuperMovie_frame.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/obj/Debug/net6.0/SuperMovie_frame.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/obj/SuperMovie_frame.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/obj/SuperMovie_frame.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/cinema.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/film.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +35,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664452441627</updated>
       <workItem from="1664452451504" duration="40000" />
-      <workItem from="1664777216816" duration="911000" />
+      <workItem from="1664777216816" duration="1453000" />
     </task>
     <servers />
   </component>
