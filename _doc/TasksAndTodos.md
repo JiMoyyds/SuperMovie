@@ -20,10 +20,10 @@
 - [ ] 创建
 - [ ] 穷举
 - [ ] 根据用户过滤
-- [ ] 校验订单合法性(通过比对order_id一致性)
 - [ ] 根据film_id过滤
 - [ ] 根据影片类型过滤(通过JOIN film表)
 - [ ] 根据影片主演过滤(通过JOIN film表)
+- [ ] 校验订单合法性(通过比对order_id一致性)
 
 ## table :: super_movie.default_schema.schedule
 

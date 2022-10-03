@@ -67,9 +67,9 @@ CREATE TABLE default_schema."order" (
     order_user_id bigint,
     order_pay_amount double precision,
     order_time time without time zone,
-    order_film_id text,
-    order_cinema_id text,
-    order_schedule_screening text,
+    order_film_id bigint,
+    order_cinema_id bigint,
+    order_schedule_id bigint,
     order_cinema_seat text
 );
 
@@ -84,7 +84,8 @@ CREATE TABLE default_schema.schedule (
     schedule_cinema_id bigint,
     schedule_film_id bigint,
     schedule_start_time timestamp without time zone,
-    schedule_end_time timestamp without time zone
+    schedule_end_time timestamp without time zone,
+    schedule_id bigint
 );
 
 
@@ -136,7 +137,7 @@ COPY default_schema.film (film_id, film_name, film_online_time, film_is_preorder
 -- Data for Name: order; Type: TABLE DATA; Schema: default_schema; Owner: postgres
 --
 
-COPY default_schema."order" (order_id, order_user_id, order_pay_amount, order_time, order_film_id, order_cinema_id, order_schedule_screening, order_cinema_seat) FROM stdin;
+COPY default_schema."order" (order_id, order_user_id, order_pay_amount, order_time, order_film_id, order_cinema_id, order_schedule_id, order_cinema_seat) FROM stdin;
 \.
 
 
@@ -144,7 +145,7 @@ COPY default_schema."order" (order_id, order_user_id, order_pay_amount, order_ti
 -- Data for Name: schedule; Type: TABLE DATA; Schema: default_schema; Owner: postgres
 --
 
-COPY default_schema.schedule (schedule_cinema_id, schedule_film_id, schedule_start_time, schedule_end_time) FROM stdin;
+COPY default_schema.schedule (schedule_cinema_id, schedule_film_id, schedule_start_time, schedule_end_time, schedule_id) FROM stdin;
 \.
 
 

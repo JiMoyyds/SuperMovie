@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/film.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/cinema.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/schedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/schedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/user.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/user.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/vip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/vip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664452441627</updated>
       <workItem from="1664452451504" duration="40000" />
-      <workItem from="1664777216816" duration="1453000" />
+      <workItem from="1664777216816" duration="3398000" />
     </task>
     <servers />
   </component>
