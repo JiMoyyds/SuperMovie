@@ -1,13 +1,8 @@
-namespace SuperMovieSDK;
+namespace SuperMovieSDK.User.Operation;
 
-public interface IUserModel
-{
-    public long Id { get; set; }
-    public string PwdHash { get; set; }
-    public long VipLevel { get; set; }
-    public DateTime VipLevelExpireTime { get; set; }
-}
+using Model;
 
+//由hzc实现
 public interface IUserOperation
 {
     public bool CreateUser(IUserModel model);

@@ -1,11 +1,8 @@
-namespace SuperMovieSDK;
+namespace SuperMovieSDK.Cinema.Operation;
 
-public interface ICinemaModel
-{
-    public long CinemaId { get; set; }
-    public long CinemaName { get; set; }
-}
+using Model;
 
+//由wzj实现
 public interface ICinemaOperation
 {
     public bool CreateCinema(ICinemaModel model);

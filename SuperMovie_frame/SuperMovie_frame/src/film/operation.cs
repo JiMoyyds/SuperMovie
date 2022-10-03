@@ -1,16 +1,8 @@
-namespace SuperMovieSDK;
+namespace SuperMovieSDK.Film.Operation;
 
-public interface IFilmModel
-{
-    public long Id { get; set; }
-    public long Name { get; set; }
-    public DateTime OnlineTime { get; set; }
-    public bool IsPreorder { get; set; }
-    public List<string> Types { get; set; }
-    public double Price { get; set; }
-    public List<string> Actors { get; set; }
-}
+using Model;
 
+//由zty实现
 public interface IFilmOperation
 {
     public bool CreateFilm(IFilmModel model);
