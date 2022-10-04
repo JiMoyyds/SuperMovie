@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/operation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/film/operation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/order/operation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/schedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/schedule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/user/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/user/operation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/vip/vip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/vip/vip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +41,7 @@
       <workItem from="1664867174045" duration="162000" />
       <workItem from="1664873640639" duration="1269000" />
       <workItem from="1664890688156" duration="234000" />
+      <workItem from="1664891929091" duration="20000" />
     </task>
     <servers />
   </component>
