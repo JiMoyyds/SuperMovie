@@ -7,6 +7,7 @@ public interface IFilmOperation
 {
     public bool CreateFilm(IFilmModel model);
     public bool DeleteFilm(long filmId);
+    public IFilmModel? GetFilm(long filmId);
     public List<IFilmModel> GetAllFilm();
     public List<IFilmModel> FilterFilmByIsPreorder(bool isPreorder);
     public List<IFilmModel> FilterFilmByTypes(List<string> types);

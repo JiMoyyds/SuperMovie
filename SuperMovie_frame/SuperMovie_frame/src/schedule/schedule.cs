@@ -7,6 +7,7 @@ public interface IScheduleOperation
 {
     public bool CreateSchedule(IScheduleModel model);
     public bool DeleteSchedule(long scheduleId);
+    public IScheduleModel GetSchedule(long scheduleId);
     public List<IScheduleModel> GetAllSchedule();
     public List<IScheduleModel> FilterScheduleByCinemaId(long cinemaId);
     public List<IScheduleModel> FilterScheduleByTimespan(DateTime start, DateTime end);

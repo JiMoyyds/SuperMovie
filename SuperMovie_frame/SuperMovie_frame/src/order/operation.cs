@@ -7,6 +7,7 @@ public interface IOrderOperation
 {
     public bool CreateOrder(IOrderModel model);
     public bool DeleteOrder(long orderId);
+    public IOrderModel? GetOrder(long orderId);
     public List<IOrderModel> GetAllOrder();
     public List<IOrderModel> FilterOrderByUserId(long userId);
     public List<IOrderModel> FilterOrderByFilmId(long filmId);
