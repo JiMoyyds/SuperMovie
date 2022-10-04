@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3fba54f-b33c-41b3-afa4-19c17aa98dcb" name="Changes" comment="" />
+    <list default="true" id="a3fba54f-b33c-41b3-afa4-19c17aa98dcb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../DbMiddleware/.idea/.idea.DbMiddleware/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddleware/.idea/.idea.DbMiddleware/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbMiddlewarePostgresImpl.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DbMiddlewarePostgresImpl.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbMiddlewarePostgresImpl.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DbMiddlewarePostgresImpl.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/DbMiddlewarePostgresImpl.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/DbMiddlewarePostgresImpl.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/init.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/init.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/data/dev/repo/SuperMovieSDK/DbMiddlewarePostgresImpl/src/main.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -21,10 +32,34 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/thaumy/repo/SuperMovieSDK/DbMiddleware/bin/Debug/net6.0/DbMiddleware.dll",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected=".NET Static Method.DbMiddlewarePostgresImpl.test.Init.Do">
+    <configuration name="DbMiddlewarePostgresImpl.test.Init.Do" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="$APPLICATION_HOME_DIR$/lib/ReSharperHost/JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DbMiddlewarePostgresImpl.csproj" />
+      <option name="PROJECT_TFM" value="net6.0" />
+      <option name="CLASS_NAME" value="DbMiddlewarePostgresImpl.test.Init" />
+      <option name="METHOD_NAME" value="Do" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Static Method.DbMiddlewarePostgresImpl.test.Init.Do" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -35,6 +70,7 @@
       <updated>1664452562306</updated>
       <workItem from="1664452572971" duration="134000" />
       <workItem from="1664453924205" duration="327000" />
+      <workItem from="1664874926046" duration="1577000" />
     </task>
     <servers />
   </component>

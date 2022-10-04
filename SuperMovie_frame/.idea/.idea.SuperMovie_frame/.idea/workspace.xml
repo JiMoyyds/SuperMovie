@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/model.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/film/model.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/order/model.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/model.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/user/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/user/model.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/vip/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/vip/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddleware/.idea/.idea.DbMiddleware/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddleware/.idea/.idea.DbMiddleware/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/obj/Debug/net6.0/DbMiddlewarePostgresImpl.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/obj/Debug/net6.0/DbMiddlewarePostgresImpl.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/test/init.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/test/init.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,7 @@
       <workItem from="1664452451504" duration="40000" />
       <workItem from="1664777216816" duration="4991000" />
       <workItem from="1664867174045" duration="162000" />
+      <workItem from="1664873640639" duration="1269000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d076e1f9-7c58-4ae0-a384-ec7184d275c9" name="Changes" comment="" />
+    <list default="true" id="d076e1f9-7c58-4ae0-a384-ec7184d275c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DbMiddleware/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DbMiddleware/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/DbMiddlewarePostgresImpl.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/obj/Debug/net6.0/DbMiddlewarePostgresImpl.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/obj/Debug/net6.0/DbMiddlewarePostgresImpl.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/test/init.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/test/init.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,14 +21,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -30,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664452558211</updated>
       <workItem from="1664452562771" duration="152000" />
+      <workItem from="1664875065149" duration="606000" />
     </task>
     <servers />
   </component>

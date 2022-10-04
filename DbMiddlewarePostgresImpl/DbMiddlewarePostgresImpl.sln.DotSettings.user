@@ -2,6 +2,9 @@
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fthaumy_002Flab_002FDbMiddleware_002Fbin_002FDebug_002Fnet6_002E0_002FDbMiddleware_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fthaumy_002Frepo_002FDbManaged_002Fbin_002FDebug_002Fnet6_002E0_002FDbManaged_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fthaumy_002Frepo_002Ffsharper_002Fbin_002FDebug_002Fnet6_002E0_002Ffsharper_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fthaumy_002Frepo_002FSuperMovieSDK_002FDbMiddleware_002Fbin_002FDebug_002Fnet6_002E0_002FDbMiddleware_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fthaumy_002Frepo_002FSuperMovieSDK_002F_005Fdep_002FDbManaged_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fthaumy_002Frepo_002FSuperMovieSDK_002F_005Fdep_002Ffsharper_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=16499848_002D8e28_002D4dfe_002Dae9c_002D1b5b91c9f03d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::9868BBF8-F8D3-4D55-A1DC-8230B57F6A18::net6.0::DbMiddlewarePostgresImpl.test.InitOk.Test1&lt;/TestId&gt;
@@ -25,11 +28,9 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ae02f467_002Dd992_002D4998_002Dbf0a_002D44563b4c45b3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from test #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;ProjectFolder&gt;9868BBF8-F8D3-4D55-A1DC-8230B57F6A18/d:test&lt;/ProjectFolder&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d57da84d_002D20b3_002D429c_002D99ef_002D7a3440ddc33f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d57da84d_002D20b3_002D429c_002D99ef_002D7a3440ddc33f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;ProjectFolder&gt;9868BBF8-F8D3-4D55-A1DC-8230B57F6A18/d:test&lt;/ProjectFolder&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e51f513b_002D72e1_002D4997_002Dad75_002D5f80d4118782/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::9868BBF8-F8D3-4D55-A1DC-8230B57F6A18::net6.0::DbMiddlewarePostgresImpl.test.InitOk.Test1&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e51f513b_002D72e1_002D4997_002Dad75_002D5f80d4118782/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1 #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;9868BBF8-F8D3-4D55-A1DC-8230B57F6A18/d:test/f:initOk.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

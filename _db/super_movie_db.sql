@@ -48,10 +48,10 @@ ALTER TABLE default_schema.cinema OWNER TO postgres;
 CREATE TABLE default_schema.film (
     film_id bigint,
     film_name text,
-    film_online_time timestamp without time zone,
+    film_online_time timestamp with time zone,
     film_is_preorder boolean,
     film_types text,
-    film_price integer,
+    film_price double precision,
     film_actors text
 );
 

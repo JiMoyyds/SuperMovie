@@ -26,10 +26,21 @@ public static class Init
                        );");
         for (var i = 0; i < 1000; i++)
             Db.Query(@$"INSERT INTO {Tab1} (id, test_name, time, content)
-                           VALUES ({i}, 'init', '{Util.Iso8601Now()}', 'ts1_insert');");
+                           VALUES (:i, 'init', :time, 'ts1_insert');"
+                , 1,
+                new[]
+                {
+                    ("i", (object)i),
+                    ("time", DateTime.Now)
+                });
 
         for (var i = 0; i < 1000; i++)
             Db.Query(@$"INSERT INTO {Tab1} (id, test_name, time, content)
-                           VALUES ({i}, 'init', '{Util.Iso8601Now()}', 'ts2_insert');");
+                           VALUES (:i, 'init', :time, 'ts2_insert');"
+                , 1, new[]
+                {
+                    ("i", (object)i),
+                    ("time", DateTime.Now)
+                });
     }
 }
