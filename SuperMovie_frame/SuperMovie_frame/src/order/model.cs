@@ -1,5 +1,6 @@
 namespace SuperMovieSDK.Order.Model;
 
+//由lyf实现
 public interface IOrderModel
 {
     public long Id { get; set; }
@@ -9,5 +10,5 @@ public interface IOrderModel
     public long FilmId { get; set; }
     public long CinemaId { get; set; }
     public long ScheduleId { get; set; }
-    public long CinemaSeat { get; set; }
+    public string CinemaSeat { get; set; }
 }

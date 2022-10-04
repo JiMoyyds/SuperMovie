@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/operation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/film/operation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/order/operation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/schedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/schedule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/user.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/user/operation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/vip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/vip/vip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/film/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/order/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/user/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/user/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/vip/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/vip/model.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,7 @@
       <updated>1664452441627</updated>
       <workItem from="1664452451504" duration="40000" />
       <workItem from="1664777216816" duration="4991000" />
+      <workItem from="1664867174045" duration="162000" />
     </task>
     <servers />
   </component>

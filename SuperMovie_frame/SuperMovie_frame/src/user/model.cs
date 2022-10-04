@@ -1,5 +1,6 @@
 namespace SuperMovieSDK.User.Model;
 
+//由hzc实现
 public interface IUserModel
 {
     public long Id { get; set; }

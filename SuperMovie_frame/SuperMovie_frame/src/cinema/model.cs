@@ -1,7 +1,8 @@
 namespace SuperMovieSDK.Cinema.Model;
 
+//由wzj实现
 public interface ICinemaModel
 {
-    public long CinemaId { get; set; }
-    public long CinemaName { get; set; }
+    public long Id { get; set; }
+    public string Name { get; set; }
 }

@@ -1,5 +1,6 @@
 namespace SuperMovieSDK.Schedule.Model;
 
+//由wzj实现
 public interface IScheduleModel
 {
     public long Id { get; set; }
