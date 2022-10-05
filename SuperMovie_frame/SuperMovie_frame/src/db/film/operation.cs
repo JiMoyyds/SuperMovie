@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Film.Operation;
+namespace SuperMovieSDK.Db.Film.Operation;
 
 using Model;
 
@@ -13,7 +13,9 @@ public interface IFilmOperation
     public List<IFilmModel> FilterFilmByTypes(List<string> types);
     public List<IFilmModel> FilterFilmByOnlineTime(DateTime start, DateTime end);
     public List<IFilmModel> FilterFilmByName(string name);
+    public List<IFilmModel> MatchFilmByName(string name);
     public List<IFilmModel> FilterFilmByActors(List<string> actors);
+    public List<string> GetAllActors();
     public bool UpdateFilmName(long filmId, string newValue);
     public bool UpdateFilmOnlineTime(long filmId, DateTime newValue);
     public bool UpdateFilmIsPreorder(long filmId, bool newValue);

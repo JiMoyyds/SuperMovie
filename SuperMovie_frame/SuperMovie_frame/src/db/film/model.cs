@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Film.Model;
+namespace SuperMovieSDK.Db.Film.Model;
 
 //由zty实现
 public interface IFilmModel

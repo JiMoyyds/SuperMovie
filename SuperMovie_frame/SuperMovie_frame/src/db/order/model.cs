@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Order.Model;
+namespace SuperMovieSDK.Db.Order.Model;
 
 //由lyf实现
 public interface IOrderModel

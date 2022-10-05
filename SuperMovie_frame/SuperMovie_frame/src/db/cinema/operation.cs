@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Cinema.Operation;
+namespace SuperMovieSDK.Db.Cinema.Operation;
 
 using Model;
 

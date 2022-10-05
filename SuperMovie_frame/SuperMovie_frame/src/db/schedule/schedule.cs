@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Schedule.Operation;
+namespace SuperMovieSDK.Db.Schedule.Operation;
 
 using Model;
 

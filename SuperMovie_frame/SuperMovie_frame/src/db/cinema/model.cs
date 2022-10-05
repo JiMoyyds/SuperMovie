@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Cinema.Model;
+namespace SuperMovieSDK.Db.Cinema.Model;
 
 //由wzj实现
 public interface ICinemaModel

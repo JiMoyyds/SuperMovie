@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Schedule.Model;
+namespace SuperMovieSDK.Db.Schedule.Model;
 
 //由wzj实现
 public interface IScheduleModel

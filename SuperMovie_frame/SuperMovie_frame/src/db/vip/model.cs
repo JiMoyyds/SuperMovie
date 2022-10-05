@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Vip.Model;
+namespace SuperMovieSDK.Db.Vip.Model;
 
 //由hzc实现
 public interface IVipModel

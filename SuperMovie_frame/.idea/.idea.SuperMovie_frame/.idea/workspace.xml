@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/order/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/SuperMovie_frame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/SuperMovie_frame.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/cinema/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/cinema/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/cinema/operation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/film/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/film/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/film/operation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/order/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/operation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/schedule/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/schedule/schedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/schedule/schedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/user/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/user/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/user/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/user/operation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/vip/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/vip/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/vip/vip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/vip/vip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,14 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,6 +57,7 @@
       <workItem from="1664890688156" duration="234000" />
       <workItem from="1664891929091" duration="20000" />
       <workItem from="1664892200833" duration="68000" />
+      <workItem from="1664930147204" duration="5961000" />
     </task>
     <servers />
   </component>

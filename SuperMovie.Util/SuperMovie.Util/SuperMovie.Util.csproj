@@ -7,7 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="src\db" />
+      <Reference Include="palaflake">
+        <HintPath>..\..\_dep\palaflake.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

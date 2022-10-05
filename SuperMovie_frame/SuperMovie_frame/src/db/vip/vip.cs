@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Vip.Operation;
+namespace SuperMovieSDK.Db.Vip.Operation;
 
 using Model;
 

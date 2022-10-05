@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.User.Model;
+namespace SuperMovieSDK.Db.User.Model;
 
 //由hzc实现
 public interface IUserModel
