@@ -8,9 +8,10 @@ using Schedule.Entity;
 public interface IOrderEntity
 {
     public bool Drop();
-    
+
+    public long Id { get; }
     public IUserEntity User { get; set; }
-    public long PayAmount { get; set; }
+    public double PayAmount { get; set; }
     public IFilmEntity Film { get; set; }
     public ICinemaEntity Cinema { get; set; }
     public IScheduleEntity Schedule { get; set; }

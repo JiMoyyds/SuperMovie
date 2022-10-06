@@ -4,6 +4,8 @@ public interface IFilmEntity
 {
     public bool Drop();
 
+    public long Id { get; }
+
     public string Name { get; set; }
     public DateTime OnlineTime { get; set; }
     public bool IsPreorder { get; set; }

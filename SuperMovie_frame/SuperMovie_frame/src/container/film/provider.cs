@@ -9,7 +9,7 @@ public interface IFilmProvider
         string name,
         DateTime onlineTime,
         bool isPreorder,
-        bool price
+        double price
     );
 
     public IFilmEntity? GetFilm(long id);

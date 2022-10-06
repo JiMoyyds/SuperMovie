@@ -11,7 +11,7 @@ public interface IOrderProvider
     public IOrderEntity? CreateOrder
     (
         IUserEntity user,
-        long payAmount,
+        double payAmount,
         IFilmEntity film,
         ICinemaEntity cinema,
         IScheduleEntity schedule,

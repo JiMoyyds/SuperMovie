@@ -6,6 +6,7 @@ public interface ICinemaEntity
 {
     public bool Drop();
 
+    public long Id { get; }
     public string Name { get; set; }
 
     public List<IScheduleEntity> Schedules { get; }
