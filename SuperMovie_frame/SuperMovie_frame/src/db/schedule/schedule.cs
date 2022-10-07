@@ -1,8 +1,12 @@
-namespace SuperMovieSDK.Db.Schedule.Operation;
+namespace SuperMovie.Db.Schedule.Operation;
 
 using Model;
 
-//由wzj实现
+//resolver : WZJ
+//asm file : ScheduleImpl
+//impl :: SuperMovie.Db.Schedule.Operation.ScheduleOperation
+//impl proj struct :
+//src/db/operation.cs
 public interface IScheduleOperation
 {
     public bool CreateSchedule(IScheduleModel model);

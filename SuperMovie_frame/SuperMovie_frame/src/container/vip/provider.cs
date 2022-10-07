@@ -1,7 +1,12 @@
-namespace SuperMovieSDK.Container.Vip.Provider;
+namespace SuperMovie.Container.Vip.Provider;
 
 using  Entity;
 
+//resolver : HZC
+//asm file : VipImpl
+//impl :: SuperMovie.Container.Vip.Provider.VipProvider
+//impl proj struct :
+//src/container/provider.cs
 public interface IVipProvider
 {
     public IVipEntity? CreateVip

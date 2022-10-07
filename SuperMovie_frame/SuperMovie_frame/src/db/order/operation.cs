@@ -1,8 +1,12 @@
-﻿namespace SuperMovieSDK.Db.Order.Operation;
+﻿namespace SuperMovie.Db.Order.Operation;
 
 using Model;
 
-//由lyf实现
+//resolver : LYF
+//asm file : OrderImpl
+//impl :: SuperMovie.Db.Order.Operation.OrderOperation
+//impl proj struct :
+//src/db/operation.cs
 public interface IOrderOperation
 {
     public bool CreateOrder(IOrderModel model);

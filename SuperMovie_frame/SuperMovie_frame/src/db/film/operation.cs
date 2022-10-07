@@ -1,8 +1,12 @@
-namespace SuperMovieSDK.Db.Film.Operation;
+namespace SuperMovie.Db.Film.Operation;
 
 using Model;
 
-//由zty实现
+//resolver : ZTY
+//asm file : FilmImpl
+//impl :: SuperMovie.Db.Film.Operation.FilmOperation
+//impl proj struct :
+//src/db/operation.cs
 public interface IFilmOperation
 {
     public bool CreateFilm(IFilmModel model);

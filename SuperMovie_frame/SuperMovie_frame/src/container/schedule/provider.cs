@@ -1,9 +1,14 @@
-namespace SuperMovieSDK.Container.Schedule.Provider;
+namespace SuperMovie.Container.Schedule.Provider;
 
 using Entity;
 using Film.Entity;
 using Cinema.Entity;
 
+//resolver : WZJ
+//asm file : ScheduleImpl
+//impl :: SuperMovie.Container.Schedule.Provider.ScheduleProvider
+//impl proj struct :
+//src/container/provider.cs
 public interface IScheduleProvider
 {
     public IScheduleEntity? CreateSchedule

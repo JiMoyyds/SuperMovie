@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3fba54f-b33c-41b3-afa4-19c17aa98dcb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../DbMiddleware/.idea/.idea.DbMiddleware/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddleware/.idea/.idea.DbMiddleware/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util/SuperMovie.Util.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util/SuperMovie.Util.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movieui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movieui/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
       <workItem from="1664453924205" duration="327000" />
       <workItem from="1664874926046" duration="1577000" />
       <workItem from="1665060195941" duration="107000" />
+      <workItem from="1665110197284" duration="16000" />
     </task>
     <servers />
   </component>

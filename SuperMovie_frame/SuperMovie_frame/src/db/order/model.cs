@@ -1,6 +1,10 @@
-namespace SuperMovieSDK.Db.Order.Model;
+namespace SuperMovie.Db.Order.Model;
 
-//由lyf实现
+//resolver : LYF
+//asm file : OrderImpl
+//impl :: SuperMovie.Db.Order.Model.OrderModel
+//impl proj struct :
+//src/db/model.cs
 public interface IOrderModel
 {
     public long Id { get; set; }

@@ -1,6 +1,10 @@
-namespace SuperMovieSDK.Db.Schedule.Model;
+namespace SuperMovie.Db.Schedule.Model;
 
-//由wzj实现
+//resolver : WZJ
+//asm file : ScheduleImpl
+//impl :: SuperMovie.Db.Schedule.Model.ScheduleModel
+//impl proj struct :
+//src/db/model.cs
 public interface IScheduleModel
 {
     public long Id { get; set; }

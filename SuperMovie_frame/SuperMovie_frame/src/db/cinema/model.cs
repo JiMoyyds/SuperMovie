@@ -1,6 +1,10 @@
-namespace SuperMovieSDK.Db.Cinema.Model;
+namespace SuperMovie.Db.Cinema.Model;
 
-//由wzj实现
+//resolver : WZJ
+//asm file : CinemaImpl
+//impl :: SuperMovie.Db.Cinema.Model.CinemaModel
+//impl proj struct :
+//src/db/model.cs
 public interface ICinemaModel
 {
     public long Id { get; set; }

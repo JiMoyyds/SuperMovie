@@ -1,8 +1,12 @@
-namespace SuperMovieSDK.Db.Cinema.Operation;
+namespace SuperMovie.Db.Cinema.Operation;
 
 using Model;
 
-//由wzj实现
+//resolver : WZJ
+//asm file : CinemaImpl
+//impl :: SuperMovie.Db.Cinema.Operation.CinemaOperation
+//impl proj struct :
+//src/db/operation.cs
 public interface ICinemaOperation
 {
     public bool CreateCinema(ICinemaModel model);

@@ -1,7 +1,12 @@
-namespace SuperMovieSDK.Container.Film.Provider;
+namespace SuperMovie.Container.Film.Provider;
 
 using Entity;
 
+//resolver : ZTY
+//asm file : FilmImpl
+//impl :: SuperMovie.Container.Film.Provider.FilmProvider
+//impl proj struct :
+//src/container/provider.cs
 public interface IFilmProvider
 {
     public IFilmEntity? CreateFilm

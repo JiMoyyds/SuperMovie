@@ -1,8 +1,12 @@
-namespace SuperMovieSDK.Db.Vip.Operation;
+namespace SuperMovie.Db.Vip.Operation;
 
 using Model;
 
-//由hzc实现
+//resolver : HZC
+//asm file : VipImpl
+//impl :: SuperMovie.Db.Vip.Operation.VipOperation
+//impl proj struct :
+//src/db/operation.cs
 public interface IVipOperation
 {
     public bool CreateVip(IVipModel model);

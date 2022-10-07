@@ -1,8 +1,12 @@
-namespace SuperMovieSDK.Db.User.Operation;
+namespace SuperMovie.Db.User.Operation;
 
 using Model;
 
-//由hzc实现
+//resolver : HZC
+//asm file : UserImpl
+//impl :: SuperMovie.Db.User.Operation.UserOperation
+//impl proj struct :
+//src/db/operation.cs
 public interface IUserOperation
 {
     public bool CreateUser(IUserModel model);

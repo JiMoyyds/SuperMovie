@@ -1,6 +1,10 @@
-namespace SuperMovieSDK.Db.Vip.Model;
+namespace SuperMovie.Db.Vip.Model;
 
-//由hzc实现
+//resolver : HZC
+//asm file : VipImpl
+//impl :: SuperMovie.Db.Vip.Model.VipModel
+//impl proj struct :
+//src/db/model.cs
 public interface IVipModel
 {
     public long Level { get; set; }

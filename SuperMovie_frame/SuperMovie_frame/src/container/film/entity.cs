@@ -1,8 +1,23 @@
-namespace SuperMovieSDK.Container.Film.Entity;
+namespace SuperMovie.Container.Film.Entity;
 
+//resolver : ZTY
+//asm file : FilmImpl
+//impl :: SuperMovie.Container.Film.Entity.FilmEntity
+//impl proj struct :
+//src/container/entity.cs
 public interface IFilmEntity
 {
+    /// <summary>
+    /// 释放实体
+    /// </summary>
+    /// <returns></returns>
     public bool Drop();
+
+    /// <summary>
+    /// 实体是否合法
+    /// </summary>
+    /// <returns></returns>
+    public bool IsValid();
 
     public long Id { get; }
 

@@ -1,4 +1,4 @@
-namespace SuperMovieSDK.Container.Order.Provider;
+namespace SuperMovie.Container.Order.Provider;
 
 using Entity;
 using Film.Entity;
@@ -6,6 +6,11 @@ using User.Entity;
 using Cinema.Entity;
 using Schedule.Entity;
 
+//resolver : LYF
+//asm file : OrderImpl
+//impl :: SuperMovie.Container.Order.Provider.OrderProvider
+//impl proj struct :
+//src/container/provider.cs
 public interface IOrderProvider
 {
     public IOrderEntity? CreateOrder

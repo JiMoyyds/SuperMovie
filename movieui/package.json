@@ -6,7 +6,11 @@
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -22,6 +26,9 @@
     "@types/qrcode": "^1.5.0",
     "@types/webfontloader": "^1.0.0",
     "@vitejs/plugin-vue": "^3.1.0",
+    "electron": "^21.1.0",
+    "electron-builder": "^23.3.3",
+    "electron-devtools-installer": "^3.2.0",
     "marked": "^4.1.0",
     "stylus": "^0.59.0",
     "typescript": "^4.6.4",

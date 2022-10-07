@@ -1,6 +1,10 @@
-namespace SuperMovieSDK.Db.Film.Model;
+namespace SuperMovie.Db.Film.Model;
 
-//由zty实现
+//resolver : ZTY
+//asm file : FilmImpl
+//impl :: SuperMovie.Db.Film.Model.FilmModel
+//impl proj struct :
+//src/db/model.cs
 public interface IFilmModel
 {
     public long Id { get; set; }

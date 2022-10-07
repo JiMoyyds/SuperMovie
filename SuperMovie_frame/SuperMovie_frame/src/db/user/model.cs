@@ -1,6 +1,10 @@
-namespace SuperMovieSDK.Db.User.Model;
+namespace SuperMovie.Db.User.Model;
 
-//由hzc实现
+//resolver : HZC
+//asm file : UserImpl
+//impl :: SuperMovie.Db.User.Model.UserModel
+//impl proj struct :
+//src/db/model.cs
 public interface IUserModel
 {
     public long Id { get; set; }

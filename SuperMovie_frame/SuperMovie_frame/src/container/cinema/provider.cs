@@ -1,7 +1,12 @@
-namespace SuperMovieSDK.Container.Cinema.Provider;
+namespace SuperMovie.Container.Cinema.Provider;
 
 using Entity;
 
+//resolver : WZJ
+//asm file : CinemaImpl
+//impl :: SuperMovie.Container.Cinema.Provider.CinemaProvider
+//impl proj struct :
+//src/container/provider.cs
 public interface ICinemaProvider
 {
     public ICinemaEntity? CreateCinema(string name);

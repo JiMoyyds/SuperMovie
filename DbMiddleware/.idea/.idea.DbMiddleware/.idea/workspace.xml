@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d076e1f9-7c58-4ae0-a384-ec7184d275c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util/SuperMovie.Util.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util/SuperMovie.Util.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util/src/hash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie.Util/SuperMovie.Util/src/hash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DbMiddlewarePostgresImpl/.idea/.idea.DbMiddlewarePostgresImpl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_frame/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movieui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movieui/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
       <workItem from="1664452562771" duration="152000" />
       <workItem from="1664875065149" duration="606000" />
       <workItem from="1665060163877" duration="2000" />
+      <workItem from="1665110181153" duration="42000" />
     </task>
     <servers />
   </component>
