@@ -30,6 +30,6 @@ public interface IUserEntity
     public bool RemoveOrder(IOrderEntity order);
     public bool ClearOrder();
 
-    public IVipEntity Vip { get; set; }
+    public IVipEntity? Vip { get; set; }
     public DateTime VipLevelExpireTime { get; set; }
 }
