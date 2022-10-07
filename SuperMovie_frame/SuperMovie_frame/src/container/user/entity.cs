@@ -22,7 +22,7 @@ public interface IUserEntity
     /// <returns></returns>
     public bool IsValid();
 
-    public long Id { get; set; }
+    public long Id { get; }
     public bool ResetPwd(string oldPwd, string newPwd);
 
     public List<IOrderEntity> Orders { get; }

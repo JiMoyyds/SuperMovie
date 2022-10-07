@@ -19,6 +19,6 @@ public interface IVipEntity
     /// <returns></returns>
     public bool IsValid();
 
-    public long Level { get; set; }
+    public long Level { get; }
     public long Discount { get; set; }
 }
