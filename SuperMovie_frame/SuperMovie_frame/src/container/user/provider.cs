@@ -18,6 +18,7 @@ public interface IUserProvider
         DateTime vipLevelExpireTime
     );
 
-    public IUserEntity? GetUser(long id, string pwd);
+    public IUserEntity? GetUser(long id);
+    public IUserEntity? UserLoginCheck(long id, string pwd);
     public List<IUserEntity> GetAllUser();
 }
