@@ -19,6 +19,6 @@ public interface IUserProvider
     );
 
     public IUserEntity? GetUser(long id);
-    public IUserEntity? UserLoginCheck(long id, string pwd);
+    public IUserEntity? IsIdMatchPwd(long id, string pwd);
     public List<IUserEntity> GetAllUser();
 }
