@@ -1,7 +1,7 @@
 namespace SuperMovie.Db.Schedule.Model;
 
 //resolver : WZJ
-//asm file : ScheduleImpl
+//asm file : ScheduleDbImpl
 //impl :: SuperMovie.Db.Schedule.Model.ScheduleModel
 //impl proj struct :
 //src/db/model.cs

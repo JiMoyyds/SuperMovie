@@ -3,7 +3,7 @@ namespace SuperMovie.Db.Schedule.Operation;
 using Model;
 
 //resolver : WZJ
-//asm file : ScheduleImpl
+//asm file : ScheduleDbImpl
 //impl :: SuperMovie.Db.Schedule.Operation.ScheduleOperation
 //impl proj struct :
 //src/db/operation.cs
