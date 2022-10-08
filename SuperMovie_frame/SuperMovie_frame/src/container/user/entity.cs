@@ -26,8 +26,6 @@ public interface IUserEntity
     public bool ResetPwd(string oldPwd, string newPwd);
 
     public List<IOrderEntity> Orders { get; }
-    public bool AddOrder(IOrderEntity order);
-    public bool RemoveOrder(IOrderEntity order);
     public bool ClearOrder();
 
     public IVipEntity? Vip { get; set; }
