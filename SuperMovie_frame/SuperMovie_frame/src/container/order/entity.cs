@@ -30,6 +30,6 @@ public interface IOrderEntity
     public IFilmEntity? Film { get; set; }
     public ICinemaEntity? Cinema { get; set; }
     public IScheduleEntity? Schedule { get; set; }
-    public string Seat { get; set; }
-    public DateTime Time { get; set; }
+    public string? Seat { get; set; }
+    public DateTime? Time { get; set; }
 }
