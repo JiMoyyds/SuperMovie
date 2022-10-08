@@ -26,4 +26,6 @@ public interface IFilmOperation
     public bool UpdateFilmTypes(long filmId, List<string> newValue);
     public bool UpdateFilmPrice(long filmId, double newValue);
     public bool UpdateFilmActors(long filmId, List<string> newValue);
+    public bool UpdateFilmCoverUrl(long filmId, string newValue);
+    public bool UpdateFilmPreviewVideoUrl(long filmId, string newValue);
 }

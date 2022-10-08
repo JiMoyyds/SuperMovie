@@ -36,4 +36,7 @@ public interface IFilmEntity
     public bool AddActor(string name);
     public bool RemoveActor(string name);
     public bool ClearActor(string name);
+
+    public string CoverUrl { get; set; }
+    public string PreviewVideoUrl { get; set; }
 }

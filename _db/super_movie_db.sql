@@ -52,7 +52,9 @@ CREATE TABLE default_schema.film (
     film_is_preorder boolean,
     film_types text,
     film_price double precision,
-    film_actors text
+    film_actors text,
+    film_cover_url text,
+    film_preview_video_url text
 );
 
 
@@ -129,7 +131,7 @@ COPY default_schema.cinema (cinema_id, cinema_name) FROM stdin;
 -- Data for Name: film; Type: TABLE DATA; Schema: default_schema; Owner: postgres
 --
 
-COPY default_schema.film (film_id, film_name, film_online_time, film_is_preorder, film_types, film_price, film_actors) FROM stdin;
+COPY default_schema.film (film_id, film_name, film_online_time, film_is_preorder, film_types, film_price, film_actors, film_cover_url, film_preview_video_url) FROM stdin;
 \.
 
 

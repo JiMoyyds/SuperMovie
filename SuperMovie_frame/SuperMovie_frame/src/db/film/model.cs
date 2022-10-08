@@ -14,4 +14,6 @@ public interface IFilmModel
     public List<string> Types { get; set; }
     public double Price { get; set; }
     public List<string> Actors { get; set; }
+    public string CoverUrl { get; set; }
+    public string PreviewVideoUrl { get; set; }
 }
