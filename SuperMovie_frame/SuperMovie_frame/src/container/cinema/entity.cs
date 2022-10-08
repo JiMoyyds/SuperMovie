@@ -3,7 +3,7 @@ namespace SuperMovie.Container.Cinema.Entity;
 using Schedule.Entity;
 
 //resolver : WZJ
-//asm file : CinemaImpl
+//asm file : CinemaContainerImpl
 //impl :: SuperMovie.Container.Cinema.Entity.CinemaEntity
 //impl proj struct :
 //src/container/entity.cs

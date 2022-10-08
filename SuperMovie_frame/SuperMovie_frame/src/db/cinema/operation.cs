@@ -3,7 +3,7 @@ namespace SuperMovie.Db.Cinema.Operation;
 using Model;
 
 //resolver : WZJ
-//asm file : CinemaImpl
+//asm file : CinemaDbImpl
 //impl :: SuperMovie.Db.Cinema.Operation.CinemaOperation
 //impl proj struct :
 //src/db/operation.cs

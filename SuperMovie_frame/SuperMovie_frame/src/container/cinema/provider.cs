@@ -3,7 +3,7 @@ namespace SuperMovie.Container.Cinema.Provider;
 using Entity;
 
 //resolver : WZJ
-//asm file : CinemaImpl
+//asm file : CinemaContainerImpl
 //impl :: SuperMovie.Container.Cinema.Provider.CinemaProvider
 //impl proj struct :
 //src/container/provider.cs

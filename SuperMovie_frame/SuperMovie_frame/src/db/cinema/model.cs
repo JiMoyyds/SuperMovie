@@ -1,7 +1,7 @@
 namespace SuperMovie.Db.Cinema.Model;
 
 //resolver : WZJ
-//asm file : CinemaImpl
+//asm file : CinemaDbImpl
 //impl :: SuperMovie.Db.Cinema.Model.CinemaModel
 //impl proj struct :
 //src/db/model.cs

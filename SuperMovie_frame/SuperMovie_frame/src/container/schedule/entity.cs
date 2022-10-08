@@ -4,7 +4,7 @@ using Film.Entity;
 using Cinema.Entity;
 
 //resolver : WZJ
-//asm file : ScheduleImpl
+//asm file : ScheduleContainerImpl
 //impl :: SuperMovie.Container.Schedule.Entity.ScheduleEntity
 //impl proj struct :
 //src/container/entity.cs
