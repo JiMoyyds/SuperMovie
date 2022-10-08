@@ -1,7 +1,7 @@
 namespace SuperMovie.Db.Order.Model;
 
 //resolver : LYF
-//asm file : OrderImpl
+//asm file : OrderDbImpl
 //impl :: SuperMovie.Db.Order.Model.OrderModel
 //impl proj struct :
 //src/db/model.cs

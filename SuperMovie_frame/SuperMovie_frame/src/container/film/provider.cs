@@ -3,7 +3,7 @@ namespace SuperMovie.Container.Film.Provider;
 using Entity;
 
 //resolver : ZTY
-//asm file : FilmImpl
+//asm file : FilmContainerImpl
 //impl :: SuperMovie.Container.Film.Provider.FilmProvider
 //impl proj struct :
 //src/container/provider.cs

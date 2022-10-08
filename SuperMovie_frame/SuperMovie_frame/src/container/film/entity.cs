@@ -1,7 +1,7 @@
 namespace SuperMovie.Container.Film.Entity;
 
 //resolver : ZTY
-//asm file : FilmImpl
+//asm file : FilmContainerImpl
 //impl :: SuperMovie.Container.Film.Entity.FilmEntity
 //impl proj struct :
 //src/container/entity.cs

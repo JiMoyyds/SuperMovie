@@ -1,7 +1,7 @@
 namespace SuperMovie.Db.Film.Model;
 
 //resolver : ZTY
-//asm file : FilmImpl
+//asm file : FilmDbImpl
 //impl :: SuperMovie.Db.Film.Model.FilmModel
 //impl proj struct :
 //src/db/model.cs

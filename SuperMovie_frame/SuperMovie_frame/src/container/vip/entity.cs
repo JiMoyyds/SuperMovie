@@ -1,7 +1,7 @@
 namespace SuperMovie.Container.Vip.Entity;
 
 //resolver : HZC
-//asm file : VipImpl
+//asm file : VipContainerImpl
 //impl :: SuperMovie.Container.Vip.Entity.VipEntity
 //impl proj struct :
 //src/container/entity.cs

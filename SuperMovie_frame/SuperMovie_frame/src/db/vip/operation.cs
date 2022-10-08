@@ -3,7 +3,7 @@ namespace SuperMovie.Db.Vip.Operation;
 using Model;
 
 //resolver : HZC
-//asm file : VipImpl
+//asm file : VipDbImpl
 //impl :: SuperMovie.Db.Vip.Operation.VipOperation
 //impl proj struct :
 //src/db/operation.cs

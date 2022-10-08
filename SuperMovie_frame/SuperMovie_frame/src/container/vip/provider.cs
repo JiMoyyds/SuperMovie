@@ -3,7 +3,7 @@ namespace SuperMovie.Container.Vip.Provider;
 using  Entity;
 
 //resolver : HZC
-//asm file : VipImpl
+//asm file : VipContainerImpl
 //impl :: SuperMovie.Container.Vip.Provider.VipProvider
 //impl proj struct :
 //src/container/provider.cs

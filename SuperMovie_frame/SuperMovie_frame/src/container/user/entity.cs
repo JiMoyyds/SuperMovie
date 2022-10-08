@@ -4,7 +4,7 @@ using Vip.Entity;
 using Order.Entity;
 
 //resolver : HZC
-//asm file : UserImpl
+//asm file : UserContainerImpl
 //impl :: SuperMovie.Container.User.Entity.UserEntity
 //impl proj struct :
 //src/container/entity.cs

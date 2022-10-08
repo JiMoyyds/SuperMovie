@@ -7,7 +7,7 @@ using Cinema.Entity;
 using Schedule.Entity;
 
 //resolver : LYF
-//asm file : OrderImpl
+//asm file : OrderContainerImpl
 //impl :: SuperMovie.Container.Order.Provider.OrderProvider
 //impl proj struct :
 //src/container/provider.cs

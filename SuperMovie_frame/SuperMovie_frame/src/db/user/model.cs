@@ -1,7 +1,7 @@
 namespace SuperMovie.Db.User.Model;
 
 //resolver : HZC
-//asm file : UserImpl
+//asm file : UserDbImpl
 //impl :: SuperMovie.Db.User.Model.UserModel
 //impl proj struct :
 //src/db/model.cs

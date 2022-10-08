@@ -3,7 +3,7 @@ namespace SuperMovie.Db.User.Operation;
 using Model;
 
 //resolver : HZC
-//asm file : UserImpl
+//asm file : UserDbImpl
 //impl :: SuperMovie.Db.User.Operation.UserOperation
 //impl proj struct :
 //src/db/operation.cs

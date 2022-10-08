@@ -3,7 +3,7 @@ namespace SuperMovie.Db.Film.Operation;
 using Model;
 
 //resolver : ZTY
-//asm file : FilmImpl
+//asm file : FilmDbImpl
 //impl :: SuperMovie.Db.Film.Operation.FilmOperation
 //impl proj struct :
 //src/db/operation.cs
