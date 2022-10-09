@@ -21,4 +21,6 @@ public interface IScheduleProvider
 
     public IScheduleEntity? GetSchedule(long id);
     public List<IScheduleEntity> GetAllSchedule();
+    public List<IScheduleEntity> FilterScheduleByCinema(ICinemaEntity cinema);
+    public List<IScheduleEntity> FilterScheduleByTimespan(DateTime start, DateTime end);
 }
