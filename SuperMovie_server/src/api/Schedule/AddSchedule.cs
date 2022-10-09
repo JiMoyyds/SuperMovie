@@ -7,6 +7,12 @@ public struct AddScheduleReq
     public DateTime ScheduleEndTime;
 }
 
+public struct AddScheduleRsp
+{
+    public bool Ok;
+    public long ScheduleId;
+}
+
 //api : add_schedule
 public class AddSchedule
 {

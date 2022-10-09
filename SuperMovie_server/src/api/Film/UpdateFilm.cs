@@ -1,6 +1,6 @@
 namespace SuperMovie.Server.Api.Film;
 
-public class UpdateFilmReq
+public struct UpdateFilmReq
 {
     public long FilmId;
     public string FilmName;
@@ -8,6 +8,11 @@ public class UpdateFilmReq
     public string FilmPreviewVideoUrl;
     public double FilmPrice;
     public bool FilmIsPreorder;
+}
+
+public struct UpdateFilmRsp
+{
+    public bool Ok;
 }
 
 //api : update_film

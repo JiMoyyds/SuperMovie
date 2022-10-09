@@ -8,6 +8,11 @@ public struct SearchFilmReq
     public string FilmNameKeyWord;
 }
 
+public struct SearchFilmRsp
+{
+    public List<FilmRsp> Collection;
+}
+
 //api : search_film
 public class SearchFilm
 {
