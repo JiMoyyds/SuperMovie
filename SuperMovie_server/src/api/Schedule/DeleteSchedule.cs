@@ -1,6 +1,7 @@
-namespace SuperMovie_server.api.Schedule;
+namespace SuperMovie.Server.Api.Schedule;
 
-public class RemoveSchedule
+//api : delete_schedule
+public class DeleteSchedule
 {
     
 }

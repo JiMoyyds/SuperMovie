@@ -1,5 +1,6 @@
-namespace SuperMovie_server.api.Schedule;
+namespace SuperMovie.Server.Api.Schedule;
 
+//api : add_schedule
 public class AddSchedule
 {
     

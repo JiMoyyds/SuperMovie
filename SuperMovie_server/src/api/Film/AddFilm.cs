@@ -1,5 +1,6 @@
-namespace SuperMovie_server.api.Film;
+namespace SuperMovie.Server.Api.Film;
 
+//api : add_film
 public class AddFilm
 {
     

@@ -1,6 +1,7 @@
-namespace SuperMovie_server.api.Film;
+namespace SuperMovie.Server.Api.Film;
 
-public class FilterFilm
+//api : search_film
+public class SearchFilm
 {
     
 }

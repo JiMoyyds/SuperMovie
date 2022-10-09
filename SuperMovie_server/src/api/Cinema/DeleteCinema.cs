@@ -1,5 +1,6 @@
-namespace SuperMovie_server.api.Cinema;
+namespace SuperMovie.Server.Api.Cinema;
 
+//api : deleta_cinema
 public class DeleteCinema
 {
     

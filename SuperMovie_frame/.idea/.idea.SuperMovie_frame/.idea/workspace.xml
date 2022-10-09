@@ -2,9 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/model.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/operation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/IsOrderIdValid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmNameBOR.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmTypeBOR.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Cinema/AddCinema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Cinema/AddCinema.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Cinema/DeleteCinema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Cinema/DeleteCinema.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/DeleteFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/DeleteFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllPreviewFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllPreviewFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllReleasedFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllReleasedFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/SearchFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/SearchFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/UpdateFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/UpdateFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/CreateOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/CreateOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrderWithUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrderWithUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/IsOrderValid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/RefundOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/RefundOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/AddSchedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/AddSchedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/DeleteSchedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/DeleteSchedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/SortAllRealeasedActorByOrderCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmActorBOR.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/SortAllRealeasedFilmByOrderCount.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/SortAllRealeasedTypeByOrderCount.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/AddUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/AddUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/IsUserIdMatchPwd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/IsUserIdMatchPwd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/RefundUserVip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/RefundUserVip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/UpgradeUserVip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/UpgradeUserVip.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +85,8 @@
       <workItem from="1665220225560" duration="1916000" />
       <workItem from="1665272923264" duration="218000" />
       <workItem from="1665281820226" duration="17000" />
-      <workItem from="1665322645476" duration="3689000" />
+      <workItem from="1665322645476" duration="3819000" />
+      <workItem from="1665329342173" duration="794000" />
     </task>
     <servers />
   </component>

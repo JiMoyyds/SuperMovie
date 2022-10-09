@@ -1,5 +1,6 @@
-namespace SuperMovie_server.api.Order;
+namespace SuperMovie.Server.Api.Order;
 
+//api : create_order
 public class CreateOrder
 {
     
