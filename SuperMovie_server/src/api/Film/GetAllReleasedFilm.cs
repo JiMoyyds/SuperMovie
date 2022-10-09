@@ -1,7 +1,10 @@
 namespace SuperMovie.Server.Api.Film;
 
-//api : get_all_film
-public class GetAllFilm
+public class GetAllReleasedFilmReq
 {
-    
+}
+
+//api : get_all_released_film
+public class GetAllReleasedFilm
+{
 }

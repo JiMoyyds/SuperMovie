@@ -25,6 +25,7 @@
       </v-card-title>
 
       <v-card-text>
+        <v-text-field label="电影ID"/>
         <v-text-field label="放映开始"/>
         <v-text-field label="放映结束"/>
 
@@ -49,14 +50,6 @@
             class="mb-3"
         >
           当前排厅
-          <v-btn
-              class="float-right mb-4"
-              color="primary"
-              width="100"
-          >
-            保存
-          </v-btn>
-
         </div>
       </v-card-title>
 

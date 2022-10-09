@@ -1,7 +1,11 @@
 namespace SuperMovie.Server.Api.Film;
 
-//api : delete_film
-public class AddFilm
+public struct DeleteFilmReq
 {
-    
+    public long FilmId;
+}
+
+//api : delete_film
+public class DeleteFilm
+{
 }
