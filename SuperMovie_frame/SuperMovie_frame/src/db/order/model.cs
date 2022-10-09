@@ -15,4 +15,5 @@ public interface IOrderModel
     public long CinemaId { get; set; }
     public long ScheduleId { get; set; }
     public string CinemaSeat { get; set; }
+    public string Status { get; set; }
 }

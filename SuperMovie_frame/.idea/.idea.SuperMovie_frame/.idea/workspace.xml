@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/SuperMovie_frame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/SuperMovie_frame.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/SuperMovie_server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/SuperMovie_server.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/SuperMovie_server.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/SuperMovie_server.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/SuperMovie_server.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/SuperMovie_server.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Booking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Booking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/BoxOfficeStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/BoxOfficeStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Cinema/CinemaCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Cinema/CreateCinema.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Cinema/CinemaManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Cinema/CinemaManagement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Film/FilmEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/FilmEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Film/FilmManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/FilmManagement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/PaySuccess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/PaySuccess.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/RecentOrders.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/RecentOrders.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Register.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/ResetPwd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/ResetPwd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/ScheduleEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/ScheduleEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Search.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Search.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Ticket/TicketChecking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Ticket/TicketChecking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/Ticket/TicketPrinting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Ticket/TicketPrinting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/UpgradeVip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/UpgradeVip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/component/UserInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/UserInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/operation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +61,7 @@
       <workItem from="1665220225560" duration="1916000" />
       <workItem from="1665272923264" duration="218000" />
       <workItem from="1665281820226" duration="17000" />
-      <workItem from="1665322645476" duration="1323000" />
+      <workItem from="1665322645476" duration="3689000" />
     </task>
     <servers />
   </component>

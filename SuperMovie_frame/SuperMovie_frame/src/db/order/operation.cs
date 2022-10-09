@@ -25,4 +25,5 @@ public interface IOrderOperation
     public bool UpdateOrderCinemaId(long orderId, long newValue);
     public bool UpdateOrderScheduleId(long orderId, long newValue);
     public bool UpdateOrderCinemaSeat(long orderId, string newValue);
+    public bool UpdateOrderStatus(long orderId, string newValue);
 }
