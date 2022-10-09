@@ -28,14 +28,14 @@ public interface IFilmEntity
     public List<string> Types { get; }
     public bool AddType(string name);
     public bool RemoveType(string name);
-    public bool ClearType(string name);
+    public bool ClearType();
 
     public double Price { get; set; }
 
     public List<string> Actors { get; }
     public bool AddActor(string name);
     public bool RemoveActor(string name);
-    public bool ClearActor(string name);
+    public bool ClearActor();
 
     public string CoverUrl { get; set; }
     public string PreviewVideoUrl { get; set; }

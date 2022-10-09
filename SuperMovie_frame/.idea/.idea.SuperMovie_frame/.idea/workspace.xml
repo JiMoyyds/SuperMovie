@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/film/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/film/model.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/film/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/film/operation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +58,7 @@
       <workItem from="1665217740852" duration="107000" />
       <workItem from="1665220225560" duration="1916000" />
       <workItem from="1665272923264" duration="218000" />
+      <workItem from="1665281820226" duration="17000" />
     </task>
     <servers />
   </component>
