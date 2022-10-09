@@ -25,7 +25,6 @@ public interface IOrderProvider
 
     public IOrderEntity? GetOrder(long id);
     public List<IOrderEntity> GetAllOrder();
-    public List<IOrderEntity> FilterOrderByUser(IUserEntity user);
     public List<IOrderEntity> FilterOrderByFilm(IFilmEntity film);
     public List<IOrderEntity> FilterOrderByFilmTypes(List<string> filmTypes);
     public List<IOrderEntity> FilterOrderByFilmActors(List<string> filmActors);

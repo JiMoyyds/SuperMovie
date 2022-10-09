@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/thaumy/data/dev/lab/SuperMovie_server/SuperMovie_server.csproj": {}
+    "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/SuperMovie_server.csproj": {}
   },
   "projects": {
-    "/home/thaumy/data/dev/lab/SuperMovie_server/SuperMovie_server.csproj": {
+    "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/SuperMovie_server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/thaumy/data/dev/lab/SuperMovie_server/SuperMovie_server.csproj",
+        "projectUniqueName": "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/SuperMovie_server.csproj",
         "projectName": "SuperMovie_server",
-        "projectPath": "/home/thaumy/data/dev/lab/SuperMovie_server/SuperMovie_server.csproj",
+        "projectPath": "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/SuperMovie_server.csproj",
         "packagesPath": "/home/thaumy/.nuget/packages/",
-        "outputPath": "/home/thaumy/data/dev/lab/SuperMovie_server/obj/",
+        "outputPath": "/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/thaumy/.nuget/NuGet/NuGet.Config"
