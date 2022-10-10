@@ -41,11 +41,11 @@ function isBigIntKey(key: string) {
         key === "ScheduleId" ||
         key === "ScheduleFilmId" ||
 
-        key === "OrderId: bigint" ||
-        key === "OrderFilmId: bigint" ||
-        key === "OrderUserId: bigint" ||
-        key === "OrderCinemaId: bigint" ||
-        key === "OrderScheduleId: bigint"
+        key === "OrderId" ||
+        key === "OrderFilmId" ||
+        key === "OrderUserId" ||
+        key === "OrderCinemaId" ||
+        key === "OrderScheduleId"
 }
 
 function reqStringify(req: any) {
