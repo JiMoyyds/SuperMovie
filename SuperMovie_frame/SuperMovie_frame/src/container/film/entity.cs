@@ -21,8 +21,8 @@ public interface IFilmEntity
 
     public long Id { get; }
 
-    public string Name { get; set; }
-    public DateTime OnlineTime { get; set; }
+    public string? Name { get; set; }
+    public DateTime? OnlineTime { get; set; }
     public bool IsPreorder { get; set; }
 
     public List<string> Types { get; }
@@ -37,6 +37,6 @@ public interface IFilmEntity
     public bool RemoveActor(string name);
     public bool ClearActor();
 
-    public string CoverUrl { get; set; }
-    public string PreviewVideoUrl { get; set; }
+    public string? CoverUrl { get; set; }
+    public string? PreviewVideoUrl { get; set; }
 }
