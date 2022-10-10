@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/ref/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/ref/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/ref/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/ref/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/app.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/app.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/FilmContainerImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/FilmContainerImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/FilmDbImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/FilmDbImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Cinema/ScheduleEditor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Cinema/ScheduleEditor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/plugins/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/plugins/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +65,7 @@
       <workItem from="1665370227443" duration="20000" />
       <workItem from="1665373737108" duration="19000" />
       <workItem from="1665373877341" duration="4594000" />
-      <workItem from="1665408998607" duration="1481000" />
+      <workItem from="1665408998607" duration="1787000" />
     </task>
     <servers />
   </component>
