@@ -12,6 +12,7 @@ type  AddFilmReq =
         FilmPreviewVideoUrl: string
         FilmPrice: number
         FilmIsPreorder: boolean
+        FilmOnlineTime: Date
     }
 
 type AddFilmRsp =

@@ -10,11 +10,11 @@ using Util;
 public struct AddFilmReq
 {
     public string FilmName;
-    public DateTime FilmOnlineTime;
     public string FilmCoverUrl;
     public string FilmPreviewVideoUrl;
     public double FilmPrice;
     public bool FilmIsPreorder;
+    public DateTime FilmOnlineTime;
 }
 
 public struct AddFilmRsp
@@ -53,6 +53,7 @@ public class AddFilm : WebSocketBehavior
             {
                 Ok = true,
                 FilmId = film.Id
+                Film
             };
         }
         else

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/cinema/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/cinema/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/user/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/user/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/addFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/addFilm.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +63,7 @@
       <workItem from="1665281820226" duration="17000" />
       <workItem from="1665322645476" duration="3819000" />
       <workItem from="1665329342173" duration="6258000" />
+      <workItem from="1665370227443" duration="20000" />
     </task>
     <servers />
   </component>
