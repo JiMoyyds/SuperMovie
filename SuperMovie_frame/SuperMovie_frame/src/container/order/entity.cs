@@ -32,5 +32,9 @@ public interface IOrderEntity
     public ICinemaEntity? Cinema { get; set; }
     public IScheduleEntity? Schedule { get; set; }
     public string? Seat { get; set; }
+
     public string? Status { get; set; }
+    //created:表示订单刚被创建，等待支付
+    //paid:表示订单已经被支付，没有被退款
+    //refunded:表示订单已被支付，但被退款
 }

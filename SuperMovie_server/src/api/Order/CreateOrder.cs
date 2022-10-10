@@ -1,3 +1,5 @@
+using SuperMovie.Container.Order.Provider;
+
 namespace SuperMovie.Server.Api.Order;
 
 using WebSocketSharp;
@@ -23,9 +25,15 @@ public struct CreateOrderRsp
 //api : create_order
 public class CreateOrder : WebSocketBehavior
 {
+    private IOrderProvider _orderProvider;
+    public CreateOrder(IOrderProvider orderProvider)
+    {
+        
+    }
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<CreateOrderReq>(e.Data);
+        var order=
         var rsp = new CreateOrderRsp
         {
             Ok = false,

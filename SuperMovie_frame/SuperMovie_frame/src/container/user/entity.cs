@@ -30,4 +30,5 @@ public interface IUserEntity
 
     public IVipEntity? Vip { get; set; }
     public DateTime? VipLevelExpireTime { get; set; }
+    public double GetIfRefundVipThenAmount();
 }

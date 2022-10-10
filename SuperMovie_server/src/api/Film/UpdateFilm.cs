@@ -23,14 +23,41 @@ public struct UpdateFilmRsp
 //api : update_film
 public class UpdateFilm : WebSocketBehavior
 {
+    private readonly IFilmProvider _filmProvider;
+
+    public UpdateFilm(IFilmProvider filmProvider)
+    {
+        _filmProvider = filmProvider;
+    }
+
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<UpdateFilmReq>(e.Data);
-        var rsp = new UpdateFilmRsp
+        var film = _filmProvider.GetFilm(req.FilmId);
+
+        UpdateFilmRsp rsp;
+
+        if (film != null)
         {
-            Ok = false
-        };
-       
+            film.Name = req.FilmName;
+            film.CoverUrl = req.FilmCoverUrl;
+            film.PreviewVideoUrl = req.FilmPreviewVideoUrl;
+            film.Price = req.FilmPrice;
+            film.IsPreorder = req.FilmIsPreorder;
+
+            rsp = new UpdateFilmRsp
+            {
+                Ok = true
+            };
+        }
+        else
+        {
+            rsp = new UpdateFilmRsp
+            {
+                Ok = false
+            };
+        }
+
         Send(JsonHelper.Stringify(rsp));
     }
 }

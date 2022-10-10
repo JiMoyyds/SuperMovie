@@ -44,17 +44,48 @@ public class SearchFilm : WebSocketBehavior
             .FilterFilmByTypes(req.FilmTypes);
         var filterByFilmOnlineTime = _filmProvider
             .FilterFilmByOnlineTime(req.FilmOnlineTimeStart, req.FilmOnlineTimeEnd);
-        var filterByScheduleTime = ()=>
+        var filterByScheduleTime = () =>
         {
-             var schedules=_scheduleProvider
+            var schedules = _scheduleProvider
                 .FilterScheduleByTimespan(req.FilmScheduleTimeStart, req.FilmScheduleTimeEnd);
-             var films = new List<IFilmEntity>();
-             return films
+            var films = new List<IFilmEntity>();
+
+            foreach (var schedule in schedules)
+            {
+                if (schedule.Film != null)
+                    films.Add(schedule.Film);
+            }
+
+            return films;
         };
+
+        var filmEntities =
+            new List<IFilmEntity>();
+        filmEntities.AddRange(filterByFilmName);
+        filmEntities.AddRange(filterByFilmTypes);
+        filmEntities.AddRange(filterByFilmOnlineTime);
+        filmEntities.AddRange(filterByScheduleTime());
+
+        var filmRspList = new List<FilmRsp>();
+
+        foreach (var film in filmEntities.DistinctBy(x => x.Id))
+        {
+            var filmRsp = new FilmRsp
+            {
+                FilmId = film.Id,
+                FilmName = film.Name,
+                FilmCoverUrl = film.CoverUrl,
+                FilmPreviewVideoUrl = film.PreviewVideoUrl,
+                FilmPrice = film.Price,
+                FilmIsPreorder = film.IsPreorder
+            };
+
+            filmRspList.Add(filmRsp);
+        }
 
         var rsp = new SearchFilmRsp
         {
-            Collection = new List<FilmRsp>()
+            Collection = filmRspList
         };
 
         Send(JsonHelper.Stringify(rsp));
