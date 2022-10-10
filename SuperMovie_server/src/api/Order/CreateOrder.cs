@@ -17,7 +17,7 @@ public struct CreateOrderReq
 public struct CreateOrderRsp
 {
     public bool Ok;
-    public bool OrderId;
+    public long OrderId;
 }
 
 //api : create_order
@@ -26,5 +26,10 @@ public class CreateOrder : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<CreateOrderReq>(e.Data);
+        var rsp = new CreateOrderRsp
+        {
+            Ok = false,
+            OrderId = 0
+        };
     }
 }

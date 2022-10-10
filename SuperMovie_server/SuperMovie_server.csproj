@@ -11,6 +11,9 @@
       <Reference Include="SuperMovie.Util">
         <HintPath>..\SuperMovie.Util\SuperMovie.Util\bin\Debug\net6.0\SuperMovie.Util.dll</HintPath>
       </Reference>
+      <Reference Include="SuperMovie_frame">
+        <HintPath>..\SuperMovie_frame\SuperMovie_frame\bin\Debug\net6.0\SuperMovie_frame.dll</HintPath>
+      </Reference>
       <Reference Include="websocket-sharp">
         <HintPath>..\..\websocket-sharp\websocket-sharp\bin\Release\net6.0\websocket-sharp.dll</HintPath>
       </Reference>

@@ -21,5 +21,9 @@ public class UpgradeUserVip : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<UpgradeUserVipReq>(e.Data);
+        var rsp = new UpgradeUserVipRsp
+        {
+            Ok = false
+        };
     }
 }

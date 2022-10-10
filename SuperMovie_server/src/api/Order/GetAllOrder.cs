@@ -30,5 +30,9 @@ public class GetAllOrder : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<GetAllOrderReq>(e.Data);
+        var rsp = new GetAllOrderRsp
+        {
+            Collection = new List<OrderRsp>()
+        };
     }
 }

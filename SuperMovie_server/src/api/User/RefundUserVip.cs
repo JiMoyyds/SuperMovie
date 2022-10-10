@@ -20,5 +20,9 @@ public class RefundUserVip : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<RefundUserVipReq>(e.Data);
+        var rsp = new RefundUserVipRsp
+        {
+            Ok = false
+        };
     }
 }

@@ -28,6 +28,6 @@ public interface IUserEntity
     public List<IOrderEntity> Orders { get; }
     public bool ClearOrder();
 
-    public IVipEntity? Vip { get; set; }
-    public DateTime? VipLevelExpireTime { get; set; }
+    public IVipEntity Vip { get; set; }
+    public DateTime VipLevelExpireTime { get; set; }
 }

@@ -20,5 +20,9 @@ public class RefundOrder : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<RefundOrderReq>(e.Data);
+        var rsp = new RefundOrderRsp
+        {
+            Ok = false
+        };
     }
 }

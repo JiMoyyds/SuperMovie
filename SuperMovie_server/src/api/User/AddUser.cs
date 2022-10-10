@@ -21,5 +21,9 @@ public class AddUser : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<AddUserReq>(e.Data);
+        var rsp = new AddUserRsp
+        {
+            Ok = false
+        };
     }
 }

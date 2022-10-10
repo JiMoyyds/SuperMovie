@@ -22,7 +22,7 @@ public interface ICinemaEntity
     public bool IsValid();
 
     public long Id { get; }
-    public string? Name { get; set; }
+    public string Name { get; set; }
 
     public List<IScheduleEntity> Schedules { get; }
     public bool ClearSchedule();

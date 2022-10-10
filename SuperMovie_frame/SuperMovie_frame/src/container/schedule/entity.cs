@@ -23,8 +23,8 @@ public interface IScheduleEntity
     public bool IsValid();
 
     public long Id { get; }
-    public DateTime? StartTime { get; set; }
-    public DateTime? EndTime { get; set; }
-    public ICinemaEntity? Cinema { get; set; }
-    public IFilmEntity? Film { get; set; }
+    public DateTime StartTime { get; set; }
+    public DateTime EndTime { get; set; }
+    public ICinemaEntity Cinema { get; set; }
+    public IFilmEntity Film { get; set; }
 }

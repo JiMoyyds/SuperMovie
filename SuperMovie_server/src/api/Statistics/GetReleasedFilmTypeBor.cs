@@ -25,5 +25,9 @@ public class GetReleasedFilmTypeBor : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<GetReleasedFilmTypeBorReq>(e.Data);
+        var rsp = new GetReleasedFilmTypeBorRsp
+        {
+            Collection = new List<FilmTypeBoxOfficeRsp>()
+        };
     }
 }

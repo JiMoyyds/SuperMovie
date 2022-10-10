@@ -20,5 +20,9 @@ public class IsOrderIdValid : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<IsOrderIdValidReq>(e.Data);
+        var rsp = new IsOrderIdValidRsp
+        {
+            Ok = false
+        };
     }
 }

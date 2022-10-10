@@ -27,10 +27,10 @@ public interface IOrderEntity
     public long Id { get; }
     public IUserEntity? User { get; set; }
     public double PayAmount { get; set; }
-    public DateTime? Time { get; set; }
-    public IFilmEntity? Film { get; set; }
-    public ICinemaEntity? Cinema { get; set; }
-    public IScheduleEntity? Schedule { get; set; }
-    public string? Seat { get; set; }
-    public string? Status { get; set; }
+    public DateTime Time { get; set; }
+    public IFilmEntity Film { get; set; }
+    public ICinemaEntity Cinema { get; set; }
+    public IScheduleEntity Schedule { get; set; }
+    public string Seat { get; set; }
+    public string Status { get; set; }
 }

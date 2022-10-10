@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/vip/provider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/vip/provider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/cinema/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/cinema/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/user/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/user/entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SuperMovie_server/SuperMovie_server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/SuperMovie_server.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SuperMovie_server/SuperMovie_server.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/SuperMovie_server.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" afterDir="false" />
@@ -85,7 +89,7 @@
       <workItem from="1665272923264" duration="218000" />
       <workItem from="1665281820226" duration="17000" />
       <workItem from="1665322645476" duration="3819000" />
-      <workItem from="1665329342173" duration="5167000" />
+      <workItem from="1665329342173" duration="5882000" />
     </task>
     <servers />
   </component>

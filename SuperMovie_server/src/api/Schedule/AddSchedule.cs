@@ -23,5 +23,10 @@ public class AddSchedule : WebSocketBehavior
     protected override void OnMessage(MessageEventArgs e)
     {
         var req = JsonHelper.Parse<AddScheduleReq>(e.Data);
+        var rsp = new AddScheduleRsp
+        {
+            Ok = false,
+            ScheduleId = 0
+        };
     }
 }

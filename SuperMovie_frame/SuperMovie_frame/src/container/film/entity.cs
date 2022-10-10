@@ -21,8 +21,8 @@ public interface IFilmEntity
 
     public long Id { get; }
 
-    public string? Name { get; set; }
-    public DateTime? OnlineTime { get; set; }
+    public string Name { get; set; }
+    public DateTime OnlineTime { get; set; }
     public bool IsPreorder { get; set; }
 
     public List<string> Types { get; }
