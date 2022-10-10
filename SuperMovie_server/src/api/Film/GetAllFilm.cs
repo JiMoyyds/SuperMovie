@@ -57,7 +57,9 @@ public class GetAllFilm : WebSocketBehavior
 
         var rsp = new GetAllFilmRsp
         {
-            Collection = new List<FilmRsp>()
+            Collection = filmRspList
         };
+
+        Send(JsonHelper.Stringify(rsp));
     }
 }

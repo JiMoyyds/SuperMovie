@@ -3,8 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/provider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/provider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/addFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/addFilm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/SearchFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/SearchFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/UpdateFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/UpdateFilm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/CreateOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/CreateOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrderWithUserId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/GetAllOrderWithUserId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/IsOrderIdValid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/IsOrderIdValid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/RefundOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/RefundOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/AddSchedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/AddSchedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/DeleteSchedule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/DeleteSchedule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmActorBor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmActorBor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmNameBor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmNameBor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmTypeBor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Statistics/GetReleasedFilmTypeBor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/AddUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/AddUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/IsUserIdMatchPwd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/IsUserIdMatchPwd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/RefundUserVip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/RefundUserVip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/UpgradeUserVip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/UpgradeUserVip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Search.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/searchFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/searchFilm.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +83,7 @@
       <workItem from="1665322645476" duration="3819000" />
       <workItem from="1665329342173" duration="6258000" />
       <workItem from="1665370227443" duration="20000" />
+      <workItem from="1665373737108" duration="19000" />
     </task>
     <servers />
   </component>

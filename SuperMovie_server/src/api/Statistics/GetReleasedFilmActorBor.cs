@@ -29,5 +29,7 @@ public class GetReleasedFilmActorBor : WebSocketBehavior
         {
             Collection = new List<FilmActorBoxOfficeRsp>()
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

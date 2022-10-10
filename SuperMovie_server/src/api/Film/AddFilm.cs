@@ -53,7 +53,6 @@ public class AddFilm : WebSocketBehavior
             {
                 Ok = true,
                 FilmId = film.Id
-                Film
             };
         }
         else

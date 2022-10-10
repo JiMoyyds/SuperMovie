@@ -34,5 +34,7 @@ public class GetAllOrder : WebSocketBehavior
         {
             Collection = new List<OrderRsp>()
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

@@ -25,5 +25,7 @@ public class IsUserIdMatchPwd : WebSocketBehavior
         {
             Ok = false
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

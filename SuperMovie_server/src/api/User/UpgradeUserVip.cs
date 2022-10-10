@@ -25,5 +25,7 @@ public class UpgradeUserVip : WebSocketBehavior
         {
             Ok = false
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

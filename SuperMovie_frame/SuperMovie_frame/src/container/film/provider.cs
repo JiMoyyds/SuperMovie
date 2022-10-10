@@ -26,8 +26,4 @@ public interface IFilmProvider
     public List<IFilmEntity> FilterFilmByName(string name);
     public List<IFilmEntity> MatchFilmByName(string name);
     public List<IFilmEntity> FilterFilmByActors(List<string> actors);
-
-    public List<(string filmActor, double boxOffice)> GetReleasedFilmActorBor();
-    public List<(string filmName, double boxOffice)> GetReleasedFilmNameBor();
-    public List<(string filmType, double boxOffice)> GetReleasedFilmTypeBor();
 }

@@ -24,5 +24,7 @@ public class IsOrderIdValid : WebSocketBehavior
         {
             Ok = false
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

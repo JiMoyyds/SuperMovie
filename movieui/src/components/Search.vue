@@ -37,7 +37,7 @@
         label="场次"
         multiple
     />
-    <v-text-field label="电影关键词"/>
+    <v-text-field label="电影名关键词"/>
 
     <div style="display:flex">
       <v-btn class="search_btn" color="primary">查询</v-btn>

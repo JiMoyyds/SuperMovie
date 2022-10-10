@@ -24,5 +24,7 @@ public class GetAllOrderWithUserId : WebSocketBehavior
         {
             Collection = new List<OrderRsp>()
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

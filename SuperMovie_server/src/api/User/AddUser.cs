@@ -25,5 +25,7 @@ public class AddUser : WebSocketBehavior
         {
             Ok = false
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

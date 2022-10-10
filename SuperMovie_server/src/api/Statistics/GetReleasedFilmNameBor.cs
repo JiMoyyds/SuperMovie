@@ -29,5 +29,7 @@ public class GetReleasedFilmNameBor : WebSocketBehavior
         {
             Collection = new List<FilmNameBoxOfficeRsp>()
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

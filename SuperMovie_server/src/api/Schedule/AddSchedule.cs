@@ -28,5 +28,7 @@ public class AddSchedule : WebSocketBehavior
             Ok = false,
             ScheduleId = 0
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

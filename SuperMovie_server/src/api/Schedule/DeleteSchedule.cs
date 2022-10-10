@@ -24,5 +24,7 @@ public class DeleteSchedule : WebSocketBehavior
         {
             Ok = false
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

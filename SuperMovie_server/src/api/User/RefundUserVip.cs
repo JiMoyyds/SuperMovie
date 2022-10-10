@@ -24,5 +24,7 @@ public class RefundUserVip : WebSocketBehavior
         {
             Ok = false
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

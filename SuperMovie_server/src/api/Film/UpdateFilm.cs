@@ -30,5 +30,7 @@ public class UpdateFilm : WebSocketBehavior
         {
             Ok = false
         };
+       
+        Send(JsonHelper.Stringify(rsp));
     }
 }

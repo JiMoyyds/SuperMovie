@@ -9,8 +9,10 @@ const conn = new WebSocket(`${wsUrlRoot}/search_film`)
 type SearchFilmReq =
     {
         FilmTypes: string[]
-        FilmOnlineTime: Date
-        FilmScheduleStartTime: Date
+        FilmOnlineTimeStart: Date
+        FilmOnlineTimeEnd: Date
+        FilmScheduleTimeStart: Date
+        FilmScheduleTimeEnd: Date
         FilmNameKeyWord: string
     }
 
