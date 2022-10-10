@@ -1,7 +1,8 @@
-namespace SuperMovie_server.api.User;
+namespace SuperMovie.Server.Api.User;
 
 using WebSocketSharp;
 using WebSocketSharp.Server;
+using Util;
 
 public struct AddUserReq
 {
@@ -17,4 +18,8 @@ public struct AddUserRsp
 //api : add_user
 public class AddUser : WebSocketBehavior
 {
+    protected override void OnMessage(MessageEventArgs e)
+    {
+        var req = JsonHelper.Parse<AddUserReq>(e.Data);
+    }
 }

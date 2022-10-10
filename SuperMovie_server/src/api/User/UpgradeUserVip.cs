@@ -1,7 +1,8 @@
-namespace SuperMovie_server.api.User;
+namespace SuperMovie.Server.Api.User;
 
 using WebSocketSharp;
 using WebSocketSharp.Server;
+using Util;
 
 public struct UpgradeUserVipReq
 {
@@ -17,4 +18,8 @@ public struct UpgradeUserVipRsp
 //api : upgrade_user_vip
 public class UpgradeUserVip : WebSocketBehavior
 {
+    protected override void OnMessage(MessageEventArgs e)
+    {
+        var req = JsonHelper.Parse<UpgradeUserVipReq>(e.Data);
+    }
 }

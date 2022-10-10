@@ -2,6 +2,7 @@ namespace SuperMovie.Server.Api.Order;
 
 using WebSocketSharp;
 using WebSocketSharp.Server;
+using Util;
 
 public struct CreateOrderReq
 {
@@ -22,4 +23,8 @@ public struct CreateOrderRsp
 //api : create_order
 public class CreateOrder : WebSocketBehavior
 {
+    protected override void OnMessage(MessageEventArgs e)
+    {
+        var req = JsonHelper.Parse<CreateOrderReq>(e.Data);
+    }
 }

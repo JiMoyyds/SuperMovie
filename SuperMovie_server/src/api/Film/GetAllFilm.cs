@@ -2,6 +2,7 @@ namespace SuperMovie.Server.Api.Film;
 
 using WebSocketSharp;
 using WebSocketSharp.Server;
+using Util;
 
 public struct GetAllFilmReq
 {
@@ -25,4 +26,8 @@ public struct GetAllFilmRsp
 //api : get_all_film
 public class GetAllFilm : WebSocketBehavior
 {
+    protected override void OnMessage(MessageEventArgs e)
+    {
+        var req = JsonHelper.Parse<GetAllFilmReq>(e.Data);
+    }
 }

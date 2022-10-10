@@ -1,6 +1,6 @@
 namespace SuperMovie.Container.Vip.Provider;
 
-using  Entity;
+using Entity;
 
 //resolver : HZC
 //asm file : VipContainerImpl
@@ -12,7 +12,8 @@ public interface IVipProvider
     public IVipEntity? CreateVip
     (
         long level,
-        double discount
+        double discount,
+        double monthPrice
     );
 
     public IVipEntity? GetVip(long level);
