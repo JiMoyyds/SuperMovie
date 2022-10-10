@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Film;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct DeleteFilmReq
 {
     public long FilmId;
@@ -11,6 +14,6 @@ public struct DeleteFilmRsp
 }
 
 //api : delete_film
-public class DeleteFilm
+public class DeleteFilm : WebSocketBehavior
 {
 }

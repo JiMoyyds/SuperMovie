@@ -1,5 +1,8 @@
 namespace SuperMovie_server.api.User;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct AddUserReq
 {
     public long UserId;
@@ -12,6 +15,6 @@ public struct AddUserRsp
 }
 
 //api : add_user
-public class AddUser
+public class AddUser : WebSocketBehavior
 {
 }

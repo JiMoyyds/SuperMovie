@@ -28,4 +28,8 @@ public interface IOrderProvider
     public List<IOrderEntity> FilterOrderByFilm(IFilmEntity film);
     public List<IOrderEntity> FilterOrderByFilmTypes(List<string> filmTypes);
     public List<IOrderEntity> FilterOrderByFilmActors(List<string> filmActors);
+
+    public List<(string filmActor, long boxOffice)> GetReleasedFilmActorBor();
+    public List<(string filmName, long boxOffice)> GetReleasedFilmNameBor();
+    public List<(string filmType, long boxOffice)> GetReleasedFilmTypeBor();
 }

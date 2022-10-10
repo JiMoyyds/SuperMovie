@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Order;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct GetAllOrderReq
 {
 }
@@ -11,7 +14,7 @@ public struct OrderRsp
     public long OrderFilmId;
     public long OrderCinemaId;
     public long OrderScheduleId;
-    public long OrderSeat;
+    public string OrderSeat;
     public double OrderPayAmount;
 }
 
@@ -21,6 +24,6 @@ public struct GetAllOrderRsp
 }
 
 //api : get_all_order
-public class GetAllOrder
+public class GetAllOrder : WebSocketBehavior
 {
 }

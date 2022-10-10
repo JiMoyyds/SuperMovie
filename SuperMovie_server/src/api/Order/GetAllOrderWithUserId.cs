@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Order;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct GetAllOrderWithUserIdReq
 {
     public long OrderUserId;
@@ -11,6 +14,6 @@ public struct GetAllOrderWithUserIdRsp
 }
 
 //api : get_all_order_with_user
-public class GetAllOrderWithUserId
+public class GetAllOrderWithUserId : WebSocketBehavior
 {
 }

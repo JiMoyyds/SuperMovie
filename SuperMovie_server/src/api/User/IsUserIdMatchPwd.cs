@@ -1,9 +1,12 @@
 namespace SuperMovie_server.api.User;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct IsUserIdMatchPwdReq
 {
     public long UserId;
-    public long UserPwd;
+    public string UserPwd;
 }
 
 public struct IsUserIdMatchPwdRsp
@@ -12,6 +15,6 @@ public struct IsUserIdMatchPwdRsp
 }
 
 //api : is_user_id_match_pwd
-public class IsUserIdMatchPwd
+public class IsUserIdMatchPwd : WebSocketBehavior
 {
 }

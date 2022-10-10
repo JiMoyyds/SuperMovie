@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Schedule;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct AddScheduleReq
 {
     public long ScheduleFilmId;
@@ -14,6 +17,6 @@ public struct AddScheduleRsp
 }
 
 //api : add_schedule
-public class AddSchedule
+public class AddSchedule : WebSocketBehavior
 {
 }

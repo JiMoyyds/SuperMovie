@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Schedule;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct DeleteScheduleReq
 {
     public long ScheduleId;
@@ -7,10 +10,10 @@ public struct DeleteScheduleReq
 
 public struct DeleteScheduleRsp
 {
-    public long Ok;
+    public bool Ok;
 }
 
 //api : delete_schedule
-public class DeleteSchedule
+public class DeleteSchedule : WebSocketBehavior
 {
 }

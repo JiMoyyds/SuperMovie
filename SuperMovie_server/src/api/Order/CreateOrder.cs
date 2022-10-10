@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Order;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct CreateOrderReq
 {
     public long OrderFilmId;
@@ -17,6 +20,6 @@ public struct CreateOrderRsp
 }
 
 //api : create_order
-public class CreateOrder
+public class CreateOrder : WebSocketBehavior
 {
 }

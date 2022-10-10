@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Order;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct RefundOrderReq
 {
     public long OrderId;
@@ -11,6 +14,6 @@ public struct RefundOrderRsp
 }
 
 //api : refund_order
-public class RefundOrder
+public class RefundOrder : WebSocketBehavior
 {
 }

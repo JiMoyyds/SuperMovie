@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Film;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct UpdateFilmReq
 {
     public long FilmId;
@@ -16,6 +19,6 @@ public struct UpdateFilmRsp
 }
 
 //api : update_film
-public class UpdateFilm
+public class UpdateFilm : WebSocketBehavior
 {
 }

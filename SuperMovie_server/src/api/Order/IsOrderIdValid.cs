@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Order;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct IsOrderIdValidReq
 {
     public long OrderId;
@@ -11,6 +14,6 @@ public struct IsOrderIdValidRsp
 }
 
 //api : is_order_id_valid
-public class IsOrderIdValid
+public class IsOrderIdValid : WebSocketBehavior
 {
 }

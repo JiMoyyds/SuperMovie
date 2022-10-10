@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Statistics;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct GetReleasedFilmNameBorReq
 {
 }
@@ -7,7 +10,7 @@ public struct GetReleasedFilmNameBorReq
 public struct FilmNameBoxOfficeRsp
 {
     public string FilmName;
-    public string FilmBoxOffice;
+    public long FilmBoxOffice;
 }
 
 public struct GetReleasedFilmNameBorRsp
@@ -16,6 +19,6 @@ public struct GetReleasedFilmNameBorRsp
 }
 
 //api : get_released_film_name_bor
-public class GetReleasedFilmNameBor
+public class GetReleasedFilmNameBor : WebSocketBehavior
 {
 }

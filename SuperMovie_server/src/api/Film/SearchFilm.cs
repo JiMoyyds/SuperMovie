@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Film;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct SearchFilmReq
 {
     public List<string> FilmTypes;
@@ -14,6 +17,6 @@ public struct SearchFilmRsp
 }
 
 //api : search_film
-public class SearchFilm
+public class SearchFilm : WebSocketBehavior
 {
 }

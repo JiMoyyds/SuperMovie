@@ -1,5 +1,8 @@
 namespace SuperMovie.Server.Api.Cinema;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct AddCinemaReq
 {
     public string CinemaName;
@@ -12,6 +15,6 @@ public struct AddCinemaRsp
 }
 
 //api : add_cinema
-public class AddCinema
+public class AddCinema : WebSocketBehavior
 {
 }

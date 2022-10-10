@@ -1,12 +1,15 @@
 namespace SuperMovie.Server.Api.Film;
 
+using WebSocketSharp;
+using WebSocketSharp.Server;
+
 public struct GetAllFilmReq
 {
 }
 
 public struct FilmRsp
 {
-    public string FilmId;
+    public long FilmId;
     public string FilmName;
     public string FilmCoverUrl;
     public string FilmPreviewVideoUrl;
@@ -20,6 +23,6 @@ public struct GetAllFilmRsp
 }
 
 //api : get_all_film
-public class GetAllFilm
+public class GetAllFilm : WebSocketBehavior
 {
 }
