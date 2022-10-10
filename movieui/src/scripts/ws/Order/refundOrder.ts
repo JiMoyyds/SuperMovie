@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {refundOrder}
-
-const conn = new WebSocket(`${wsUrlRoot}/refund_order`)
+export type {
+    RefundOrderReq,
+    RefundOrderRsp
+}
 
 type RefundOrderReq =
     {
@@ -16,10 +18,14 @@ type RefundOrderRsp =
     }
 
 async function refundOrder(req: RefundOrderReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/refund_order`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('refund_order req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('refund_order rsp:' + msg)
 
     return <RefundOrderRsp>rspParse(msg)
 }

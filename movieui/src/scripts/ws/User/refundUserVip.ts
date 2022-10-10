@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {refundUserVip}
-
-const conn = new WebSocket(`${wsUrlRoot}/refund_user_vip`)
+export type {
+    RefundUserVipReq,
+    RefundUserVipRsp
+}
 
 type RefundUserVipReq =
     {
@@ -16,10 +18,14 @@ type RefundUserVipRsp =
     }
 
 async function refundUserVip(req: RefundUserVipReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/refund_user_vip`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('refund_user_vip req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('refund_user_vip rsp:' + msg)
 
     return <RefundUserVipRsp>rspParse(msg)
 }

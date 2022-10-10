@@ -20,7 +20,9 @@
 
 import {ref} from "vue"
 import OrderCard from "@/components/Order/OrderCard.vue"
+import {useRouter} from "vue-router"
 
+const router = useRouter()
 defineProps<{
   user_id: number
 }>()

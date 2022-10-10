@@ -63,14 +63,14 @@
           <v-btn
               prepend-icon="mdi-lock-reset"
               color="primary"
-              @click="$router.push('/reset_pwd/'+user_id)"
+              @click="router.push('/reset_pwd/'+user_id)"
           >
             修改密码
           </v-btn>
           <v-btn
               prepend-icon="mdi-crown"
               color="primary"
-              @click="$router.push('/upgrade_vip/1234')"
+              @click="router.push('/upgrade_vip/1234')"
           >
             升级会员
           </v-btn>
@@ -84,6 +84,9 @@
 </template>
 
 <script lang="ts" setup>
+import {useRouter} from "vue-router"
+
+const router = useRouter()
 
 defineProps<{
   user_id: number,

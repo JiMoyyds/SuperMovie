@@ -19,15 +19,17 @@ public struct AddCinemaRsp
 //api : add_cinema
 public class AddCinema : WebSocketBehavior
 {
-    private readonly ICinemaProvider _cinemaProvider;
+    private ICinemaProvider _cinemaProvider;
 
-    public AddCinema(ICinemaProvider cinemaProvider)
+    public void Set(ICinemaProvider cinemaProvider)
     {
         _cinemaProvider = cinemaProvider;
     }
 
     protected override void OnMessage(MessageEventArgs e)
     {
+        Console.WriteLine($"add_cinema req:\n{e.Data}");
+
         var req = JsonHelper.Parse<AddCinemaReq>(e.Data);
         var cinema = _cinemaProvider.CreateCinema(req.CinemaName);
 
@@ -50,6 +52,8 @@ public class AddCinema : WebSocketBehavior
             };
         }
 
-        Send(JsonHelper.Stringify(rsp));
+        var json = JsonHelper.Stringify(rsp);
+        Console.WriteLine($"add_cinema rsp:\n{json}");
+        Send(json);
     }
 }

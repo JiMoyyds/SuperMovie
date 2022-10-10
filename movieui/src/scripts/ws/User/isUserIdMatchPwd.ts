@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {isUserIdMatchPwd}
-
-const conn = new WebSocket(`${wsUrlRoot}/is_user_id_match_pwd`)
+export type {
+    IsUserIdMatchPwdReq,
+    IsUserIdMatchPwdRsp
+}
 
 type IsUserIdMatchPwdReq =
     {
@@ -17,10 +19,14 @@ type IsUserIdMatchPwdRsp =
     }
 
 async function isUserIdMatchPwd(req: IsUserIdMatchPwdReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/is_user_id_match_pwd`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('is_user_id_match_pwd req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('is_user_id_match_pwd rsp:' + msg)
 
     return <IsUserIdMatchPwdRsp>rspParse(msg)
 }

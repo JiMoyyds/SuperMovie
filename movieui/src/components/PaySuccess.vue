@@ -27,7 +27,7 @@
             class="go_to_my_orders_btn"
             color="primary"
             prepend-icon="mdi-printer"
-            @click="$router.push('/ticket_printing/'+payment_id)"
+            @click="router.push('/ticket_printing/'+payment_id)"
         >
           打印电影票
         </v-btn>
@@ -47,7 +47,9 @@
 <script lang="ts" setup>
 import QRCode from 'qrcode'
 import {onMounted, ref} from "vue"
+import {useRouter} from "vue-router"
 
+const router = useRouter()
 defineProps<{
   payment_id: number
 }>()

@@ -10,18 +10,18 @@
   />
 
   <v-card
-      v-for="(item,index) in result_list"
+      v-for="(item,index) in bor_by_film_name"
       class="mb-2"
   >
     <v-card-title>
       <v-chip variant="text" size="x-large">
         NO.{{ index + 1 }}
-        {{ item.title }}
+        {{ item.filmName }}
       </v-chip>
     </v-card-title>
     <v-card-text>
       <v-chip size="x-large" variant="text">
-        票房共计 {{ item.count }}
+        票房共计 {{ item.boxOffice }}
       </v-chip>
     </v-card-text>
   </v-card>
@@ -31,24 +31,32 @@
 <script lang="ts" setup>
 
 import {ref} from "vue"
+import {useRouter} from "vue-router"
 
+const router = useRouter()
 const statistics_items = ref(['按影片', '按类型', '按主演'])
 const statistics_values = ref(['按影片'])
 
-const result_list = ref([
+const bor_by_film_name = ref([
   {
-    title: '星际穿越',
-    count: 114514
+    filmName: '星际穿越',
+    boxOffice: 114514
   },
   {
-    title: '盗梦空间',
-    count: 11451
+    filmName: '盗梦空间',
+    boxOffice: 11451
   },
   {
-    title: '信条',
-    count: 1145
+    filmName: '信条',
+    boxOffice: 1145
   }
 ])
+
+/*
+const bor_by_film_name;
+const bor_by_film_type;
+const bor_by_film_actor;
+*/
 
 </script>
 

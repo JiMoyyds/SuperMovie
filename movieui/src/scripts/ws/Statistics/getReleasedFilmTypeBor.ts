@@ -1,9 +1,12 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {getReleasedFilmTypeBor}
-
-const conn = new WebSocket(`${wsUrlRoot}/get_released_film_type_bor`)
+export type {
+    FilmTypeBoxOfficeRsp,
+    GetReleasedFilmTypeBorReq,
+    GetReleasedFilmTypeBorRsp
+}
 
 type GetReleasedFilmTypeBorReq =
     {}
@@ -11,7 +14,7 @@ type GetReleasedFilmTypeBorReq =
 type FilmTypeBoxOfficeRsp =
     {
         FilmType: string
-        FilmBoxOffice: bigint
+        FilmBoxOffice: number
     }
 
 type GetReleasedFilmTypeBorRsp =
@@ -20,10 +23,15 @@ type GetReleasedFilmTypeBorRsp =
     }
 
 async function getReleasedFilmTypeBor(req: GetReleasedFilmTypeBorReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/get_released_film_type_bor`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('get_released_film_type_bor req:' + reqJson)
+    console.log(reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('get_released_film_type_bor req:' + msg)
 
     return <GetReleasedFilmTypeBorRsp>rspParse(msg)
 }

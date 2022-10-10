@@ -18,15 +18,17 @@ public struct DeleteFilmRsp
 //api : delete_film
 public class DeleteFilm : WebSocketBehavior
 {
-    private readonly IFilmProvider _filmProvider;
+    private IFilmProvider _filmProvider;
 
-    public DeleteFilm(IFilmProvider filmProvider)
+    public void Set(IFilmProvider filmProvider)
     {
         _filmProvider = filmProvider;
     }
 
     protected override void OnMessage(MessageEventArgs e)
     {
+        Console.WriteLine($"delete_film req:\n{e.Data}");
+
         var req = JsonHelper.Parse<DeleteFilmReq>(e.Data);
         var film = _filmProvider.GetFilm(req.FilmId);
 
@@ -47,6 +49,8 @@ public class DeleteFilm : WebSocketBehavior
             };
         }
 
-        Send(JsonHelper.Stringify(rsp));
+        var json = JsonHelper.Stringify(rsp);
+        Console.WriteLine($"delete_film rsp:\n{json}");
+        Send(json);
     }
 }

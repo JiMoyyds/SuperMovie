@@ -1,10 +1,12 @@
 import {FilmRsp} from "@/scripts/ws/Film/getAllFilm"
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {searchFilm}
-
-const conn = new WebSocket(`${wsUrlRoot}/search_film`)
+export type {
+    SearchFilmReq,
+    SearchFilmRsp
+}
 
 type SearchFilmReq =
     {
@@ -22,10 +24,14 @@ type SearchFilmRsp =
     }
 
 async function searchFilm(req: SearchFilmReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/search_film`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('search_film req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('search_film rsp:' + msg)
 
     return <SearchFilmRsp>rspParse(msg)
 }

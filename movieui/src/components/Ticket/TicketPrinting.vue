@@ -35,7 +35,9 @@
 <script lang="ts" setup>
 import QRCode from 'qrcode'
 import {onMounted, ref} from "vue"
+import {useRouter} from "vue-router"
 
+const router = useRouter()
 const payment_id = ref(1145141919810)
 const payment_film_info = ref({
   name: '电影名称',

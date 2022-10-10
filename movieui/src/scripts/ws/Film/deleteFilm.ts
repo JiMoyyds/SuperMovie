@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {deleteFilm}
-
-const conn = new WebSocket(`${wsUrlRoot}/delete_film`)
+export type {
+    DeleteFilmReq,
+    DeleteFilmRsp
+}
 
 type DeleteFilmReq =
     {
@@ -16,10 +18,14 @@ type DeleteFilmRsp =
     }
 
 async function deleteFilm(req: DeleteFilmReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/delete_film`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('delete_film req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('delete_film rsp:' + msg)
 
     return <DeleteFilmRsp>rspParse(msg)
 }

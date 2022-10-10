@@ -43,9 +43,9 @@
       <v-btn class="search_btn" color="primary">查询</v-btn>
     </div>
 
-    <div class="card_field" v-if="search_result.length!==0">
+    <div class="card_field" v-if="search_result_example.length!==0">
       <FilmPreviewCard
-          v-for="film in search_result"
+          v-for="film in search_result_example"
           :cover_url="film.cover_url"
           :name="film.name"
           :booking_route="film.route"
@@ -58,9 +58,12 @@
 
 <script lang="ts" setup>
 
-import {Ref, ref, watch} from "vue";
-import FilmPreviewCard from "@/components/Film/FilmPreviewCard.vue";
-import {all_film_on_sale_list} from "@/scripts/film_data";
+import {Ref, ref, watch} from "vue"
+import FilmPreviewCard from "@/components/Film/FilmPreviewCard.vue"
+import {all_film_on_sale_list} from "@/scripts/film_data"
+import {searchFilm} from "@/scripts/ws/Film/searchFilm"
+import {useRouter} from "vue-router"
+const router = useRouter()
 
 const type_items = ref(['全部', '古装', '科幻', '喜剧', '爱情', '动作', '卡通'])
 const type_values = ref(['全部'])
@@ -85,7 +88,19 @@ watch(screening_values, x => handler(x, screening_values))
 
 //const search_result = ref([])
 
-const search_result = ref(all_film_on_sale_list)
+const search_result_example = ref(all_film_on_sale_list)
+
+//TODO
+/*
+const search_result = await searchFilm({
+  FilmTypes: [""],
+  FilmOnlineTimeStart: new Date(),
+  FilmOnlineTimeEnd: new Date(),
+  FilmScheduleTimeStart: new Date(),
+  FilmScheduleTimeEnd: new Date(),
+  FilmNameKeyWord: ""
+})*/
+
 </script>
 
 <style lang="stylus" scoped>

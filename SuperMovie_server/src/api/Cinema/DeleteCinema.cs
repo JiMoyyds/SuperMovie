@@ -18,15 +18,17 @@ public struct DeleteCinemaRsp
 //api : deleta_cinema
 public class DeleteCinema : WebSocketBehavior
 {
-    private readonly ICinemaProvider _cinemaProvider;
+    private ICinemaProvider _cinemaProvider;
 
-    public DeleteCinema(ICinemaProvider cinemaProvider)
+    public void Set(ICinemaProvider cinemaProvider)
     {
         _cinemaProvider = cinemaProvider;
     }
 
     protected override void OnMessage(MessageEventArgs e)
     {
+        Console.WriteLine($"delete_cinema req:\n{e.Data}");
+        
         var req = JsonHelper.Parse<DeleteCinemaReq>(e.Data);
         var cinema = _cinemaProvider.GetCinema(req.CinemaId);
 
@@ -47,6 +49,8 @@ public class DeleteCinema : WebSocketBehavior
             };
         }
 
-        Send(JsonHelper.Stringify(rsp));
+        var json = JsonHelper.Stringify(rsp);
+        Console.WriteLine($"delete_cinema rsp:\n{json}");
+        Send(json);
     }
 }

@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {addCinema}
-
-const conn = new WebSocket(`${wsUrlRoot}/add_cinema`)
+export type {
+    AddCinemaReq,
+    AddCinemaRsp
+}
 
 type AddCinemaReq =
     {
@@ -18,10 +20,14 @@ type AddCinemaRsp =
 
 
 async function addCinema(req: AddCinemaReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/add_cinema`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('add_cinema req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('add_cinema rsp:' + msg)
 
     return <AddCinemaRsp>rspParse(msg)
 }

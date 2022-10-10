@@ -84,7 +84,8 @@ export default createRouter({
             path: '/film_editor/:film_id',
             component: FilmEditor,
             props: r => ({
-                film_id: r.params.film_id
+                film_id: r.params.film_id,
+                create_film: false
             }),
         },
         {

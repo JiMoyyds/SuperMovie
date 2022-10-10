@@ -1,3 +1,8 @@
-export {wsUrlRoot}
+export {
+    wsUrlRoot,
+    enableDebugMode
+}
 
-const wsUrlRoot = "http://localhost:114514"
+const wsUrlRoot = "ws://localhost:11451"
+//const enableDebugMode = true
+const enableDebugMode = false

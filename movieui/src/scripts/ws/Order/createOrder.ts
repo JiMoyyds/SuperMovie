@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {createOrder}
-
-const conn = new WebSocket(`${wsUrlRoot}/create_order`)
+export type {
+    CreateOrderReq,
+    CreateOrderRsp
+}
 
 type CreateOrderReq =
     {
@@ -22,10 +24,14 @@ type CreateOrderRsp =
     }
 
 async function createOrder(req: CreateOrderReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/create_order`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('create_order req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('create_order rsp:' + msg)
 
     return <CreateOrderRsp>rspParse(msg)
 }

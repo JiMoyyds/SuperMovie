@@ -13,6 +13,7 @@ public struct UpdateFilmReq
     public string FilmPreviewVideoUrl;
     public double FilmPrice;
     public bool FilmIsPreorder;
+    public DateTime FilmOnlineTime;
 }
 
 public struct UpdateFilmRsp
@@ -23,15 +24,17 @@ public struct UpdateFilmRsp
 //api : update_film
 public class UpdateFilm : WebSocketBehavior
 {
-    private readonly IFilmProvider _filmProvider;
+    private IFilmProvider _filmProvider;
 
-    public UpdateFilm(IFilmProvider filmProvider)
+    public void Set(IFilmProvider filmProvider)
     {
         _filmProvider = filmProvider;
     }
 
     protected override void OnMessage(MessageEventArgs e)
     {
+        Console.WriteLine($"update_film req:\n{e.Data}");
+
         var req = JsonHelper.Parse<UpdateFilmReq>(e.Data);
         var film = _filmProvider.GetFilm(req.FilmId);
 
@@ -44,6 +47,7 @@ public class UpdateFilm : WebSocketBehavior
             film.PreviewVideoUrl = req.FilmPreviewVideoUrl;
             film.Price = req.FilmPrice;
             film.IsPreorder = req.FilmIsPreorder;
+            film.OnlineTime = req.FilmOnlineTime;
 
             rsp = new UpdateFilmRsp
             {
@@ -58,6 +62,8 @@ public class UpdateFilm : WebSocketBehavior
             };
         }
 
-        Send(JsonHelper.Stringify(rsp));
+        var json = JsonHelper.Stringify(rsp);
+        Console.WriteLine($"update_film rsp:\n{json}");
+        Send(json);
     }
 }

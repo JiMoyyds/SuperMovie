@@ -1,13 +1,16 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {addSchedule}
-
-const conn = new WebSocket(`${wsUrlRoot}/add_schedule`)
+export type {
+    AddScheduleReq,
+    AddScheduleRsp
+}
 
 type AddScheduleReq =
     {
         ScheduleFilmId: bigint
+        ScheduleCinemaId: bigint
         ScheduleStartTime: Date
         ScheduleEndTime: Date
     }
@@ -19,10 +22,14 @@ type AddScheduleRsp =
     }
 
 async function addSchedule(req: AddScheduleReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/add_schedule`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('add_schedule req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('add_schedule rsp:' + msg)
 
     return <AddScheduleRsp>rspParse(msg)
 }

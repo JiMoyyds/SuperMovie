@@ -26,10 +26,10 @@ public struct SearchFilmRsp
 //api : search_film
 public class SearchFilm : WebSocketBehavior
 {
-    private readonly IFilmProvider _filmProvider;
-    private readonly IScheduleProvider _scheduleProvider;
+    private IFilmProvider _filmProvider;
+    private IScheduleProvider _scheduleProvider;
 
-    public SearchFilm(IFilmProvider filmProvider, IScheduleProvider scheduleProvider)
+    public void Set(IFilmProvider filmProvider, IScheduleProvider scheduleProvider)
     {
         _filmProvider = filmProvider;
         _scheduleProvider = scheduleProvider;
@@ -37,6 +37,8 @@ public class SearchFilm : WebSocketBehavior
 
     protected override void OnMessage(MessageEventArgs e)
     {
+        Console.WriteLine($"search_film req:\n{e.Data}");
+
         var req = JsonHelper.Parse<SearchFilmReq>(e.Data);
         var filterByFilmName = _filmProvider
             .FilterFilmByName(req.FilmNameKeyWord);
@@ -88,6 +90,8 @@ public class SearchFilm : WebSocketBehavior
             Collection = filmRspList
         };
 
-        Send(JsonHelper.Stringify(rsp));
+        var json = JsonHelper.Stringify(rsp);
+        Console.WriteLine($"search_film rsp:\n{json}");
+        Send(json);
     }
 }

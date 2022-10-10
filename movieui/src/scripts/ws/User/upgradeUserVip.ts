@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {upgradeUserVip}
-
-const conn = new WebSocket(`${wsUrlRoot}/upgrade_user_vip`)
+export type {
+    UpgradeUserVipReq,
+    UpgradeUserVipRsp
+}
 
 type UpgradeUserVipReq =
     {
@@ -17,10 +19,14 @@ type UpgradeUserVipRsp =
     }
 
 async function upgradeUserVip(req: UpgradeUserVipReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/upgrade_user_vip`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('upgrade_user_vip req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('upgrade_user_vip rsp:' + msg)
 
     return <UpgradeUserVipRsp>rspParse(msg)
 }

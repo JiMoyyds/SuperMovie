@@ -1,10 +1,12 @@
 import {OrderRsp} from "@/scripts/ws/Order/getAllOrder"
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {getAllOrderWithUserId}
-
-const conn = new WebSocket(`${wsUrlRoot}/get_all_order_with_user_id`)
+export type {
+    GetAllOrderWithUserIdReq,
+    GetAllOrderWithUserIdRsp
+}
 
 type GetAllOrderWithUserIdReq =
     {
@@ -17,10 +19,14 @@ type GetAllOrderWithUserIdRsp =
     }
 
 async function getAllOrderWithUserId(req: GetAllOrderWithUserIdReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/get_all_order_with_user_id`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('get_all_order_with_user_id req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('get_all_order_with_user_id rsp:' + msg)
 
     return <GetAllOrderWithUserIdRsp>rspParse(msg)
 }

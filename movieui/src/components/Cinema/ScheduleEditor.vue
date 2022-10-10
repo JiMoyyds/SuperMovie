@@ -91,12 +91,19 @@
 <script lang="ts" setup>
 
 import {schedule_list} from "@/scripts/schedule_data"
-import {ref} from "vue";
+import {ref} from "vue"
+import {useRouter} from "vue-router"
 
+const router = useRouter()
 defineProps<{
   cinema_id: number,
   cinema_name: number
 }>()
+//25588491022761984
+
+function save(){
+
+}
 
 </script>
 

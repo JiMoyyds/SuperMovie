@@ -27,15 +27,17 @@ public struct GetAllFilmRsp
 //api : get_all_film
 public class GetAllFilm : WebSocketBehavior
 {
-    private readonly IFilmProvider _filmProvider;
+    private IFilmProvider _filmProvider;
 
-    public GetAllFilm(IFilmProvider filmProvider)
+    public void Set(IFilmProvider filmProvider)
     {
         _filmProvider = filmProvider;
     }
 
     protected override void OnMessage(MessageEventArgs e)
     {
+        Console.WriteLine($"get_all_film req:\n{e.Data}");
+
         var req = JsonHelper.Parse<GetAllFilmReq>(e.Data);
         var films = _filmProvider.GetAllFilm();
 
@@ -60,6 +62,8 @@ public class GetAllFilm : WebSocketBehavior
             Collection = filmRspList
         };
 
-        Send(JsonHelper.Stringify(rsp));
+        var json = JsonHelper.Stringify(rsp);
+        Console.WriteLine($"get_all_film rsp:\n{json}");
+        Send(json);
     }
 }

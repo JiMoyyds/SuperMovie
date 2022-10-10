@@ -1,8 +1,19 @@
+import {enableDebugMode} from "@/scripts/ws/meta"
+
 export {
     sendMsg,
     recvMsg,
     rspParse,
-    reqStringify
+    reqStringify,
+    createWebSocket
+}
+
+function createWebSocket(url: string): any {
+    if (enableDebugMode) {
+        return null
+    } else {
+        return new WebSocket(url)
+    }
 }
 
 async function sendMsg(ws: WebSocket, msg: string) {
@@ -40,6 +51,7 @@ function isBigIntKey(key: string) {
 
         key === "ScheduleId" ||
         key === "ScheduleFilmId" ||
+        key === "ScheduleCinemaId" ||
 
         key === "OrderId" ||
         key === "OrderFilmId" ||

@@ -54,7 +54,7 @@
       <v-btn
           class="pay-btn"
           color="primary"
-          @click="$router.push('/pay_success/114514')"
+          @click="router.push('/pay_success/114514')"
       >
         支付订单
       </v-btn>
@@ -64,11 +64,14 @@
 
 <script lang="ts" setup>
 
+import {useRouter} from "vue-router"
+
 defineProps<{
   filmId: number
 }>()
 
-import {Ref, ref, watch} from "vue";
+import {Ref, ref, watch} from "vue"
+const router = useRouter()
 
 function sqrt(x: number) {
   return Math.sqrt(x)

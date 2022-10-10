@@ -46,7 +46,9 @@
 import {onMounted, ref} from "vue"
 import {Html5Qrcode} from 'html5-qrcode'
 import {Html5QrcodeScanner} from 'html5-qrcode'
+import {useRouter} from "vue-router"
 
+const router = useRouter()
 const showQrIcon = ref(false)
 const _decodedText = ref('_')
 

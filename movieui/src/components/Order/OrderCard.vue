@@ -38,6 +38,9 @@
 
 <script lang="ts" setup>
 
+import {useRouter} from "vue-router"
+
+const router = useRouter()
 defineProps<{
   order_id: number,
   user_id: number,

@@ -1,9 +1,11 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {addUser}
-
-const conn = new WebSocket(`${wsUrlRoot}/add_user`)
+export type {
+    AddUserReq,
+    AddUserRsp
+}
 
 type AddUserReq =
     {
@@ -17,10 +19,14 @@ type AddUserRsp =
     }
 
 async function addUser(req: AddUserReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/add_user`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('add_user req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('add_user rsp:' + msg)
 
     return <AddUserRsp>rspParse(msg)
 }

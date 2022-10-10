@@ -42,7 +42,7 @@
       <v-btn
           variant="text"
           color="primary"
-          @click="$router.push('/'+booking_route)"
+          @click="router.push('/'+booking_route)"
       >
         购票
       </v-btn>
@@ -61,8 +61,10 @@
 
 <script lang="ts" setup>
 
-import {ref} from "vue";
+import {ref} from "vue"
+import {useRouter} from "vue-router"
 
+const router = useRouter()
 defineProps<{
   name: string,
   cover_url: string,

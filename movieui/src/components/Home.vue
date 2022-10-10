@@ -11,11 +11,11 @@
 
       <v-card-text class="card_field">
         <FilmPreviewCard
-            v-for="film in film_on_show_list"
-            :cover_url="film.cover_url"
-            :name="film.name"
-            :booking_route="film.route"
-            :trailer_url="film.trailer_url"
+            v-for="film in released_film_list"
+            :cover_url="film.FilmCoverUrl"
+            :name="film.FilmName"
+            :booking_route="'booking/'+film.FilmId"
+            :trailer_url="film.FilmPreviewVideoUrl"
         />
       </v-card-text>
 
@@ -31,11 +31,11 @@
 
       <v-card-text class="card_field">
         <FilmPreviewCard
-            v-for="film in film_preview_list"
-            :cover_url="film.cover_url"
-            :name="film.title"
-            :booking_route="film.route"
-            :trailer_url="film.trailer_url"
+            v-for="film in preview_film_list"
+            :cover_url="film.FilmCoverUrl"
+            :name="film.FilmName"
+            :booking_route="'booking/'+film.FilmId"
+            :trailer_url="film.FilmPreviewVideoUrl"
         />
       </v-card-text>
     </v-card>
@@ -45,12 +45,34 @@
 
 <script lang="ts" setup>
 
-import {ref} from "vue"
+import {onMounted, ref} from "vue"
 import FilmPreviewCard from "@/components/Film/FilmPreviewCard.vue"
 import {
   film_on_show_list,
   film_preview_list
 } from "@/scripts/film_data"
+import {FilmRsp, getAllFilm, GetAllFilmReq} from "@/scripts/ws/Film/getAllFilm"
+import {useRouter} from "vue-router"
+
+const router = useRouter()
+let req = <GetAllFilmReq>{
+  CinemaName: "hi"
+}
+
+const released_film_list = ref<FilmRsp[]>([])
+const preview_film_list = ref<FilmRsp[]>([])
+
+onMounted(async () => {
+  const all_film_list = (await getAllFilm({})).Collection
+
+  for (const film of all_film_list) {
+    if (film.FilmIsPreorder)
+      preview_film_list.value.push(film)
+    else
+      released_film_list.value.push(film)
+  }
+
+})
 
 </script>
 

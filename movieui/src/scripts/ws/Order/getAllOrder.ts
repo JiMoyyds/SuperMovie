@@ -1,10 +1,12 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
-import {recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
+import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
 export {getAllOrder}
-export type {OrderRsp}
-
-const conn = new WebSocket(`${wsUrlRoot}/get_all_order`)
+export type {
+    OrderRsp,
+    GetAllOrderReq,
+    GetAllOrderRsp
+}
 
 type GetAllOrderReq =
     {}
@@ -26,10 +28,14 @@ type GetAllOrderRsp =
     }
 
 async function getAllOrder(req: GetAllOrderReq) {
+    const conn = createWebSocket(`${wsUrlRoot}/get_all_order`)
 
     const task = recvMsg(conn)
-    sendMsg(conn, reqStringify(req)).then()
+    const reqJson = reqStringify(req)
+    console.log('get_all_order req:' + reqJson)
+    sendMsg(conn, reqJson).then()
     const msg = await task
+    console.log('get_all_order rsp:' + msg)
 
     return <GetAllOrderRsp>rspParse(msg)
 }

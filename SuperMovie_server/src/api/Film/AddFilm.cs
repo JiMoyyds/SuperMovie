@@ -26,15 +26,17 @@ public struct AddFilmRsp
 //api : add_film
 public class AddFilm : WebSocketBehavior
 {
-    private readonly IFilmProvider _filmProvider;
+    private IFilmProvider _filmProvider;
 
-    public AddFilm(IFilmProvider filmProvider)
+    public void Set(IFilmProvider filmProvider)
     {
         _filmProvider = filmProvider;
     }
 
     protected override void OnMessage(MessageEventArgs e)
     {
+        Console.WriteLine($"add_film req:\n{e.Data}");
+
         var req = JsonHelper.Parse<AddFilmReq>(e.Data);
 
         var film = _filmProvider.CreateFilm
@@ -49,6 +51,8 @@ public class AddFilm : WebSocketBehavior
 
         if (film != null)
         {
+            film.CoverUrl = req.FilmCoverUrl;
+            film.PreviewVideoUrl = req.FilmPreviewVideoUrl;
             rsp = new AddFilmRsp
             {
                 Ok = true,
@@ -64,6 +68,8 @@ public class AddFilm : WebSocketBehavior
             };
         }
 
-        Send(JsonHelper.Stringify(rsp));
+        var json = JsonHelper.Stringify(rsp);
+        Console.WriteLine($"add_film rsp:\n{json}");
+        Send(json);
     }
 }

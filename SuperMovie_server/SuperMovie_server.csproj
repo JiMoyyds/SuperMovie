@@ -8,15 +8,73 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Reference Include="CinemaContainerImpl">
+        <HintPath>..\_build\CinemaContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="CinemaDbImpl">
+        <HintPath>..\_build\CinemaDbImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="DbManaged">
+        <HintPath>..\_dep\DbManaged.dll</HintPath>
+      </Reference>
+      <Reference Include="DbMiddleware">
+        <HintPath>..\DbMiddleware\bin\Debug\net6.0\DbMiddleware.dll</HintPath>
+      </Reference>
+      <Reference Include="DbMiddlewarePostgresImpl">
+        <HintPath>..\DbMiddlewarePostgresImpl\bin\Debug\net6.0\DbMiddlewarePostgresImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="FilmContainerImpl">
+        <HintPath>..\_build\FilmContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="FilmDbImpl">
+        <HintPath>..\_build\FilmDbImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="fsharper">
+        <HintPath>..\_dep\fsharper.dll</HintPath>
+      </Reference>
+      <Reference Include="OrderContainerImpl">
+        <HintPath>..\_build\OrderContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="OrderDbImpl">
+        <HintPath>..\_build\OrderDbImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="palaflake">
+        <HintPath>..\_dep\palaflake.dll</HintPath>
+      </Reference>
+      <Reference Include="ScheduleContainerImpl">
+        <HintPath>..\_build\ScheduleContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="ScheduleDbImpl">
+        <HintPath>..\_build\ScheduleDbImpl.dll</HintPath>
+      </Reference>
       <Reference Include="SuperMovie.Util">
         <HintPath>..\SuperMovie.Util\SuperMovie.Util\bin\Debug\net6.0\SuperMovie.Util.dll</HintPath>
       </Reference>
       <Reference Include="SuperMovie_frame">
         <HintPath>..\SuperMovie_frame\SuperMovie_frame\bin\Debug\net6.0\SuperMovie_frame.dll</HintPath>
       </Reference>
+      <Reference Include="UserContainerImpl">
+        <HintPath>..\_build\UserContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="UserDbImpl">
+        <HintPath>..\_build\UserDbImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="VipContainerImpl">
+        <HintPath>..\_build\VipContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="VipDbImpl">
+        <HintPath>..\_build\VipDbImpl.dll</HintPath>
+      </Reference>
       <Reference Include="websocket-sharp">
         <HintPath>..\..\websocket-sharp\websocket-sharp\bin\Release\net6.0\websocket-sharp.dll</HintPath>
       </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
 </Project>
