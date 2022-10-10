@@ -1,15 +1,9 @@
 <template>
-  <div>
+  <div class="mt-5">
 
-    <v-switch
-        v-model="enable_preview"
-        label="包含预售"
-        color="indigo"
-        hide-details
-    />
     <v-autocomplete
-        :items="type_items"
-        v-model="type_values"
+        :items="AllFilmType"
+        v-model="SelectedFilmType"
         outlined
         dense
         chips
@@ -17,39 +11,68 @@
         label="类型"
         multiple
     />
-    <v-autocomplete
-        :items="time_items"
-        v-model="time_values"
-        outlined
-        dense
-        chips
-        small-chips
-        label="上映时间"
-        multiple
-    />
-    <v-autocomplete
-        :items="screening_items"
-        v-model="screening_values"
-        outlined
-        dense
-        chips
-        small-chips
-        label="场次"
-        multiple
-    />
+
+    <div style="display:flex">
+      <v-text-field class="mx-1" label="上映年起始"
+                    v-model="FilmOnlineTimeYearStart"/>
+      <v-text-field class="mx-1" label="上映月起始"
+                    v-model="FilmOnlineTimeMonthStart"/>
+
+      <v-icon
+          icon="mdi-arrow-right"
+          class="mx-5 mt-3"
+          size="x-large"
+          color="grey"
+      />
+
+      <v-text-field class="mx-1" label="上映年结束"
+                    v-model="FilmOnlineTimeYearEnd"/>
+      <v-text-field class="mx-1" label="上映月结束"
+                    v-model="FilmOnlineTimeMonthEnd"/>
+    </div>
+
+    <div style="display:flex">
+      <v-text-field class="mx-1" label="场次月起始"
+                    v-model="FilmScheduleTimeMonthStart"/>
+      <v-text-field class="mx-1" label="场次日起始"
+                    v-model="FilmScheduleTimeDayStart"/>
+      <v-text-field class="mx-1" label="场次时起始"
+                    v-model="FilmScheduleTimeHourStart"/>
+
+      <v-icon
+          icon="mdi-arrow-right"
+          class="mx-5 mt-3"
+          size="x-large"
+          color="grey"
+      />
+
+      <v-text-field class="mx-1" label="场次月结束"
+                    v-model="FilmScheduleTimeMonthEnd"/>
+      <v-text-field class="mx-1" label="场次日结束"
+                    v-model="FilmScheduleTimeDayEnd"/>
+      <v-text-field class="mx-1" label="场次时结束"
+                    v-model="FilmScheduleTimeDayEnd"/>
+    </div>
+
     <v-text-field label="电影名关键词"/>
 
     <div style="display:flex">
-      <v-btn class="search_btn" color="primary">查询</v-btn>
+      <v-btn
+          class="search_btn"
+          color="primary"
+          @click="search()"
+      >
+        查询
+      </v-btn>
     </div>
 
-    <div class="card_field" v-if="search_result_example.length!==0">
+    <div class="card_field" v-if="search_result.length!==0">
       <FilmPreviewCard
-          v-for="film in search_result_example"
-          :cover_url="film.cover_url"
-          :name="film.name"
-          :booking_route="film.route"
-          :trailer_url="film.trailer_url"
+          v-for="film in search_result"
+          :cover_url="film.FilmCoverUrl"
+          :name="film.FilmName"
+          :booking_route="'booking'+film.FilmId"
+          :trailer_url="film.FilmPreviewVideoUrl"
       />
     </div>
 
@@ -58,19 +81,30 @@
 
 <script lang="ts" setup>
 
-import {Ref, ref, watch} from "vue"
+import {onMounted, Ref, ref, watch} from "vue"
 import FilmPreviewCard from "@/components/Film/FilmPreviewCard.vue"
-import {all_film_on_sale_list} from "@/scripts/film_data"
 import {searchFilm} from "@/scripts/ws/Film/searchFilm"
 import {useRouter} from "vue-router"
+import {FilmRsp} from "@/scripts/ws/Film/getAllFilm"
+
 const router = useRouter()
 
-const type_items = ref(['全部', '古装', '科幻', '喜剧', '爱情', '动作', '卡通'])
-const type_values = ref(['全部'])
-const time_items = ref(['全部', '2023', '2022', '2021', '2020', '2019', '2018'])
-const time_values = ref(['全部'])
-const screening_items = ref(['全部', '9:00', '11:00', '13:00', '15:00', '18:00', '20:00'])
-const screening_values = ref(['全部'])
+const AllFilmType = ref(['全部'])
+const SelectedFilmType = ref(['全部'])
+
+const FilmOnlineTimeYearStart = ref(new Date().getFullYear())
+const FilmOnlineTimeYearEnd = ref(new Date().getFullYear())
+const FilmOnlineTimeMonthStart = ref(new Date().getMonth())
+const FilmOnlineTimeMonthEnd = ref(new Date().getMonth())
+
+const FilmScheduleTimeMonthStart = ref(new Date().getMonth())
+const FilmScheduleTimeMonthEnd = ref(new Date().getMonth())
+const FilmScheduleTimeDayStart = ref(new Date().getDay())
+const FilmScheduleTimeDayEnd = ref(new Date().getDay())
+const FilmScheduleTimeHourStart = ref(new Date().getHours() + 1)
+const FilmScheduleTimeHourEnd = ref(new Date().getHours() + 1)
+
+const FilmNameKeyWord = ref('')
 
 const enable_preview = ref(false)
 
@@ -82,24 +116,33 @@ function handler(x: string[], target: Ref<string[]>) {
   }
 }
 
-watch(type_values, x => handler(x, type_values))
-watch(time_values, x => handler(x, time_values))
-watch(screening_values, x => handler(x, screening_values))
+watch(AllFilmType, x => handler(x, AllFilmType))
 
-//const search_result = ref([])
+const search_result = ref<FilmRsp[]>([])
 
-const search_result_example = ref(all_film_on_sale_list)
+async function search() {
+  //TODO 校验
+  const FilmOnlineTimeStart = new Date(
+      `${FilmOnlineTimeYearStart.value}-${FilmOnlineTimeMonthStart.value}-00T00:00:00`)
+  const FilmOnlineTimeEnd = new Date(
+      `${FilmOnlineTimeYearEnd.value}-${FilmOnlineTimeMonthEnd.value}-00T00:00:00`)
 
-//TODO
-/*
-const search_result = await searchFilm({
-  FilmTypes: [""],
-  FilmOnlineTimeStart: new Date(),
-  FilmOnlineTimeEnd: new Date(),
-  FilmScheduleTimeStart: new Date(),
-  FilmScheduleTimeEnd: new Date(),
-  FilmNameKeyWord: ""
-})*/
+  const FilmScheduleTimeStart = new Date(
+      `${new Date().getFullYear()}-${FilmScheduleTimeMonthStart.value}-${FilmScheduleTimeDayStart.value}T${FilmScheduleTimeHourStart.value}:00:00`)
+  const FilmScheduleTimeEnd = new Date(
+      `${new Date().getFullYear()}-${FilmScheduleTimeMonthEnd.value}-${FilmScheduleTimeDayEnd.value}T${FilmScheduleTimeHourEnd.value}:00:00`)
+
+  search_result.value = (await searchFilm({
+    FilmTypes: (SelectedFilmType.value.some(x => x === "全部") ?
+        AllFilmType.value : SelectedFilmType.value),
+    FilmOnlineTimeStart: FilmOnlineTimeStart,
+    FilmOnlineTimeEnd: FilmOnlineTimeEnd,
+    FilmScheduleTimeStart: FilmScheduleTimeStart,
+    FilmScheduleTimeEnd: FilmScheduleTimeEnd,
+    FilmNameKeyWord: FilmNameKeyWord.value
+  })).Collection
+
+}
 
 </script>
 

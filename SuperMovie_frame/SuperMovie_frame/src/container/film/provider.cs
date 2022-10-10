@@ -20,7 +20,7 @@ public interface IFilmProvider
     public IFilmEntity? GetFilm(long id);
     public List<IFilmEntity> GetAllFilm();
 
-    public List<string> GetAllFilmTypes();
+    public List<string> GetAllFilmType();
     public List<DateTime> GetAllFilmOnlineTime();
     public List<IFilmEntity> FilterFilmByIsPreorder(bool isPreorder);
     public List<IFilmEntity> FilterFilmByTypes(List<string> types);

@@ -29,118 +29,118 @@ export default createRouter({
         {
             path: '/',
             component: Home,
-            props: {},
+            props: {}
         },
         {
             path: '/login',
             component: Login,
-            props: {},
+            props: {}
         },
         {
             path: '/register',
             component: Register,
-            props: {},
+            props: {}
         },
         {
             path: '/search',
             component: Search,
-            props: {},
+            props: {}
         },
         {
             path: '/booking/:film_id',
             component: Booking,
             props: r => ({
-                filmId: r.params.film_id
-            }),
+                filmId: BigInt(r.params.film_id.toString())
+            })
         },
         {
             path: '/pay_success/:payment_id',
             component: PaySuccess,
             props: r => ({
-                payment_id: r.params.payment_id
-            }),
+                payment_id: BigInt(r.params.payment_id.toString())
+            })
         },
         {
             path: '/ticket_printing/:payment_id',
             component: TicketPrinting,
             props: r => ({
-                payment_id: r.params.payment_id
-            }),
+                payment_id: BigInt(r.params.payment_id.toString())
+            })
         },
         {
             path: '/film_management',
             component: FilmManagement,
-            props: {},
+            props: {}
         },
         {
             path: '/film_editor/create',
             component: FilmEditor,
             props: {
-                film_id: 0,
+                film_id: 0n,
                 create_film: true
-            },
+            }
         },
         {
             path: '/film_editor/:film_id',
             component: FilmEditor,
             props: r => ({
-                film_id: r.params.film_id,
+                film_id: BigInt(r.params.film_id.toString()),
                 create_film: false
-            }),
+            })
         },
         {
             path: '/cinema_management',
             component: CinemaManagement,
-            props: {},
+            props: {}
         },
         {
             path: '/cinema_creator',
             component: CinemaCreator,
-            props: {},
+            props: {}
         },
         {
             path: '/schedule_editor/:cinema_id',
             component: ScheduleEditor,
             props: r => ({
-                cinema_id: r.params.cinema_ia,
+                cinema_id: BigInt(r.params.cinema_id.toString()),
                 cinema_name: '示例影厅'
-            }),
+            })
         },
         {
             path: '/user_info/:user_id',
             component: UserInfo,
             props: r => ({
-                user_id: r.params.user_id,
-            }),
+                user_id: BigInt(r.params.user_id.toString())
+            })
         },
         {
             path: '/reset_pwd/:user_id',
             component: ResetPwd,
             props: r => ({
-                user_id: r.params.user_id,
-            }),
+                user_id: BigInt(r.params.user_id.toString())
+            })
         },
         {
             path: '/upgrade_vip/:user_id',
             component: UpgradeVip,
             props: r => ({
-                user_id: r.params.user_id,
-            }),
+                user_id: BigInt(r.params.user_id.toString())
+            })
         },
         {
             path: '/box_office_statistics',
-            component: BoxOfficeStatistics,
+            component: BoxOfficeStatistics
         },
         {
             path: '/recent_orders/:user_id',
             component: RecentOrders,
             props: r => ({
-                user_id: r.params.user_id,
-            }),
+                user_id: BigInt(r.params.user_id.toString())
+            })
         },
         {
             path: '/ticket_checking',
-            component: TicketChecking,
-        },
-    ],
+            component: TicketChecking
+        }
+    ]
 })

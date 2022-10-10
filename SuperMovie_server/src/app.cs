@@ -36,6 +36,7 @@ public class Worker : BackgroundService
         var wsServer = new WebSocketServer("ws://localhost:11451");
         var cinemaGen = new IdGenerator(ActionType.Cinema);
         var filmGen = new IdGenerator(ActionType.Film);
+        var scheduleGen = new IdGenerator(ActionType.Schedule);
         var db = new PostgresDatabase
         (
             "postgres",
@@ -45,8 +46,8 @@ public class Worker : BackgroundService
             "super_movie"
         );
 
-        ICinemaProvider cinemaProvider = new CinemaProvider(null, filmGen, db);
-        IFilmProvider filmProvider = new FilmProvider(filmGen, db);
+        ICinemaProvider cinemaProvider = null;
+        IFilmProvider filmProvider = null;
         IOrderProvider orderProvider = null;
         IScheduleProvider scheduleProvider = null;
         IUserProvider userProvider = null;
@@ -58,6 +59,13 @@ public class Worker : BackgroundService
         var scheduleProviderF = () => scheduleProvider;
         var userProviderF = () => userProvider;
         var vipProviderF = () => vipProvider;
+
+        cinemaProvider = new CinemaProvider(scheduleProviderF, cinemaGen, db);
+        filmProvider = new FilmProvider(filmGen, db);
+        orderProvider = null;
+        scheduleProvider = new ScheduleProvider(cinemaProviderF, filmProvider, scheduleGen, db);
+        userProvider = null;
+        vipProvider = null;
 
 //Cinema
         wsServer.AddWebSocketService<AddCinema>
@@ -79,6 +87,12 @@ public class Worker : BackgroundService
             handler => handler.Set(filmProviderF()));
         wsServer.AddWebSocketService<GetAllFilm>
         ("/get_all_film",
+            handler => handler.Set(filmProviderF()));
+        wsServer.AddWebSocketService<GetAllFilmType>
+        ("/get_all_film_type",
+            handler => handler.Set(filmProviderF()));
+        wsServer.AddWebSocketService<GetAllFilmOnlineTime>
+        ("/get_all_film_online_time",
             handler => handler.Set(filmProviderF()));
         wsServer.AddWebSocketService<GetFilm>
         ("/get_film",
@@ -133,6 +147,9 @@ public class Worker : BackgroundService
         wsServer.AddWebSocketService<DeleteSchedule>
         ("/delete_schedule",
             handler => handler.Set(scheduleProviderF()));
+        wsServer.AddWebSocketService<GetAllScheduleByCinemaId>
+        ("/get_all_schedule_by_cinema_id",
+            handler => handler.Set(scheduleProviderF(), cinemaProviderF()));
 
 //Statistics
         wsServer.AddWebSocketService<GetReleasedFilmActorBor>
