@@ -14,4 +14,5 @@ public interface IVipOperation
     public IVipModel? GetVip(long vipLevel);
     public List<IVipModel> GetAllVip();
     public bool UpdateVipDiscount(long vipLevel, double newValue);
+    public bool UpdateVipMonthPrice(long vipLevel, double newValue);
 }

@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/film/provider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/provider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/provider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/vip/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/vip/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/vip/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/vip/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/vip/operation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/vip/operation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
       <workItem from="1665272923264" duration="218000" />
       <workItem from="1665281820226" duration="17000" />
       <workItem from="1665322645476" duration="3819000" />
-      <workItem from="1665329342173" duration="2616000" />
+      <workItem from="1665329342173" duration="3830000" />
     </task>
     <servers />
   </component>

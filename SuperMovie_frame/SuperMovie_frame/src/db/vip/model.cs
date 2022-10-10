@@ -9,4 +9,5 @@ public interface IVipModel
 {
     public long Level { get; set; }
     public double Discount { get; set; }
+    public double MonthPrice { get; set; }
 }

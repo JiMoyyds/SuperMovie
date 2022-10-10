@@ -21,4 +21,5 @@ public interface IVipEntity
 
     public long Level { get; }
     public double Discount { get; set; }
+    public double MonthPrice { get; set; }
 }
