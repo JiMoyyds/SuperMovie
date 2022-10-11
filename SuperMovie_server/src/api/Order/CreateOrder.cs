@@ -3,6 +3,7 @@ using SuperMovie.Container.Film.Provider;
 using SuperMovie.Container.Order.Provider;
 using SuperMovie.Container.Schedule.Provider;
 using SuperMovie.Container.User.Provider;
+using AlipayF2F;
 
 namespace SuperMovie.Server.Api.Order;
 
@@ -24,6 +25,7 @@ public struct CreateOrderRsp
 {
     public bool Ok;
     public long OrderId;
+    public string AlipayQrCodePath;
 }
 
 //api : create_order
@@ -34,13 +36,15 @@ public class CreateOrder : WebSocketBehavior
     private ICinemaProvider _cinemaProvider;
     private IScheduleProvider _scheduleProvider;
     private IOrderProvider _orderProvider;
+    private F2FClient _f2fClient;
 
     public void Set(
         IUserProvider userProvider,
         IFilmProvider filmProvider,
         ICinemaProvider cinemaProvider,
         IScheduleProvider scheduleProvider,
-        IOrderProvider orderProvider
+        IOrderProvider orderProvider,
+        F2FClient f2fCLient
     )
     {
         _userProvider = userProvider;
@@ -48,6 +52,7 @@ public class CreateOrder : WebSocketBehavior
         _cinemaProvider = cinemaProvider;
         _scheduleProvider = scheduleProvider;
         _orderProvider = orderProvider;
+        _f2fClient = f2fCLient;
     }
 
     protected override void OnMessage(MessageEventArgs e)
@@ -76,10 +81,25 @@ public class CreateOrder : WebSocketBehavior
 
             if (order != null)
             {
+                var orderMsg =
+                    $@"超级电影购票: {film.Name}
+                       订单号: {order.Id}
+                       影厅: {cinema.Name}
+                       座位: {order.Seat}
+                       场次: {order.Schedule.StartTime} to {order.Schedule.EndTime}";
+
+                var f2fReq = F2FRequest.PreCreateTrade(
+                    order.Id.ToString(),
+                    orderMsg,
+                    order.PayAmount
+                );
+                var f2fRsp = _f2fClient.ExecuteRequest(f2fReq);
+
                 rsp = new CreateOrderRsp
                 {
                     Ok = true,
-                    OrderId = order.Id
+                    OrderId = order.Id,
+                    AlipayQrCodePath = f2fRsp.QrCode
                 };
             }
             else
@@ -87,7 +107,8 @@ public class CreateOrder : WebSocketBehavior
                 rsp = new CreateOrderRsp
                 {
                     Ok = false,
-                    OrderId = 0
+                    OrderId = 0,
+                    AlipayQrCodePath = ""
                 };
             }
         }
@@ -96,7 +117,8 @@ public class CreateOrder : WebSocketBehavior
             rsp = new CreateOrderRsp
             {
                 Ok = false,
-                OrderId = 0
+                OrderId = 0,
+                AlipayQrCodePath = ""
             };
         }
 

@@ -210,11 +210,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/thaumy/data/dev/lab/AlipayF2F/AlipayF2F.csproj",
+      "projectUniqueName": "/home/thaumy/data/dev/repo/SuperMovieSDK/AlipayF2F/AlipayF2F.csproj",
       "projectName": "AlipayF2F",
-      "projectPath": "/home/thaumy/data/dev/lab/AlipayF2F/AlipayF2F.csproj",
+      "projectPath": "/home/thaumy/data/dev/repo/SuperMovieSDK/AlipayF2F/AlipayF2F.csproj",
       "packagesPath": "/home/thaumy/.nuget/packages/",
-      "outputPath": "/home/thaumy/data/dev/lab/AlipayF2F/obj/",
+      "outputPath": "/home/thaumy/data/dev/repo/SuperMovieSDK/AlipayF2F/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/thaumy/.nuget/NuGet/NuGet.Config"

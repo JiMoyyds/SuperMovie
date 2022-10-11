@@ -27,5 +27,4 @@ public interface IScheduleEntity
     public DateTime? EndTime { get; set; }
     public ICinemaEntity? Cinema { get; set; }
     public IFilmEntity? Film { get; set; }
-    public bool IsShowing();
 }

@@ -10,6 +10,7 @@ using Util;
 
 public struct SearchFilmReq
 {
+    public bool EnableScheduleSearch;
     public List<string> FilmTypes;
     public DateTime FilmOnlineTimeStart;
     public DateTime FilmOnlineTimeEnd;
@@ -41,12 +42,12 @@ public class SearchFilm : WebSocketBehavior
 
         var req = JsonHelper.Parse<SearchFilmReq>(e.Data);
         var filterByFilmName = _filmProvider
-            .FilterFilmByName(req.FilmNameKeyWord);
+            .MatchFilmByName(req.FilmNameKeyWord);
         var filterByFilmTypes = _filmProvider
             .FilterFilmByTypes(req.FilmTypes);
         var filterByFilmOnlineTime = _filmProvider
             .FilterFilmByOnlineTime(req.FilmOnlineTimeStart, req.FilmOnlineTimeEnd);
-        var filterByScheduleTime = () =>
+        var filterByScheduleTimeF = () =>
         {
             var schedules = _scheduleProvider
                 .FilterScheduleByTimespan(req.FilmScheduleTimeStart, req.FilmScheduleTimeEnd);
@@ -60,17 +61,38 @@ public class SearchFilm : WebSocketBehavior
 
             return films;
         };
+        var filterByScheduleTime = filterByScheduleTimeF();
 
-        var filmEntities =
-            new List<IFilmEntity>();
-        filmEntities.AddRange(filterByFilmName);
-        filmEntities.AddRange(filterByFilmTypes);
-        filmEntities.AddRange(filterByFilmOnlineTime);
-        filmEntities.AddRange(filterByScheduleTime());
+        var filmsUnion = new List<IFilmEntity>();
+        filmsUnion.AddRange(filterByFilmName);
+        filmsUnion.AddRange(filterByFilmTypes);
+        filmsUnion.AddRange(filterByFilmOnlineTime);
+        if (req.EnableScheduleSearch)
+            filmsUnion.AddRange(filterByScheduleTime);
+        Console.WriteLine(JsonHelper.Stringify(filmsUnion));
+        var filmsIntersection = new List<IFilmEntity>();
+        foreach (var film in filmsUnion.DistinctBy(x => x.Id))
+        {
+            if (filterByFilmName.Exists(x => x.Id == film.Id) &&
+                filterByFilmTypes.Exists(x => x.Id == film.Id) &&
+                filterByFilmOnlineTime.Exists(x => x.Id == film.Id)
+               )
+            {
+                if (req.EnableScheduleSearch)
+                {
+                    if (filterByScheduleTime.Exists(x => x.Id == film.Id))
+                        filmsIntersection.Add(film);
+                }
+                else
+                {
+                    filmsIntersection.Add(film);
+                }
+            }
+        }
 
         var filmRspList = new List<FilmRsp>();
 
-        foreach (var film in filmEntities.DistinctBy(x => x.Id))
+        foreach (var film in filmsIntersection.DistinctBy(x => x.Id))
         {
             var filmRsp = new FilmRsp
             {
@@ -79,7 +101,10 @@ public class SearchFilm : WebSocketBehavior
                 FilmCoverUrl = film.CoverUrl,
                 FilmPreviewVideoUrl = film.PreviewVideoUrl,
                 FilmPrice = film.Price,
-                FilmIsPreorder = film.IsPreorder
+                FilmIsPreorder = film.IsPreorder,
+                FilmOnlineTime = film.OnlineTime.Value,
+                FilmTypes = film.Types,
+                FilmActors = film.Actors
             };
 
             filmRspList.Add(filmRsp);

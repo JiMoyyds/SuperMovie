@@ -15,6 +15,8 @@ public struct AddFilmReq
     public double FilmPrice;
     public bool FilmIsPreorder;
     public DateTime FilmOnlineTime;
+    public List<string> FilmTypes;
+    public List<string> FilmActors;
 }
 
 public struct AddFilmRsp
@@ -53,6 +55,12 @@ public class AddFilm : WebSocketBehavior
         {
             film.CoverUrl = req.FilmCoverUrl;
             film.PreviewVideoUrl = req.FilmPreviewVideoUrl;
+
+            foreach (var type in req.FilmTypes)
+                film.AddType(type);
+            foreach (var actor in req.FilmActors)
+                film.AddActor(actor);
+
             rsp = new AddFilmRsp
             {
                 Ok = true,

@@ -43,6 +43,7 @@
           variant="text"
           color="primary"
           @click="router.push('/'+booking_route)"
+          v-if="IsUserLogin&&!IsUserAdmin"
       >
         购票
       </v-btn>
@@ -63,6 +64,7 @@
 
 import {ref} from "vue"
 import {useRouter} from "vue-router"
+import {IsUserLogin, IsUserAdmin} from "@/scripts/state/user"
 
 const router = useRouter()
 defineProps<{

@@ -15,7 +15,7 @@ type IsUserIdMatchPwdReq =
 
 type IsUserIdMatchPwdRsp =
     {
-        Ok: boolean
+        Yes: boolean
     }
 
 async function isUserIdMatchPwd(req: IsUserIdMatchPwdReq) {

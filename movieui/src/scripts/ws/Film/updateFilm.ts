@@ -16,6 +16,8 @@ type UpdateFilmReq =
         FilmPrice: number
         FilmIsPreorder: boolean
         FilmOnlineTime: Date
+        FilmTypes: string[]
+        FilmActors: string[]
     }
 
 type UpdateFilmRsp =

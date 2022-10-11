@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zXCXMlcUcUdWGJhT2vFZUeZBDite/e+J84isFV+bP6JljDKRvwNT2k0bey3DBS7HmVHdT1lmcyRM59vIANJ7JA==",
+  "dgSpecHash": "lAhmi3tcMwmdYwWrF/FfYm/XzbuH0QoMzK94hkwQBtIck+4PK7KT1kfiCep8Obq2Zq0E5ePo5lq0XGnydGg3Tg==",
   "success": true,
   "projectFilePath": "/home/thaumy/repo/SuperMovieSDK/SuperMovie_server/SuperMovie_server.csproj",
   "expectedPackageFiles": [
+    "/home/thaumy/.nuget/packages/alipaysdknet.core/4.6.398/alipaysdknet.core.4.6.398.nupkg.sha512",
     "/home/thaumy/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/thaumy/.nuget/packages/microsoft.extensions.configuration/6.0.0/microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
@@ -30,10 +31,13 @@
     "/home/thaumy/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/microsoft.extensions.options.configurationextensions/6.0.0/microsoft.extensions.options.configurationextensions.6.0.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/thaumy/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/thaumy/.nuget/packages/portable.bouncycastle/1.8.5.2/portable.bouncycastle.1.8.5.2.nupkg.sha512",
     "/home/thaumy/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/thaumy/.nuget/packages/system.text.encoding.codepages/4.7.0/system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
     "/home/thaumy/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512"
   ],

@@ -15,6 +15,7 @@ public struct GetAllScheduleByCinemaIdReq
 public struct ScheduleRsp
 {
     public long ScheduleId;
+    public long ScheduleCinemaId;
     public long ScheduleFilmId;
     public DateTime ScheduleStartTime;
     public DateTime ScheduleEndTime;
@@ -58,6 +59,7 @@ public class GetAllScheduleByCinemaId : WebSocketBehavior
                     var it = new ScheduleRsp
                     {
                         ScheduleId = schedule.Id,
+                        ScheduleCinemaId = schedule.Cinema.Id,
                         ScheduleFilmId = schedule.Film.Id,
                         ScheduleStartTime = schedule.StartTime.Value,
                         ScheduleEndTime = schedule.EndTime.Value

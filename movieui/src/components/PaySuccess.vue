@@ -1,10 +1,9 @@
 <template>
   <div>
 
-    <div class="holder">
+    <div class="holder mt-5">
 
-      <h3>等待支付 or 支付完成</h3>
-
+      <h3>订单已被创建，请在 3 小时内完成支付.</h3>
 
       <v-divider class="my-4"></v-divider>
 
@@ -48,22 +47,32 @@
 import QRCode from 'qrcode'
 import {onMounted, ref} from "vue"
 import {useRouter} from "vue-router"
+import {getAllOrder} from "@/scripts/ws/Order/getAllOrder"
 
 const router = useRouter()
-defineProps<{
-  payment_id: number
-}>()
-
-const payment_id = ref(1145141919810)
+const props =
+    defineProps<{
+      payment_id: bigint
+    }>()
 
 const qrcode_area = ref()
+const AlipayQrCodePath = ref('')
 
 function setQr() {
-  QRCode.toCanvas(qrcode_area.value, String(payment_id.value))
+  QRCode.toCanvas(qrcode_area.value, String(props.payment_id))
 }
 
-onMounted(() => {
+function k() {
+
+}
+
+onMounted(async () => {
   setQr()
+  const orders = (await getAllOrder({})).Collection
+  for (const order of orders) {
+    if (order.OrderId === props.payment_id)
+      order.
+        }
 })
 
 </script>

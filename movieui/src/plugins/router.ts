@@ -94,16 +94,10 @@ export default createRouter({
             props: {}
         },
         {
-            path: '/cinema_creator',
-            component: CinemaCreator,
-            props: {}
-        },
-        {
             path: '/schedule_editor/:cinema_id',
             component: ScheduleEditor,
             props: r => ({
                 cinema_id: BigInt(r.params.cinema_id.toString()),
-                cinema_name: '示例影厅'
             })
         },
         {

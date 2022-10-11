@@ -9,7 +9,7 @@
           prepend-icon="mdi-theater"
       >
         <div>
-          {{ cinema_name }}
+          {{ CinemaName }}
         </div>
       </v-chip>
     </div>
@@ -35,8 +35,8 @@
             small-chips
             label="电影选择"
         />
-        <v-text-field label="放映开始" v-model="NewScheduleStartTime"/>
-        <v-text-field label="放映结束" v-model="NewScheduleEndTime"/>
+        <v-text-field label="放映开始(UTC+0)" v-model="NewScheduleStartTime"/>
+        <v-text-field label="放映结束(UTC+0)" v-model="NewScheduleEndTime"/>
 
         <v-btn
             class="float-right"
@@ -107,16 +107,17 @@ import {useRouter} from "vue-router"
 import {FilmRsp} from "@/scripts/ws/Film/getAllFilm"
 import {getAllFilm} from "@/scripts/ws/Film/getAllFilm"
 import {addSchedule} from "@/scripts/ws/Schedule/addSchedule"
-import {GetAllScheduleByCinemaId, ScheduleRsp} from "@/scripts/ws/Schedule/getAllScheduleByCinemaId"
+import {getAllScheduleByCinemaId, ScheduleRsp} from "@/scripts/ws/Schedule/getAllScheduleByCinemaId"
 import {deleteSchedule} from "@/scripts/ws/Schedule/deleteSchedule"
+import {getAllCinema} from "@/scripts/ws/Cinema/getAllCinema"
 
 const router = useRouter()
 const props =
     defineProps<{
       cinema_id: bigint,
-      cinema_name: number
     }>()
 
+const CinemaName = ref('')
 const AllFilmName = ref<string[]>([])
 const SelectedFilmName = ref<string>('')
 
@@ -126,20 +127,28 @@ const AllScheduleInCurrentCinema = ref<ScheduleRsp[]>([])
 const NewScheduleStartTime = ref<string>(new Date().toISOString())
 const NewScheduleEndTime = ref<string>(new Date().toISOString())
 
-function add() {
+async function add() {
   const filmId = AllFilm.value.filter(x => x.FilmName === SelectedFilmName.value)[0].FilmId
-  addSchedule({
+  const result = await addSchedule({
     ScheduleFilmId: filmId,
     ScheduleCinemaId: props.cinema_id,
     ScheduleStartTime: new Date(NewScheduleStartTime.value),
     ScheduleEndTime: new Date(NewScheduleEndTime.value)
   })
+  AllScheduleInCurrentCinema.value =
+      (await getAllScheduleByCinemaId({
+        CinemaId: props.cinema_id
+      })).Collection
 }
 
-function delete_(ScheduleId: bigint) {
+async function delete_(ScheduleId: bigint) {
   deleteSchedule({
     ScheduleId: ScheduleId
   })
+  AllScheduleInCurrentCinema.value =
+      (await getAllScheduleByCinemaId({
+        CinemaId: props.cinema_id
+      })).Collection
 }
 
 
@@ -151,9 +160,15 @@ onMounted(async () => {
   }
 
   AllScheduleInCurrentCinema.value =
-      (await GetAllScheduleByCinemaId({
+      (await getAllScheduleByCinemaId({
         CinemaId: props.cinema_id
       })).Collection
+  if (AllFilmName.value.length > 0)
+    SelectedFilmName.value = AllFilmName.value[0]
+  const all_cinema = (await getAllCinema({})).Collection
+  for (const cinema of all_cinema)
+    if (cinema.CinemaId === props.cinema_id)
+      CinemaName.value = cinema.CinemaName
 })
 
 </script>

@@ -32,12 +32,19 @@
     </div>
 
     <div style="display:flex">
-      <v-text-field class="mx-1" label="场次月起始"
-                    v-model="FilmScheduleTimeMonthStart"/>
-      <v-text-field class="mx-1" label="场次日起始"
-                    v-model="FilmScheduleTimeDayStart"/>
-      <v-text-field class="mx-1" label="场次时起始"
-                    v-model="FilmScheduleTimeHourStart"/>
+      <v-switch v-model="EnableScheduleSearch" label="启用场次检索"/>
+      <v-text-field
+          :disabled="!EnableScheduleSearch"
+          class="mx-1" label="场次月起始"
+          v-model="FilmScheduleTimeMonthStart"/>
+      <v-text-field
+          :disabled="!EnableScheduleSearch"
+          class="mx-1" label="场次日起始"
+          v-model="FilmScheduleTimeDayStart"/>
+      <v-text-field
+          :disabled="!EnableScheduleSearch"
+          class="mx-1" label="场次时起始"
+          v-model="FilmScheduleTimeHourStart"/>
 
       <v-icon
           icon="mdi-arrow-right"
@@ -46,15 +53,22 @@
           color="grey"
       />
 
-      <v-text-field class="mx-1" label="场次月结束"
-                    v-model="FilmScheduleTimeMonthEnd"/>
-      <v-text-field class="mx-1" label="场次日结束"
-                    v-model="FilmScheduleTimeDayEnd"/>
-      <v-text-field class="mx-1" label="场次时结束"
-                    v-model="FilmScheduleTimeDayEnd"/>
+      <v-text-field
+          :disabled="!EnableScheduleSearch"
+          class="mx-1" label="场次月结束"
+          v-model="FilmScheduleTimeMonthEnd"/>
+      <v-text-field
+          :disabled="!EnableScheduleSearch"
+          class="mx-1" label="场次日结束"
+          v-model="FilmScheduleTimeDayEnd"/>
+      <v-text-field
+          :disabled="!EnableScheduleSearch"
+          class="mx-1" label="场次时结束"
+          v-model="FilmScheduleTimeHourEnd"/>
     </div>
 
-    <v-text-field label="电影名关键词"/>
+    <v-text-field label="电影名关键词"
+                  v-model="FilmNameKeyWord"/>
 
     <div style="display:flex">
       <v-btn
@@ -86,6 +100,7 @@ import FilmPreviewCard from "@/components/Film/FilmPreviewCard.vue"
 import {searchFilm} from "@/scripts/ws/Film/searchFilm"
 import {useRouter} from "vue-router"
 import {FilmRsp} from "@/scripts/ws/Film/getAllFilm"
+import {getAllFilmType} from "@/scripts/ws/Film/getAllFilmType"
 
 const router = useRouter()
 
@@ -94,19 +109,19 @@ const SelectedFilmType = ref(['全部'])
 
 const FilmOnlineTimeYearStart = ref(new Date().getFullYear())
 const FilmOnlineTimeYearEnd = ref(new Date().getFullYear())
-const FilmOnlineTimeMonthStart = ref(new Date().getMonth())
-const FilmOnlineTimeMonthEnd = ref(new Date().getMonth())
+const FilmOnlineTimeMonthStart = ref(new Date().getMonth() + 1)
+const FilmOnlineTimeMonthEnd = ref(new Date().getMonth() + 1)
 
-const FilmScheduleTimeMonthStart = ref(new Date().getMonth())
-const FilmScheduleTimeMonthEnd = ref(new Date().getMonth())
-const FilmScheduleTimeDayStart = ref(new Date().getDay())
-const FilmScheduleTimeDayEnd = ref(new Date().getDay())
-const FilmScheduleTimeHourStart = ref(new Date().getHours() + 1)
-const FilmScheduleTimeHourEnd = ref(new Date().getHours() + 1)
+const FilmScheduleTimeMonthStart = ref(new Date().getMonth() + 1)
+const FilmScheduleTimeDayStart = ref(new Date().getDate())
+const FilmScheduleTimeHourStart = ref(new Date().getHours())
+
+const FilmScheduleTimeMonthEnd = ref(new Date().getMonth() + 1)
+const FilmScheduleTimeDayEnd = ref(new Date().getDate())
+const FilmScheduleTimeHourEnd = ref(new Date().getHours())
 
 const FilmNameKeyWord = ref('')
-
-const enable_preview = ref(false)
+const EnableScheduleSearch = ref(false)
 
 function handler(x: string[], target: Ref<string[]>) {
   if (x.length === 0)
@@ -116,25 +131,21 @@ function handler(x: string[], target: Ref<string[]>) {
   }
 }
 
-watch(AllFilmType, x => handler(x, AllFilmType))
+watch(SelectedFilmType, x => handler(x, SelectedFilmType))
 
 const search_result = ref<FilmRsp[]>([])
 
 async function search() {
   //TODO 校验
-  const FilmOnlineTimeStart = new Date(
-      `${FilmOnlineTimeYearStart.value}-${FilmOnlineTimeMonthStart.value}-00T00:00:00`)
-  const FilmOnlineTimeEnd = new Date(
-      `${FilmOnlineTimeYearEnd.value}-${FilmOnlineTimeMonthEnd.value}-00T00:00:00`)
-
-  const FilmScheduleTimeStart = new Date(
-      `${new Date().getFullYear()}-${FilmScheduleTimeMonthStart.value}-${FilmScheduleTimeDayStart.value}T${FilmScheduleTimeHourStart.value}:00:00`)
-  const FilmScheduleTimeEnd = new Date(
-      `${new Date().getFullYear()}-${FilmScheduleTimeMonthEnd.value}-${FilmScheduleTimeDayEnd.value}T${FilmScheduleTimeHourEnd.value}:00:00`)
+  const FilmOnlineTimeStart = new Date(FilmOnlineTimeYearStart.value, FilmOnlineTimeMonthStart.value)
+  const FilmOnlineTimeEnd = new Date(FilmOnlineTimeYearEnd.value, FilmOnlineTimeMonthEnd.value)
+  const FilmScheduleTimeStart = new Date(new Date().getFullYear(), FilmScheduleTimeMonthStart.value, FilmScheduleTimeDayStart.value, FilmScheduleTimeHourStart.value)
+  const FilmScheduleTimeEnd = new Date(new Date().getFullYear(), FilmScheduleTimeMonthEnd.value, FilmScheduleTimeDayEnd.value, FilmScheduleTimeHourEnd.value)
 
   search_result.value = (await searchFilm({
+    EnableScheduleSearch: EnableScheduleSearch.value,
     FilmTypes: (SelectedFilmType.value.some(x => x === "全部") ?
-        AllFilmType.value : SelectedFilmType.value),
+        [''] : SelectedFilmType.value),
     FilmOnlineTimeStart: FilmOnlineTimeStart,
     FilmOnlineTimeEnd: FilmOnlineTimeEnd,
     FilmScheduleTimeStart: FilmScheduleTimeStart,
@@ -143,6 +154,11 @@ async function search() {
   })).Collection
 
 }
+
+onMounted(async () => {
+  AllFilmType.value = (await getAllFilmType({})).Collection
+  AllFilmType.value.push('全部')
+})
 
 </script>
 

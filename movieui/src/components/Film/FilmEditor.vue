@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <v-card class="mt-12">
+    <v-card>
       <v-card-title>
         影片编辑
       </v-card-title>
@@ -9,6 +9,21 @@
         <v-text-field label="电影名" v-model="FilmName"/>
         <v-text-field label="电影封面URL" v-model="FilmCoverUrl"/>
         <v-text-field label="电影预告片URL" v-model="FilmPreviewVideoUrl"/>
+        <v-text-field label="电影上线时间" v-model="FilmOnlineTime"/>
+        <v-combobox
+            v-model="FilmTypes"
+            :items="[]"
+            label="电影类型"
+            multiple
+            chips
+        />
+        <v-combobox
+            v-model="FilmActors"
+            :items="[]"
+            label="电影演员"
+            multiple
+            chips
+        />
         <v-text-field label="电影价格" v-model="FilmPrice"/>
 
         <v-switch
@@ -22,7 +37,7 @@
             style="float:right"
             color="primary"
             class="mb-4"
-            @click="save();router.push('/film_management')"
+            @click="save()"
         >
           保存
         </v-btn>
@@ -32,7 +47,7 @@
             style="float:right"
             color="primary"
             class="mb-4"
-            @click="save();router.push('/film_management')"
+            @click="save()"
         >
           新增
         </v-btn>
@@ -65,7 +80,9 @@ const FilmCoverUrl = ref('封面URL')
 const FilmPreviewVideoUrl = ref('预告片URL')
 const FilmPrice = ref(0)
 const FilmIsPreorder = ref(false)
-const FilmOnlineTime = ref(new Date())//TODO
+const FilmOnlineTime = ref(new Date().toISOString())
+const FilmTypes = ref<string[]>([])
+const FilmActors = ref<string[]>([])
 
 onMounted(async () => {
   if (!props.create_film) {
@@ -75,31 +92,38 @@ onMounted(async () => {
     FilmPreviewVideoUrl.value = film.FilmPreviewVideoUrl
     FilmPrice.value = film.FilmPrice
     FilmIsPreorder.value = film.FilmIsPreorder
-    FilmOnlineTime.value = film.FilmOnlineTime
+    FilmOnlineTime.value = film.FilmOnlineTime.toISOString()
+    FilmTypes.value = film.FilmTypes
+    FilmActors.value = film.FilmActors
   }
 })
 
-function save() {
+async function save() {
   if (props.create_film) {
-    addFilm({
+    await addFilm({
       FilmName: FilmName.value,
       FilmCoverUrl: FilmCoverUrl.value,
       FilmPreviewVideoUrl: FilmPreviewVideoUrl.value,
       FilmPrice: FilmPrice.value,
       FilmIsPreorder: FilmIsPreorder.value,
-      FilmOnlineTime: FilmOnlineTime.value
+      FilmOnlineTime: new Date(FilmOnlineTime.value),
+      FilmTypes: FilmTypes.value,
+      FilmActors: FilmActors.value
     })
   } else {
-    updateFilm({
+    await updateFilm({
       FilmId: props.film_id,
       FilmName: FilmName.value,
       FilmCoverUrl: FilmCoverUrl.value,
       FilmPreviewVideoUrl: FilmPreviewVideoUrl.value,
       FilmPrice: FilmPrice.value,
       FilmIsPreorder: FilmIsPreorder.value,
-      FilmOnlineTime: FilmOnlineTime.value
+      FilmOnlineTime: new Date(FilmOnlineTime.value),
+      FilmTypes: FilmTypes.value,
+      FilmActors: FilmActors.value
     })
   }
+  await router.push('/film_management')
 }
 
 </script>

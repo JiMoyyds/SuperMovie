@@ -8,12 +8,13 @@
     <v-card-text>
       <v-text-field
           label="手机号"
-          v-model="UserId"
+          type="number"
+          v-model="_UserId"
       />
       <v-text-field
           label="密码"
           type="password"
-          v-model="UserPwd"
+          v-model="_UserPwd"
       />
 
       <v-btn
@@ -21,6 +22,7 @@
           color="orange"
           width="100%"
           height="50px"
+          @click="login()"
       >
         登录
       </v-btn>
@@ -47,12 +49,36 @@
 
 import {useRouter} from "vue-router"
 import {ref} from "vue"
+import {IsUserAdmin, IsUserLogin, UserId, UserVipDiscount, UserVipLevel} from "@/scripts/state/user"
+import {isUserIdMatchPwd} from "@/scripts/ws/User/isUserIdMatchPwd"
+import {getUser} from "@/scripts/ws/User/getUser"
 
 const router = useRouter()
 
-const UserId = ref(114514)
-const UserPwd = ref(114514)
+const _UserId = ref("")
+const _UserPwd = ref("")
 
+async function login() {
+  const isMatch = (await isUserIdMatchPwd({
+    UserId: BigInt(_UserId.value),
+    UserPwd: _UserPwd.value
+  })).Yes
+  if (isMatch) {
+    UserId.value = BigInt(_UserId.value)
+    IsUserAdmin.value = BigInt(_UserId.value) < 1000n
+    IsUserLogin.value = true
+
+    const user = await getUser({UserId: BigInt(_UserId.value)})
+    if (user.Ok) {
+      UserVipLevel.value = user.UserVipLevel
+      UserVipDiscount.value = user.UserVipLevelDiscount
+    }
+  }
+  if (BigInt(_UserId.value) > 1000n)
+    await router.push('/user_info/' + _UserId.value)
+  else
+    await router.push('/film_management')
+}
 
 </script>
 

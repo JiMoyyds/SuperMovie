@@ -19,6 +19,9 @@ type FilmRsp =
         FilmPreviewVideoUrl: string
         FilmPrice: number
         FilmIsPreorder: boolean
+        FilmOnlineTime: Date
+        FilmTypes: string[]
+        FilmActors: string[]
     }
 
 type GetAllFilmRsp =

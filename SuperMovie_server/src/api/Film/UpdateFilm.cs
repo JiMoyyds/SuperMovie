@@ -14,6 +14,8 @@ public struct UpdateFilmReq
     public double FilmPrice;
     public bool FilmIsPreorder;
     public DateTime FilmOnlineTime;
+    public List<string> FilmTypes;
+    public List<string> FilmActors;
 }
 
 public struct UpdateFilmRsp
@@ -48,6 +50,13 @@ public class UpdateFilm : WebSocketBehavior
             film.Price = req.FilmPrice;
             film.IsPreorder = req.FilmIsPreorder;
             film.OnlineTime = req.FilmOnlineTime;
+
+            film.ClearType();
+            foreach (var type in req.FilmTypes)
+                film.AddType(type);
+            film.ClearActor();
+            foreach (var actor in req.FilmActors)
+                film.AddActor(actor);
 
             rsp = new UpdateFilmRsp
             {

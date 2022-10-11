@@ -10,6 +10,7 @@ export type {
 
 type SearchFilmReq =
     {
+        EnableScheduleSearch: boolean
         FilmTypes: string[]
         FilmOnlineTimeStart: Date
         FilmOnlineTimeEnd: Date

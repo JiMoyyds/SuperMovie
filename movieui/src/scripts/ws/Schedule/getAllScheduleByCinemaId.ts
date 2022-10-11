@@ -1,7 +1,7 @@
 import {wsUrlRoot} from "@/scripts/ws/meta"
 import {createWebSocket, recvMsg, reqStringify, rspParse, sendMsg} from "@/scripts/ws/helper"
 
-export {GetAllScheduleByCinemaId}
+export {getAllScheduleByCinemaId}
 export type {
     ScheduleRsp,
     GetAllScheduleByCinemaIdReq,
@@ -16,6 +16,7 @@ type GetAllScheduleByCinemaIdReq =
 type ScheduleRsp =
     {
         ScheduleId: bigint
+        ScheduleCinemaId: bigint
         ScheduleFilmId: bigint
         ScheduleStartTime: Date
         ScheduleEndTime: Date
@@ -26,7 +27,7 @@ type GetAllScheduleByCinemaIdRsp =
         Collection: ScheduleRsp[]
     }
 
-async function GetAllScheduleByCinemaId(req: GetAllScheduleByCinemaIdReq) {
+async function getAllScheduleByCinemaId(req: GetAllScheduleByCinemaIdReq) {
     const conn = createWebSocket(`${wsUrlRoot}/get_all_schedule_by_cinema_id`)
 
     const task = recvMsg(conn)

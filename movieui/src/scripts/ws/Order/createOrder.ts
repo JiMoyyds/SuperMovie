@@ -21,6 +21,7 @@ type CreateOrderRsp =
     {
         Ok: boolean
         OrderId: bigint
+        AlipayQrCodePath: string
     }
 
 async function createOrder(req: CreateOrderReq) {

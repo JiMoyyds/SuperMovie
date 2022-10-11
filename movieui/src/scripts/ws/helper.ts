@@ -38,34 +38,22 @@ async function recvMsg(ws: WebSocket) {
     return await task
 }
 
+function isDateKey(key: string) {
+    return key.search("Time") !== -1
+}
+
 function isBigIntKey(key: string) {
-    return key === "CinemaId" ||
-
-        key === "FilmId" ||
-        key === "FilmId" ||
-        key === "FilmId" ||
-        key === "FilmId" ||
-        key === "FilmId" ||
-
-        key === "UserId" ||
-
-        key === "ScheduleId" ||
-        key === "ScheduleFilmId" ||
-        key === "ScheduleCinemaId" ||
-
-        key === "OrderId" ||
-        key === "OrderFilmId" ||
-        key === "OrderUserId" ||
-        key === "OrderCinemaId" ||
-        key === "OrderScheduleId"
+    return key.search("Id") !== -1
 }
 
 function reqStringify(req: any) {
     function replacer(key: string, value: any) {
         if (isBigIntKey(key))
             return value.toString()
-        else
-            return value
+        if (isDateKey(key))
+            return new Date(value).toISOString()
+
+        return value
     }
 
     return JSON.stringify(req, replacer)
@@ -75,8 +63,10 @@ function rspParse(rsp: string) {
     function reviver(key: string, value: any) {
         if (isBigIntKey(key))
             return BigInt(value)
-        else
-            return value
+        if (isDateKey(key))
+            return new Date(value)
+
+        return value
     }
 
     return JSON.parse(rsp, reviver)

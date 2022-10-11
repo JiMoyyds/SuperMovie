@@ -13,7 +13,7 @@ public struct IsUserIdMatchPwdReq
 
 public struct IsUserIdMatchPwdRsp
 {
-    public bool Ok;
+    public bool Yes;
 }
 
 //api : is_user_id_match_pwd
@@ -36,7 +36,7 @@ public class IsUserIdMatchPwd : WebSocketBehavior
 
         var rsp = new IsUserIdMatchPwdRsp
         {
-            Ok = user != null
+            Yes = user != null
         };
 
         var json = JsonHelper.Stringify(rsp);

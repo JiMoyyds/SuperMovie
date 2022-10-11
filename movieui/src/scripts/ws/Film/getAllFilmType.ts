@@ -12,7 +12,7 @@ type GetAllFilmTypeReq =
 
 type GetAllFilmTypeRsp =
     {
-        Collection: Date[]
+        Collection: string[]
     }
 
 async function getAllFilmType(req: GetAllFilmTypeReq) {

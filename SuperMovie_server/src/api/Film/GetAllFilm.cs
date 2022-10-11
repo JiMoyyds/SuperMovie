@@ -17,6 +17,9 @@ public struct FilmRsp
     public string FilmPreviewVideoUrl;
     public double FilmPrice;
     public bool FilmIsPreorder;
+    public DateTime FilmOnlineTime;
+    public List<string> FilmTypes;
+    public List<string> FilmActors;
 }
 
 public struct GetAllFilmRsp
@@ -52,7 +55,10 @@ public class GetAllFilm : WebSocketBehavior
                 FilmCoverUrl = film.CoverUrl,
                 FilmPreviewVideoUrl = film.PreviewVideoUrl,
                 FilmPrice = film.Price,
-                FilmIsPreorder = film.IsPreorder
+                FilmIsPreorder = film.IsPreorder,
+                FilmOnlineTime = film.OnlineTime.Value,
+                FilmTypes = film.Types,
+                FilmActors = film.Actors
             };
             filmRspList.Add(filmRsp);
         }

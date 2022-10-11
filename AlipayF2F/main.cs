@@ -17,7 +17,6 @@ public class F2FClient
         string rootCertPath,
         string alipayPublicCertPath
     )
-
     {
         _client = new DefaultAopClient(
             "https://openapi.alipaydev.com/gateway.do",
@@ -44,6 +43,24 @@ public class F2FClient
 public class F2FRequest
 {
     //trade status:
+
+    public static AlipayTradePrecreateRequest PreCreateTrade
+    (string outTradeNo, string tradeMsg,
+        double amount)
+    {
+        var request = new AlipayTradePrecreateRequest();
+
+        var model = new AlipayTradePrecreateModel
+        {
+            Subject = tradeMsg,
+            OutTradeNo = outTradeNo,
+            TotalAmount = amount.ToString("f2")
+        };
+
+        request.SetBizModel(model);
+
+        return request;
+    }
 
     public static AlipayTradeCreateRequest CreateTrade
     (string outTradeNo, string tradeMsg,

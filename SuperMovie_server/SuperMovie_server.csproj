@@ -8,6 +8,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Reference Include="AlipayF2F">
+        <HintPath>..\AlipayF2F\bin\Debug\net6.0\AlipayF2F.dll</HintPath>
+      </Reference>
       <Reference Include="CinemaContainerImpl">
         <HintPath>..\_build\CinemaContainerImpl.dll</HintPath>
       </Reference>
@@ -71,6 +74,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AlipaySDKNet.Core" Version="4.6.398" />
       <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />

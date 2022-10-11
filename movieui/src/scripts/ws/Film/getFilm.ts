@@ -21,6 +21,8 @@ type GetFilmRsp =
         FilmPrice: number
         FilmIsPreorder: boolean
         FilmOnlineTime: Date
+        FilmTypes: string[]
+        FilmActors: string[]
     }
 
 async function getFilm(req: GetFilmReq) {

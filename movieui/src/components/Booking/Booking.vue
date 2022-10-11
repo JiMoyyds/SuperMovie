@@ -1,24 +1,32 @@
 <template>
   <div>
 
-    <h3>电影1 订单编辑</h3>
+    <h2>购票 {{ FilmName }} 订单编辑</h2>
     <v-divider class="my-4"></v-divider>
     <h3 class="mb-4">影厅选择</h3>
     <v-select
-        :items="cinema_items"
+        v-model="SelectedCinemaId"
+        :items="AvailableCinemas"
+        item-value="CinemaId"
+        item-title="CinemaName"
         label="影厅"
     />
     <v-divider class="my-4"></v-divider>
     <h3 class="mb-4">场次选择</h3>
     <v-select
-        :items="screening_items"
+        :items="SchedulesInSelectedCinema"
+        v-model="SelectedSchedule"
+        item-title="ScheduleTimeText"
+        item-value="ScheduleId"
         label="场次"
     />
     <v-divider class="my-4"></v-divider>
-    <h3>座位选择</h3>
+    <h3>座位选择
+      <v-chip>{{ selectedSeat() }}</v-chip>
+    </h3>
     <div class="seats">
       <div class="screen_chip_holder mb-4">
-        <v-chip class="screen_chip px-10" color="grey">银幕位置</v-chip>
+        <v-chip class="screen_chip px-2" color="grey">首列&emsp;&emsp;&emsp;&emsp;银幕位置&emsp;&emsp;&emsp;&emsp;末列</v-chip>
       </div>
       <div class="seats_col" v-for="row_col in seats_row_cols">
         <v-icon
@@ -40,23 +48,31 @@
           class="discount_message"
           color="orange"
       >
-        您是会员L1用户，已享受9折优惠
+        您是会员Level {{ UserVipLevel }}用户，已享受{{ UserVipDiscount * 10 }}折优惠
       </v-chip>
 
       <v-chip
           color="red"
           size="large"
           class="pay_price"
+          v-if="UserVipDiscount<1"
       >
-        32元
+        <strike>原价 {{ FilmPrice }} 元</strike>
+      </v-chip>
+      <v-chip
+          color="green"
+          size="large"
+          class="pay_price"
+      >
+        实付 {{ UserVipDiscount * FilmPrice }} 元
       </v-chip>
 
       <v-btn
           class="pay-btn"
           color="primary"
-          @click="router.push('/pay_success/114514')"
+          @click="create()"
       >
-        支付订单
+        创建订单
       </v-btn>
     </div>
   </div>
@@ -65,20 +81,80 @@
 <script lang="ts" setup>
 
 import {useRouter} from "vue-router"
+import {getAllAvailableCinemaByFilmId} from "@/scripts/ws/Cinema/getAllAvailableCinemaByFilmId"
+import {ScheduleRsp} from "@/scripts/ws/Schedule/getAllScheduleByCinemaId"
+import {getAllScheduleByCinemaId} from "@/scripts/ws/Schedule/getAllScheduleByCinemaId"
+import {UserVipDiscount, UserId, UserVipLevel} from "@/scripts/state/user"
 
-defineProps<{
-  filmId: number
-}>()
+const props =
+    defineProps<{
+      filmId: bigint
+    }>()
 
-import {Ref, ref, watch} from "vue"
+const FilmName = ref('')
+const FilmPrice = ref(0.0)
+const AvailableCinemas = ref<CinemaRsp[]>([])
+const SelectedCinemaId = ref<bigint>()
+const AvailableSchedules = ref<ScheduleRsp[]>([])
+const SelectedSchedule = ref<ScheduleRsp>()
+const SchedulesInSelectedCinema = ref<{
+  ScheduleId: bigint,
+  ScheduleTimeText: string
+}[]>([])
+
+watch(SelectedCinemaId, _ => {
+  if (SelectedCinemaId.value !== undefined) {
+    for (const schedule of AvailableSchedules.value) {
+      if (schedule.ScheduleCinemaId === SelectedCinemaId.value) {
+        SchedulesInSelectedCinema.value.push({
+          ScheduleId: schedule.ScheduleId,
+          ScheduleTimeText:
+              `${schedule.ScheduleStartTime.toString()} to ${schedule.ScheduleEndTime.toString()}`
+        })
+      }
+    }
+  }
+})
+
+import {onMounted, Ref, ref, watch} from "vue"
+import {CinemaRsp} from "@/scripts/ws/Cinema/getAllCinema"
+import {getFilm} from "@/scripts/ws/Film/getFilm"
+import {createOrder} from "@/scripts/ws/Order/createOrder"
+import {HTMLCanvasElementLuminanceSource} from "html5-qrcode/third_party/zxing-js.umd"
+
 const router = useRouter()
 
 function sqrt(x: number) {
   return Math.sqrt(x)
 }
 
-const cinema_items = ref(['影厅1', '影厅2', '影厅3', '影厅4', '影厅5'])
-const screening_items = ref(['9:00', '11:00', '13:00', '15:00', '18:00', '20:00'])
+onMounted(async () => {
+  const film = await getFilm({FilmId: props.filmId})
+  FilmName.value = film.FilmName
+  FilmPrice.value = film.FilmPrice
+
+  AvailableCinemas.value =
+      (await getAllAvailableCinemaByFilmId(
+          {FilmId: props.filmId}
+      )).Collection
+
+  for (const cinema of AvailableCinemas.value) {
+    const schedules =
+        (await getAllScheduleByCinemaId({
+          CinemaId: cinema.CinemaId
+        })).Collection
+    AvailableSchedules.value =
+        AvailableSchedules.value.concat(schedules)
+  }
+})
+
+const selected_seat_col_row =
+    ref<[number, number]>([0, 0])
+
+function selectedSeat() {
+  return `${selected_seat_col_row.value[1]}排${selected_seat_col_row.value[0]}列`
+}
+
 const seats_row_cols =
     ref<[number, number][]>([
       [1, 9],
@@ -92,12 +168,29 @@ const seats_row_cols =
       [9, 17],
       [10, 18],
       [11, 19],
-      [12, 20],
+      [12, 20]
     ])
 
-const selected_seat_col_row =
-    ref<[number, number]>([0, 0])
+async function create() {
 
+  if (SelectedCinemaId.value !== undefined &&
+      //@ts-ignore
+      SelectedSchedule.value !== undefined &&
+      selectedSeat() !== '0排0列'
+  ) {
+    const order = (await createOrder({
+      OrderFilmId: props.filmId,
+      OrderUserId: UserId.value,
+      OrderCinemaId: SelectedCinemaId.value,
+      //@ts-ignore
+      OrderScheduleId: SelectedSchedule.value,
+      OrderSeat: selectedSeat(),
+      OrderPayAmount: UserVipDiscount.value * FilmPrice.value
+    }))
+    if (order.Ok)
+      await router.push('/pay_success/' + order.OrderId)
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
