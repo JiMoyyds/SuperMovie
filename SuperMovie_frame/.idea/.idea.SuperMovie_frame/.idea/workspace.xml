@@ -3,51 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="acd29234-ffc8-4413-8a44-dae40fc4bda4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SuperMovie_frame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/schedule/entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/ref/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/bin/Debug/net6.0/ref/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/SuperMovie_server.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/ref/SuperMovie_server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/obj/Debug/net6.0/ref/SuperMovie_server.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/AddFilm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetAllFilm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/GetFilm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/SearchFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/SearchFilm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/UpdateFilm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Film/UpdateFilm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/GetAllScheduleByCinemaId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Schedule/GetAllScheduleByCinemaId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/IsUserIdMatchPwd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/User/IsUserIdMatchPwd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/app.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/app.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/CinemaContainerImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/CinemaContainerImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/FilmContainerImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/FilmContainerImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/FilmDbImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/FilmDbImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/OrderContainerImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/OrderContainerImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/OrderDbImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/OrderDbImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/ScheduleContainerImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/ScheduleContainerImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_build/UserContainerImpl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../_build/UserContainerImpl.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Booking/Booking.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Booking/Booking.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Cinema/CinemaCreator.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Cinema/CinemaManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Cinema/CinemaManagement.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Cinema/ScheduleEditor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Cinema/ScheduleEditor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Film/FilmEditor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Film/FilmEditor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Film/FilmManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Film/FilmManagement.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Film/FilmPreviewCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Film/FilmPreviewCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/MenuBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/MenuBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/PaySuccess.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/PaySuccess.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/Search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/components/UserInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/components/UserInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/plugins/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/plugins/router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/addFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/addFilm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/getAllFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/getAllFilm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/getAllFilmType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/getAllFilmType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/getFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/getFilm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/searchFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/searchFilm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/updateFilm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/Film/updateFilm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/User/isUserIdMatchPwd.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/User/isUserIdMatchPwd.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movieui/src/scripts/ws/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../movieui/src/scripts/ws/helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/container/order/entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/model.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SuperMovie_frame/src/db/order/model.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/CreateOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SuperMovie_server/src/api/Order/CreateOrder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +69,8 @@
       <workItem from="1665373877341" duration="4594000" />
       <workItem from="1665408998607" duration="1874000" />
       <workItem from="1665421003958" duration="1309000" />
+      <workItem from="1665455834336" duration="314000" />
+      <workItem from="1665456436004" duration="26000" />
     </task>
     <servers />
   </component>

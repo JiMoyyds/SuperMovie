@@ -37,5 +37,4 @@ public interface IOrderEntity
     //paid:表示订单已经被支付，没有被退款
     //refunded:表示订单已被支付，但被退款
     public string? Status { get; set; }
-    public long AlipayOrderId { get; set; }
 }

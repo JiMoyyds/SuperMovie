@@ -3,7 +3,11 @@ using SuperMovie.Container.Film.Provider;
 using SuperMovie.Container.Order.Provider;
 using SuperMovie.Container.Schedule.Provider;
 using SuperMovie.Container.User.Provider;
+using Aop.Api;
 using AlipayF2F;
+using Aop.Api.Request;
+using Aop.Api.Response;
+using Aop.Api.Domain;
 
 namespace SuperMovie.Server.Api.Order;
 
@@ -19,6 +23,7 @@ public struct CreateOrderReq
     public long OrderScheduleId;
     public string OrderSeat;
     public double OrderPayAmount;
+    public long AlipayOrderId;
 }
 
 public struct CreateOrderRsp
@@ -99,7 +104,7 @@ public class CreateOrder : WebSocketBehavior
                 {
                     Ok = true,
                     OrderId = order.Id,
-                    AlipayQrCodePath = f2fRsp.QrCode
+                    AlipayOrderId = ((AopResponse)f2fRsp)
                 };
             }
             else
