@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DbMiddleware">
+      <HintPath>C:\Users\86150\Documents\GitHub\SuperMovieSDK\DbMiddleware\bin\Debug\net6.0\DbMiddleware.dll</HintPath>
+    </Reference>
+    <Reference Include="DbMiddlewarePostgresImpl">
+      <HintPath>C:\Users\86150\Documents\GitHub\SuperMovieSDK\DbMiddlewarePostgresImpl\bin\Debug\net6.0\DbMiddlewarePostgresImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMovie_frame">
+      <HintPath>C:\Users\86150\Documents\GitHub\SuperMovieSDK\SuperMovie_frame\SuperMovie_frame\bin\Debug\net6.0\SuperMovie_frame.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserContainerImpl", "UserContainerImpl.csproj", "{0F69AD01-F969-455F-925B-9FED24F42A8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F69AD01-F969-455F-925B-9FED24F42A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F69AD01-F969-455F-925B-9FED24F42A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F69AD01-F969-455F-925B-9FED24F42A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F69AD01-F969-455F-925B-9FED24F42A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1431C164-DA6A-4671-A48A-F57A2DDD4434}
+	EndGlobalSection
+EndGlobal

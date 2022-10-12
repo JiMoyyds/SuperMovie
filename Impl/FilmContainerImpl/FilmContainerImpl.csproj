@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DbManaged">
+      <HintPath>G:\SuperMovieSDK\_dep\DbManaged.dll</HintPath>
+    </Reference>
+    <Reference Include="DbMiddleware">
+      <HintPath>G:\SuperMovieSDK\DbMiddleware\bin\Debug\net6.0\DbMiddleware.dll</HintPath>
+    </Reference>
+    <Reference Include="DbMiddlewarePostgresImpl">
+      <HintPath>G:\SuperMovieSDK\DbMiddlewarePostgresImpl\bin\Debug\net6.0\DbMiddlewarePostgresImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="FilmDbImpl">
+      <HintPath>..\FilmDbImpl\bin\Debug\net6.0\FilmDbImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="palaflake">
+      <HintPath>G:\SuperMovieSDK\SuperMovie.Util\SuperMovie.Util\bin\Debug\net6.0\palaflake.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMovie.Util">
+      <HintPath>G:\SuperMovieSDK\SuperMovie.Util\SuperMovie.Util\bin\Debug\net6.0\SuperMovie.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMovie_frame">
+      <HintPath>G:\SuperMovieSDK\SuperMovie_frame\SuperMovie_frame\bin\Debug\net6.0\SuperMovie_frame.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

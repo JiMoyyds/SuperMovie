@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="CinemaContainerImpl">
+        <HintPath>..\..\repo\SuperMovieSDK\Impl\CinemaContainerImpl\bin\Debug\net6.0\CinemaContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="DbMiddleware">
+        <HintPath>..\..\repo\SuperMovieSDK\DbMiddleware\bin\Debug\net6.0\DbMiddleware.dll</HintPath>
+      </Reference>
+      <Reference Include="DbMiddlewarePostgresImpl">
+        <HintPath>..\..\repo\SuperMovieSDK\DbMiddlewarePostgresImpl\bin\Debug\net6.0\DbMiddlewarePostgresImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="FilmContainerImpl">
+        <HintPath>..\..\repo\SuperMovieSDK\Impl\FilmContainerImpl\bin\Debug\net6.0\FilmContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="FilmDbImpl">
+        <HintPath>..\..\repo\SuperMovieSDK\Impl\FilmDbImpl\bin\Debug\net6.0\FilmDbImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="OrderDbImpl">
+        <HintPath>..\OrderDbImpl\bin\Debug\net6.0\OrderDbImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="ScheduleContainerImpl">
+        <HintPath>..\..\repo\SuperMovieSDK\Impl\ScheduleContainerImpl\bin\Debug\net6.0\ScheduleContainerImpl.dll</HintPath>
+      </Reference>
+      <Reference Include="SuperMovie.Util">
+        <HintPath>..\..\repo\SuperMovieSDK\SuperMovie.Util\SuperMovie.Util\bin\Debug\net6.0\SuperMovie.Util.dll</HintPath>
+      </Reference>
+      <Reference Include="SuperMovie_frame">
+        <HintPath>..\..\repo\SuperMovieSDK\SuperMovie_frame\SuperMovie_frame\bin\Debug\net6.0\SuperMovie_frame.dll</HintPath>
+      </Reference>
+      <Reference Include="UserContainerImpl">
+        <HintPath>..\..\repo\SuperMovieSDK\Impl\UserContainerImpl\bin\Debug\net6.0\UserContainerImpl.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NUnit" Version="3.13.3" />
+    </ItemGroup>
+
+</Project>

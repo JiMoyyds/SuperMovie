@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DbMiddleware">
+      <HintPath>..\VipDbImpl\bin\Debug\net6.0\DbMiddleware.dll</HintPath>
+    </Reference>
+    <Reference Include="DbMiddlewarePostgresImpl">
+      <HintPath>..\VipDbImpl\bin\Debug\net6.0\DbMiddlewarePostgresImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="palaflake">
+      <HintPath>..\VipDbImpl\bin\Debug\net6.0\palaflake.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMovie.Util">
+      <HintPath>C:\Users\86150\Documents\GitHub\SuperMovieSDK\SuperMovie.Util\SuperMovie.Util\bin\Debug\net6.0\SuperMovie.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMovie_frame">
+      <HintPath>..\VipDbImpl\bin\Debug\net6.0\SuperMovie_frame.dll</HintPath>
+    </Reference>
+    <Reference Include="VipDbImpl">
+      <HintPath>..\VipDbImpl\bin\Debug\net6.0\VipDbImpl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="CinemaDbImpl">
+      <HintPath>..\CinemaDbImpl\bin\Debug\net6.0\CinemaDbImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="DbManaged">
+      <HintPath>F:\movie\SuperMovieSDK\_dep\DbManaged.dll</HintPath>
+    </Reference>
+    <Reference Include="DbMiddleware">
+      <HintPath>F:\movie\SuperMovieSDK\DbMiddleware\bin\Debug\net6.0\DbMiddleware.dll</HintPath>
+    </Reference>
+    <Reference Include="DbMiddlewarePostgresImpl">
+      <HintPath>F:\movie\SuperMovieSDK\DbMiddlewarePostgresImpl\bin\Debug\net6.0\DbMiddlewarePostgresImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="fsharper">
+      <HintPath>F:\movie\SuperMovieSDK\_dep\fsharper.dll</HintPath>
+    </Reference>
+    <Reference Include="palaflake">
+      <HintPath>F:\movie\SuperMovieSDK\_dep\palaflake.dll</HintPath>
+    </Reference>
+    <Reference Include="ScheduleDbImpl">
+      <HintPath>..\ScheduleDbImpl\bin\Debug\net6.0\ScheduleDbImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMovie.Util">
+      <HintPath>F:\movie\SuperMovieSDK\SuperMovie.Util\SuperMovie.Util\bin\Debug\net6.0\SuperMovie.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMovie_frame">
+      <HintPath>F:\movie\SuperMovieSDK\SuperMovie_frame\SuperMovie_frame\bin\Debug\net6.0\SuperMovie_frame.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
