@@ -73,11 +73,11 @@ async function login() {
       UserVipLevel.value = user.UserVipLevel
       UserVipDiscount.value = user.UserVipLevelDiscount
     }
+    if (BigInt(_UserId.value) > 1000n)
+      await router.push('/user_info/' + _UserId.value)
+    else
+      await router.push('/film_management')
   }
-  if (BigInt(_UserId.value) > 1000n)
-    await router.push('/user_info/' + _UserId.value)
-  else
-    await router.push('/film_management')
 }
 
 </script>

@@ -153,7 +153,7 @@ public class F2FResponse
     /// </summary>
     /// <param name="response"></param>
     /// <returns></returns>
-    static bool IsTradeSuccess(AlipayTradeQueryResponse response)
+    public static bool IsTradeSuccess(AlipayTradeQueryResponse response)
     {
         return response.TradeStatus == "TRADE_SUCCESS";
     }
@@ -163,7 +163,7 @@ public class F2FResponse
     /// </summary>
     /// <param name="response"></param>
     /// <returns></returns>
-    static bool IsTradeFinished(AlipayTradeQueryResponse response)
+    public static bool IsTradeFinished(AlipayTradeQueryResponse response)
     {
         return response.TradeStatus == "TRADE_FINISHED";
     }
@@ -173,7 +173,7 @@ public class F2FResponse
     /// </summary>
     /// <param name="response"></param>
     /// <returns></returns>
-    static bool IsTradeWaitingPay(AlipayTradeQueryResponse response)
+    public static bool IsTradeWaitingPay(AlipayTradeQueryResponse response)
     {
         return response.TradeStatus == "WAIT_BUYER_PAY";
     }
@@ -184,7 +184,7 @@ public class F2FResponse
     /// </summary>
     /// <param name="response"></param>
     /// <returns></returns>
-    static bool IsTradeClosed(AlipayTradeQueryResponse response)
+    public static bool IsTradeClosed(AlipayTradeQueryResponse response)
     {
         return response.TradeStatus == "TRADE_CLOSED";
     }

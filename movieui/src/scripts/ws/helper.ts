@@ -5,7 +5,9 @@ export {
     recvMsg,
     rspParse,
     reqStringify,
-    createWebSocket
+    createWebSocket,
+    utf8_to_b64,
+    b64_to_utf8
 }
 
 function createWebSocket(url: string): any {
@@ -70,4 +72,12 @@ function rspParse(rsp: string) {
     }
 
     return JSON.parse(rsp, reviver)
+}
+
+function utf8_to_b64(str: string) {
+    return window.btoa(unescape(encodeURIComponent(str)))
+}
+
+function b64_to_utf8(str: string) {
+    return decodeURIComponent(escape(window.atob(str)))
 }

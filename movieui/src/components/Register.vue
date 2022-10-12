@@ -8,17 +8,18 @@
     <v-card-text>
       <v-text-field
           label="手机号"
-          v-model="UserId"
+          v-model="_UserId"
       />
       <v-text-field
           label="密码(不得少于8位，必须需含有大小写字母)"
           type="password"
-          v-model="UserPwd"
+          v-model="_UserPwd"
       />
       <v-btn
           variant="text"
           color="blue"
           width="100%"
+          @click="register()"
       >
         立即注册
       </v-btn>
@@ -31,16 +32,25 @@
 
 import {useRouter} from "vue-router"
 import {ref} from "vue"
+import {addUser} from "@/scripts/ws/User/addUser"
+import {UserId, IsUserLogin} from "@/scripts/state/user"
 
 const router = useRouter()
 
-const UserId = ref(114514)
-const UserPwd = ref(114514)
+const _UserId = ref('')
+const _UserPwd = ref('')
 
-function Login() {
-
+async function register() {
+  const user = await addUser({
+    UserId: BigInt(_UserId.value),
+    UserPwd: _UserPwd.value
+  })
+  if (user.Ok) {
+    UserId.value = BigInt(_UserId.value)
+    IsUserLogin.value = true
+    await router.push('user_info/' + UserId.value)
+  }
 }
-
 </script>
 
 <style lang="stylus" scoped>

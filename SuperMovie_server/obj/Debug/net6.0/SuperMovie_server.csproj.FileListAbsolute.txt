@@ -20,3 +20,6 @@
 /home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/bin/Debug/net6.0/SuperMovie_server
 /home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.dll
 /home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/bin/Debug/net6.0/SuperMovie_server.pdb
+/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/bin/Debug/net6.0/cert/alipayCertPublicKey_RSA2.crt
+/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/bin/Debug/net6.0/cert/alipayRootCert.crt
+/home/thaumy/data/dev/repo/SuperMovieSDK/SuperMovie_server/bin/Debug/net6.0/cert/appCertPublicKey_2021000121674567.crt

@@ -1,33 +1,32 @@
 <template>
   <div>
 
-    <div class="holder">
+    <v-card
+        class="mx-auto mt-10"
+        max-width="500"
+    >
+      <v-card-text>
+        <div>{{ order_id }}</div>
+        <v-row align="center" hide-gutters>
+          <v-col
+              class="text-h3"
+              cols="9"
+          >
+            {{ OrderFilmName }}
+          </v-col>
 
-      <h3>电影名称1</h3>
+          <v-col cols="3" class="text-right">
+            <canvas ref="qrcode_area"/>
+          </v-col>
+        </v-row>
+        <p> {{ OrderCinemaName }} 厅 / {{ OrderSeat }}</p>
+        <div class="text--primary">
+          <h4>FROM : {{ OrderScheduleStartTime }}</h4>
+          <h4>TO  : {{ OrderScheduleEndTime }}</h4>
+        </div>
+      </v-card-text>
 
-      <v-divider class="my-4"></v-divider>
-
-      <h4 class="center">
-        座位：{{ payment_film_info.seat }}
-      </h4>
-      <h4 class="center">
-        观影日期：{{ payment_film_info.show_time }}
-      </h4>
-      <h4 class="center">
-        场次：{{ payment_film_info.screening }}
-      </h4>
-
-      <h4 class="center">
-        订单二维码
-      </h4>
-
-      <div class="center">
-        <canvas ref="qrcode_area"/>
-      </div>
-
-      <v-divider class="my-4"></v-divider>
-
-    </div>
+    </v-card>
 
   </div>
 </template>
@@ -36,24 +35,42 @@
 import QRCode from 'qrcode'
 import {onMounted, ref} from "vue"
 import {useRouter} from "vue-router"
+import {getOrder} from "@/scripts/ws/Order/getOrder"
+import {getFilm} from "@/scripts/ws/Film/getFilm"
+import {getCinema} from "@/scripts/ws/Cinema/getCinema"
+import {getSchedule} from "@/scripts/ws/Schedule/getSchedule"
+
+const props =
+    defineProps<{
+      order_id: bigint
+    }>()
 
 const router = useRouter()
-const payment_id = ref(1145141919810)
-const payment_film_info = ref({
-  name: '电影名称',
-  seat: '12排13列',
-  show_time: '2022 11月11日',
-  screening: '19:00-21:00'
-})
-
 const qrcode_area = ref()
 
+const OrderFilmName = ref('')
+const OrderSeat = ref('')
+const OrderCinemaName = ref('')
+const OrderScheduleStartTime = ref(new Date())
+const OrderScheduleEndTime = ref(new Date())
+
 function setQr() {
-  QRCode.toCanvas(qrcode_area.value, String(payment_id.value))
+  QRCode.toCanvas(qrcode_area.value, props.order_id.toString())
 }
 
-onMounted(() => {
+onMounted(async () => {
   setQr()
+
+  const order = await getOrder({OrderId: props.order_id})
+  const film = await getFilm({FilmId: order.OrderFilmId})
+  const cinema = await getCinema({CinemaId: order.OrderCinemaId})
+  const schedule = await getSchedule({ScheduleId: order.OrderScheduleId})
+
+  OrderFilmName.value = film.FilmName
+  OrderSeat.value = order.OrderSeat
+  OrderCinemaName.value = cinema.CinemaName
+  OrderScheduleStartTime.value = schedule.ScheduleStartTime
+  OrderScheduleEndTime.value = schedule.ScheduleEndTime
 })
 
 </script>

@@ -1,3 +1,4 @@
+using AlipayF2F;
 using SuperMovie.Container.Order.Provider;
 
 namespace SuperMovie.Server.Api.Order;
@@ -20,10 +21,12 @@ public struct RefundOrderRsp
 public class RefundOrder : WebSocketBehavior
 {
     private IOrderProvider _orderProvider;
+    private F2FClient _f2fClient;
 
-    public void Set(IOrderProvider orderProvider)
+    public void Set(IOrderProvider orderProvider, F2FClient f2fClient)
     {
         _orderProvider = orderProvider;
+        _f2fClient = f2fClient;
     }
 
     protected override void OnMessage(MessageEventArgs e)
@@ -36,15 +39,30 @@ public class RefundOrder : WebSocketBehavior
 
         RefundOrderRsp rsp;
 
-        if (order != null && order.Status == "paid")
+        if (order != null && order.Schedule.StartTime > DateTime.Now && order.Status == "paid")
         {
             //TODO AlipayF2F
+            var f2fReq = F2FRequest.RefundTrade(order.Id.ToString(), order.PayAmount);
+            var f2fRsp = _f2fClient.ExecuteRequest(f2fReq);
+            Console.WriteLine(f2fRsp.Msg);
 
-            order.Status = "refunded";
-            rsp = new RefundOrderRsp
+            var f2fReq2 = F2FRequest.QueryTrade(order.Id.ToString());
+            var f2fRsp2 = _f2fClient.ExecuteRequest(f2fReq2);
+            if (F2FResponse.IsTradeClosed(f2fRsp2))
             {
-                Ok = true
-            };
+                order.Status = "refunded";
+                rsp = new RefundOrderRsp
+                {
+                    Ok = true
+                };
+            }
+            else
+            {
+                rsp = new RefundOrderRsp
+                {
+                    Ok = false
+                };
+            }
         }
         else
         {

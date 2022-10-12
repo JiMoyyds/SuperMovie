@@ -10,18 +10,53 @@
   />
 
   <v-card
-      v-for="(item,index) in bor_by_film_name"
+      v-if="statistics_values === '按影片'"
+      v-for="(item,index) in nameBor.Collection"
       class="mb-2"
   >
     <v-card-title>
       <v-chip variant="text" size="x-large">
         NO.{{ index + 1 }}
-        {{ item.filmName }}
+        {{ item.FilmName }}
       </v-chip>
     </v-card-title>
     <v-card-text>
       <v-chip size="x-large" variant="text">
-        票房共计 {{ item.boxOffice }}
+        票房共计 {{ item.FilmBoxOffice }}
+      </v-chip>
+    </v-card-text>
+  </v-card>
+  <v-card
+      v-if="statistics_values === '按类型'"
+      v-for="(item,index) in typeBor.Collection"
+      class="mb-2"
+  >
+    <v-card-title>
+      <v-chip variant="text" size="x-large">
+        NO.{{ index + 1 }}
+        {{ item.FilmType }}
+      </v-chip>
+    </v-card-title>
+    <v-card-text>
+      <v-chip size="x-large" variant="text">
+        票房共计 {{ item.FilmBoxOffice }}
+      </v-chip>
+    </v-card-text>
+  </v-card>
+  <v-card
+      v-if="statistics_values === '按主演'"
+      v-for="(item,index) in actorBor.Collection"
+      class="mb-2"
+  >
+    <v-card-title>
+      <v-chip variant="text" size="x-large">
+        NO.{{ index + 1 }}
+        {{ item.FilmActor }}
+      </v-chip>
+    </v-card-title>
+    <v-card-text>
+      <v-chip size="x-large" variant="text">
+        票房共计 {{ item.FilmBoxOffice }}
       </v-chip>
     </v-card-text>
   </v-card>
@@ -30,33 +65,53 @@
 
 <script lang="ts" setup>
 
-import {ref} from "vue"
+import {onMounted, ref} from "vue"
 import {useRouter} from "vue-router"
+import {getReleasedFilmTypeBor, GetReleasedFilmTypeBorRsp} from "@/scripts/ws/Statistics/getReleasedFilmTypeBor"
+import {getReleasedFilmNameBor, GetReleasedFilmNameBorRsp} from "@/scripts/ws/Statistics/getReleasedFilmNameBor"
+import {
+  FilmActorBoxOfficeRsp,
+  getReleasedFilmActorBor,
+  GetReleasedFilmActorBorRsp
+} from "@/scripts/ws/Statistics/getReleasedFilmActorBor"
 
 const router = useRouter()
 const statistics_items = ref(['按影片', '按类型', '按主演'])
-const statistics_values = ref(['按影片'])
+const statistics_values = ref('按影片')
 
-const bor_by_film_name = ref([
-  {
-    filmName: '星际穿越',
-    boxOffice: 114514
-  },
-  {
-    filmName: '盗梦空间',
-    boxOffice: 11451
-  },
-  {
-    filmName: '信条',
-    boxOffice: 1145
+const actorBor = ref<GetReleasedFilmActorBorRsp>(
+    {
+      Collection: []
+    }
+)
+const typeBor = ref<GetReleasedFilmTypeBorRsp>(
+    {
+      Collection: []
+    }
+)
+const nameBor = ref<GetReleasedFilmNameBorRsp>(
+    {
+      Collection: []
+    }
+)
+
+function getBor() {
+  if (statistics_values.value === '按影片') {
+    return nameBor.value
   }
-])
+  if (statistics_values.value === '按类型') {
+    return typeBor.value
+  }
+  if (statistics_values.value === '按主演') {
+    return actorBor.value
+  }
+}
 
-/*
-const bor_by_film_name;
-const bor_by_film_type;
-const bor_by_film_actor;
-*/
+onMounted(async () => {
+  actorBor.value = (await getReleasedFilmActorBor({}))
+  nameBor.value = (await getReleasedFilmNameBor({}))
+  typeBor.value = (await getReleasedFilmTypeBor({}))
+})
 
 </script>
 

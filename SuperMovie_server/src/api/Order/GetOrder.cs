@@ -7,12 +7,14 @@ using WebSocketSharp;
 using WebSocketSharp.Server;
 using Util;
 
-public struct GetAllOrderReq
+public struct GetOrderReq
 {
+    public long OrderId;
 }
 
-public struct OrderRsp
+public struct GetOrderRsp
 {
+    public bool Ok;
     public long OrderId;
     public long OrderUserId;
     public long OrderFilmId;
@@ -24,13 +26,8 @@ public struct OrderRsp
     public string OrderStatus;
 }
 
-public struct GetAllOrderRsp
-{
-    public List<OrderRsp> Collection;
-}
-
-//api : get_all_order
-public class GetAllOrder : WebSocketBehavior
+//api : get_order
+public class GetOrder : WebSocketBehavior
 {
     private IOrderProvider _orderProvider;
     private F2FClient _f2fClient;
@@ -43,14 +40,14 @@ public class GetAllOrder : WebSocketBehavior
 
     protected override void OnMessage(MessageEventArgs e)
     {
-        Console.WriteLine($"get_all_order req:\n{e.Data}");
+        Console.WriteLine($"get_order req:\n{e.Data}");
 
-        var req = JsonHelper.Parse<GetAllOrderReq>(e.Data);
-        var orders = _orderProvider.GetAllOrder();
+        var req = JsonHelper.Parse<GetOrderReq>(e.Data);
+        var order = _orderProvider.GetOrder(req.OrderId);
 
-        var orderRspList = new List<OrderRsp>();
+        GetOrderRsp rsp;
 
-        foreach (var order in orders)
+        if (order != null)
         {
             if (order.Status == "created")
             {
@@ -63,8 +60,9 @@ public class GetAllOrder : WebSocketBehavior
                 }
             }
 
-            var orderRsp = new OrderRsp
+            rsp = new GetOrderRsp
             {
+                Ok = true,
                 OrderId = order.Id,
                 OrderUserId = order.User.Id,
                 OrderFilmId = order.Film.Id,
@@ -75,16 +73,25 @@ public class GetAllOrder : WebSocketBehavior
                 OrderStatus = order.Status,
                 OrderTime = order.Time.Value
             };
-            orderRspList.Add(orderRsp);
+        }
+        else
+        {
+            rsp = new GetOrderRsp
+            {
+                Ok = false,
+                OrderId = 0,
+                OrderUserId = 0,
+                OrderFilmId = 0,
+                OrderCinemaId = 0,
+                OrderScheduleId = 0,
+                OrderSeat = "",
+                OrderPayAmount = 0.0,
+                OrderStatus = ""
+            };
         }
 
-        var rsp = new GetAllOrderRsp
-        {
-            Collection = orderRspList
-        };
-
         var json = JsonHelper.Stringify(rsp);
-        Console.WriteLine($"get_all_order rsp:\n{json}");
+        Console.WriteLine($"get_order rsp:\n{json}");
         Send(json);
     }
 }

@@ -121,6 +121,7 @@ import {CinemaRsp} from "@/scripts/ws/Cinema/getAllCinema"
 import {getFilm} from "@/scripts/ws/Film/getFilm"
 import {createOrder} from "@/scripts/ws/Order/createOrder"
 import {HTMLCanvasElementLuminanceSource} from "html5-qrcode/third_party/zxing-js.umd"
+import {utf8_to_b64} from "@/scripts/ws/helper"
 
 const router = useRouter()
 
@@ -187,8 +188,9 @@ async function create() {
       OrderSeat: selectedSeat(),
       OrderPayAmount: UserVipDiscount.value * FilmPrice.value
     }))
-    if (order.Ok)
-      await router.push('/pay_success/' + order.OrderId)
+    if (order.Ok) {
+      await router.push('/pay_success/' + order.OrderId + '/' + utf8_to_b64(order.AlipayQrCodePath))
+    }
   }
 }
 </script>

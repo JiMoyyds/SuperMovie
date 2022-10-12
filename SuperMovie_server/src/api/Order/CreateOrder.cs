@@ -23,7 +23,6 @@ public struct CreateOrderReq
     public long OrderScheduleId;
     public string OrderSeat;
     public double OrderPayAmount;
-    public long AlipayOrderId;
 }
 
 public struct CreateOrderRsp
@@ -86,17 +85,14 @@ public class CreateOrder : WebSocketBehavior
 
             if (order != null)
             {
-                var orderMsg =
-                    $@"超级电影购票: {film.Name}
-                       订单号: {order.Id}
-                       影厅: {cinema.Name}
-                       座位: {order.Seat}
-                       场次: {order.Schedule.StartTime} to {order.Schedule.EndTime}";
+                //var orderMsg = $@"超级电影购票: {film.Name}";
+                //订单号: {order.Id}影厅: {cinema.Name}座位: {order.Seat}";
+                //场次: {order.Schedule.StartTime} to {order.Schedule.EndTime}";
 
                 var f2fReq = F2FRequest.PreCreateTrade(
                     order.Id.ToString(),
-                    orderMsg,
-                    order.PayAmount
+                    "超级电影购票",
+                    req.OrderPayAmount
                 );
                 var f2fRsp = _f2fClient.ExecuteRequest(f2fReq);
 
@@ -104,7 +100,7 @@ public class CreateOrder : WebSocketBehavior
                 {
                     Ok = true,
                     OrderId = order.Id,
-                    AlipayOrderId = ((AopResponse)f2fRsp)
+                    AlipayQrCodePath = f2fRsp.QrCode
                 };
             }
             else

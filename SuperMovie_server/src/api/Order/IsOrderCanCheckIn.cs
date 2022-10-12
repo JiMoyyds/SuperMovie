@@ -1,3 +1,5 @@
+using AlipayF2F;
+
 namespace SuperMovie.Server.Api.Order;
 
 using SuperMovie.Container.Order.Provider;
@@ -19,10 +21,12 @@ public struct IsOrderCanCheckInRsp
 public class IsOrderCanCheckIn : WebSocketBehavior
 {
     private IOrderProvider _orderProvider;
+    private F2FClient _f2fClient;
 
-    public void Set(IOrderProvider orderProvider)
+    public void Set(IOrderProvider orderProvider, F2FClient f2fClient)
     {
         _orderProvider = orderProvider;
+        _f2fClient = f2fClient;
     }
 
     protected override void OnMessage(MessageEventArgs e)
@@ -34,8 +38,13 @@ public class IsOrderCanCheckIn : WebSocketBehavior
 
         IsOrderCanCheckInRsp rsp;
 
-        if (order != null && order.Status == "paid")
+        var f2fReq = F2FRequest.QueryTrade(req.OrderId.ToString());
+        var f2fRsp = _f2fClient.ExecuteRequest(f2fReq);
+        var isSuccess = F2FResponse.IsTradeSuccess(f2fRsp);
+
+        if (order != null && (order.Status == "paid" || isSuccess))
         {
+            order.Status = "paid";
             var schedule = order.Schedule;
             var now = DateTime.Now;
             rsp = new IsOrderCanCheckInRsp

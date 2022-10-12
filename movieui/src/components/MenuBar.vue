@@ -35,7 +35,7 @@
         >票房排行
         </v-btn>
         <v-btn variant="text" size="large"
-               :to="'/recent_orders/1123'"
+               :to="'/recent_orders/'+UserId"
                v-if="IsUserLogin"
         >我的订单
         </v-btn>

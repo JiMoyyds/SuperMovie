@@ -10,6 +10,7 @@
     <span style="margin:auto" v-text="_decodedText"/>
 
     <v-icon
+        v-if="!pass"
         style="margin:auto"
         class="qr-icon mb-5"
         icon="mdi-qrcode-scan"
@@ -17,6 +18,7 @@
     />
 
     <v-chip
+        v-else
         class="my-2"
         size="x-large"
         color="green"
@@ -24,16 +26,6 @@
     >
       <div class="title">
         检票通过! 观影愉快
-      </div>
-    </v-chip>
-    <v-chip
-        class="my-2"
-        size="x-large"
-        color="red"
-        style="margin:auto"
-    >
-      <div class="title">
-        检票失败! 订单无效
       </div>
     </v-chip>
 
@@ -47,17 +39,26 @@ import {onMounted, ref} from "vue"
 import {Html5Qrcode} from 'html5-qrcode'
 import {Html5QrcodeScanner} from 'html5-qrcode'
 import {useRouter} from "vue-router"
+import {isOrderIdCanCheckIn} from "@/scripts/ws/Order/isOrderCanCheckIn"
 
 const router = useRouter()
 const showQrIcon = ref(false)
+const pass = ref(false)
 const _decodedText = ref('_')
 
-function onScanSuccess(decodedText: string, decodedResult: unknown) {
+async function onScanSuccess(decodedText: string, decodedResult: unknown) {
   _decodedText.value = decodedText
+  const ok = await isOrderIdCanCheckIn({OrderId: BigInt(decodedText)})
+  if (ok.Yes) {
+    pass.value = true
+  } else {
+    pass.value = false
+  }
 }
 
 function onScanFailure(error: string) {
   _decodedText.value = '_'
+  pass.value = false
 }
 
 onMounted(() => {
@@ -68,8 +69,8 @@ onMounted(() => {
         qrbox: {width: 300, height: 300},
         formatsToSupport: 0
       },
-      false,
-  ).render(onScanSuccess, onScanFailure);
+      false
+  ).render(onScanSuccess, onScanFailure)
 })
 
 </script>

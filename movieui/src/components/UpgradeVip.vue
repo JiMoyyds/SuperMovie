@@ -17,8 +17,14 @@
       </h1>
     </v-card-text>
     <v-card-actions>
-      <v-btn color="primary">申请退费</v-btn>
-      <v-btn color="primary">立即充值</v-btn>
+      <v-btn color="primary"
+             v-if="UserVipLevel===1n"
+      >申请退费
+      </v-btn>
+      <v-btn color="primary"
+             v-if="UserVipLevel<1n"
+      >立即充值
+      </v-btn>
     </v-card-actions>
   </v-card>
 
@@ -33,14 +39,21 @@
     <v-card-text>
       <h1>
         60元/月
-        <v-chip color="orange">
+        <v-chip color="orange"
+        >
           享受8折结算优惠
         </v-chip>
       </h1>
     </v-card-text>
     <v-card-actions>
-      <v-btn color="primary">申请退费</v-btn>
-      <v-btn color="primary">立即充值</v-btn>
+      <v-btn color="primary"
+             v-if="UserVipLevel===2n"
+      >申请退费
+      </v-btn>
+      <v-btn color="primary"
+             v-if="UserVipLevel<2n"
+      >立即充值
+      </v-btn>
     </v-card-actions>
   </v-card>
 
@@ -61,21 +74,36 @@
       </h1>
     </v-card-text>
     <v-card-actions>
-      <v-btn color="primary">申请退费</v-btn>
-      <v-btn color="primary">立即充值</v-btn>
+      <v-btn color="primary"
+             v-if="UserVipLevel===3n"
+      >申请退费
+      </v-btn>
+      <v-btn color="primary"
+             v-if="UserVipLevel<3n"
+      >立即充值
+      </v-btn>
     </v-card-actions>
   </v-card>
 
 </template>
 
 <script lang="ts" setup>
+
 import {useRouter} from "vue-router"
+import {onMounted, ref} from "vue"
+import {getUser} from "@/scripts/ws/User/getUser"
+import {UserVipLevel} from "@/scripts/state/user"
 
 const router = useRouter()
 
-defineProps<{
-  user_id: number
-}>()
+const props =
+    defineProps<{
+      user_id: bigint
+    }>()
+
+function refund(){
+
+}
 
 </script>
 

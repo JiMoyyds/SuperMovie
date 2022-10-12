@@ -54,17 +54,18 @@ export default createRouter({
             })
         },
         {
-            path: '/pay_success/:payment_id',
+            path: '/pay_success/:payment_id/:alipay_qrcode_path',
             component: PaySuccess,
             props: r => ({
-                payment_id: BigInt(r.params.payment_id.toString())
+                payment_id: BigInt(r.params.payment_id.toString()),
+                alipay_qrcode_path: r.params.alipay_qrcode_path
             })
         },
         {
-            path: '/ticket_printing/:payment_id',
+            path: '/ticket_printing/:order_id',
             component: TicketPrinting,
             props: r => ({
-                payment_id: BigInt(r.params.payment_id.toString())
+                order_id: BigInt(r.params.order_id.toString())
             })
         },
         {
@@ -97,7 +98,7 @@ export default createRouter({
             path: '/schedule_editor/:cinema_id',
             component: ScheduleEditor,
             props: r => ({
-                cinema_id: BigInt(r.params.cinema_id.toString()),
+                cinema_id: BigInt(r.params.cinema_id.toString())
             })
         },
         {

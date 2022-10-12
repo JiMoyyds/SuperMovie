@@ -48,7 +48,7 @@
                 color="orange"
                 class="mx-2"
             >
-              {{user_id}}
+              {{ user_id }}
             </v-chip>
           </div>
         </v-card-text>
@@ -67,13 +67,14 @@
           >
             修改密码
           </v-btn>
+<!--
           <v-btn
               prepend-icon="mdi-crown"
               color="primary"
-              @click="router.push('/upgrade_vip/1234')"
+              @click="router.push('/upgrade_vip/'+user_id)"
           >
             升级会员
-          </v-btn>
+          </v-btn>-->
         </v-card-actions>
 
 
@@ -88,6 +89,7 @@
 import {useRouter} from "vue-router"
 import {onMounted, ref} from "vue"
 import {getUser} from "@/scripts/ws/User/getUser"
+import {UserVipLevel} from "@/scripts/state/user"
 
 const router = useRouter()
 
@@ -96,14 +98,15 @@ const props =
       user_id: bigint,
     }>()
 
-const UserVipLevel = ref(-1n)
-const UserVipLevelDiscount = ref(-1.0)
+const _UserVipLevel = ref(-1n)
+const _UserVipLevelDiscount = ref(-1.0)
 
 onMounted(async () => {
   const user = await getUser({UserId: props.user_id})
   if (user.Ok) {
     UserVipLevel.value = user.UserVipLevel
-    UserVipLevelDiscount.value = user.UserVipLevelDiscount
+    _UserVipLevel.value = user.UserVipLevel
+    _UserVipLevelDiscount.value = user.UserVipLevelDiscount
   }
 })
 

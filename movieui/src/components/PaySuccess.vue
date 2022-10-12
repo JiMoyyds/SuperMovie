@@ -3,24 +3,51 @@
 
     <div class="holder mt-5">
 
-      <h3>订单已被创建，请在 3 小时内完成支付.</h3>
+      <v-chip
+          size="x-large"
+          color="primary"
+          prepend-icon="mdi-clock-outline"
+      >
+        订单已被创建，请在 2 小时内完成支付.
+      </v-chip>
+
+      <v-chip
+          size="x-large"
+          color="red"
+          class="mt-2"
+          prepend-icon="mdi-alert-octagon-outline"
+      >
+        在支付完成前，请不要关闭该页面.
+      </v-chip>
 
       <v-divider class="my-4"></v-divider>
 
-      <v-chip variant="text">
+      <v-chip color="secondary" class="mb-6">
         <h3>
           订单号：{{ payment_id }}
         </h3>
       </v-chip>
 
-      <v-chip variant="text">
-        订单二维码
-      </v-chip>
+      <div style="display: flex;justify-content:space-around">
+        <v-card rounded>
+          <div style="display: flex;flex-direction: column">
+            <v-chip color="primary" style="margin: auto" class="mt-2">
+              订单二维码
+            </v-chip>
+            <canvas ref="order_id_qrcode_area"></canvas>
+          </div>
+        </v-card>
 
-      <canvas ref="qrcode_area"></canvas>
-
+        <v-card rounded>
+          <div style="display: flex;flex-direction: column">
+            <v-chip color="primary" style="margin: auto" class="mt-2">
+              支付宝支付二维码
+            </v-chip>
+            <canvas ref="alipay_qrcode_path_qrcode_area"></canvas>
+          </div>
+        </v-card>
+      </div>
       <v-divider class="my-4"></v-divider>
-
       <div class="foot">
         <v-btn
             class="go_to_my_orders_btn"
@@ -28,14 +55,15 @@
             prepend-icon="mdi-printer"
             @click="router.push('/ticket_printing/'+payment_id)"
         >
-          打印电影票
+          入场凭据
         </v-btn>
         <v-btn
             class="go_to_my_orders_btn"
             color="primary"
             prepend-icon="mdi-keyboard-return"
+            @click="router.push('/recent_orders')"
         >
-          我的订单
+          最近订单
         </v-btn>
       </div>
     </div>
@@ -47,32 +75,32 @@
 import QRCode from 'qrcode'
 import {onMounted, ref} from "vue"
 import {useRouter} from "vue-router"
-import {getAllOrder} from "@/scripts/ws/Order/getAllOrder"
+import {b64_to_utf8} from "@/scripts/ws/helper"
 
 const router = useRouter()
 const props =
     defineProps<{
       payment_id: bigint
+      alipay_qrcode_path: string
     }>()
 
-const qrcode_area = ref()
-const AlipayQrCodePath = ref('')
+const order_id_qrcode_area = ref()
+const alipay_qrcode_path_qrcode_area = ref()
 
 function setQr() {
-  QRCode.toCanvas(qrcode_area.value, String(props.payment_id))
+  QRCode.toCanvas(
+      order_id_qrcode_area.value,
+      String(props.payment_id)
+  )
+  QRCode.toCanvas(
+      alipay_qrcode_path_qrcode_area.value,
+      String(b64_to_utf8(props.alipay_qrcode_path))
+  )
 }
 
-function k() {
-
-}
 
 onMounted(async () => {
   setQr()
-  const orders = (await getAllOrder({})).Collection
-  for (const order of orders) {
-    if (order.OrderId === props.payment_id)
-      order.
-        }
 })
 
 </script>

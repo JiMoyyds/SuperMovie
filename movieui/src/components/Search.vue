@@ -85,7 +85,7 @@
           v-for="film in search_result"
           :cover_url="film.FilmCoverUrl"
           :name="film.FilmName"
-          :booking_route="'booking'+film.FilmId"
+          :booking_route="'booking/'+film.FilmId"
           :trailer_url="film.FilmPreviewVideoUrl"
       />
     </div>
