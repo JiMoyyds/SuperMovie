@@ -1,0 +1,11 @@
+{
+  "width": 500,
+  "height": 800,
+  "resizable": true,
+  "base": "http://localhost:5173/",
+  "stat": "http://localhost:5173/",
+  "dev": true,
+  "css": [
+    "./css/dark.css"
+  ]
+}

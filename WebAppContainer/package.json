@@ -1,0 +1,40 @@
+{
+  "name": "web-app-container",
+  "version": "1.1.1",
+  "description": "Electron container for web apps",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/Thaumy/WebAppContainer",
+  "keywords": [
+    "WebAppContainer",
+    "Electron",
+    "Container",
+    "Web",
+    "Web App",
+    "Thaumy"
+  ],
+  "author": "Thaumy <thaumy@outlook.com>",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "electron": "^18.0.4",
+    "electron-builder": "^23.0.3"
+  },
+  "build": {
+    "appId": "WebAppContainer",
+    "extraResources": [
+      {
+        "from": "./appconfig.json",
+        "to": "../"
+      }
+    ],
+    "linux": {
+      "target": [
+        "tar.gz"
+      ]
+    }
+  }
+}
